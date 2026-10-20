@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сафразян Лидия — продуктовый дизайнер</title>
+  <meta name="description" content="Продуктовый дизайнер из Санкт-Петербурга. Кейсы и резюме.">
+  <script>
+    (() => {
+      let theme = "light";
+      try { if (localStorage.getItem("portfolio-theme") === "dark") theme = "dark"; } catch {}
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="site page-home" id="top">
+    <header>
+      <h1 class="name"><a id="name" href="index.html"><img class="avatar" src="assets/avatar.jpg" width="40" height="40" alt="Аватар Лидии"><span>Сафразян Лидия</span></a></h1>
+      <nav class="nav" aria-label="Основная навигация"><a href="resume.html">Резюме</a><a href="https://t.me/sellywood" target="_blank" rel="noreferrer">Telegram</a></nav>
+      <a class="write" id="write" href="https://t.me/sellywood" target="_blank" rel="noopener noreferrer"><span>Написать</span><span class="keys" aria-hidden="true"><i class="key">T</i></span></a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Включить тёмную тему" aria-pressed="false"><span class="theme-icon" aria-hidden="true"><svg class="theme-glyph theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="theme-glyph theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 14.5A8.6 8.6 0 0 1 9.5 3.8a8.6 8.6 0 1 0 10.7 10.7Z"/></svg></span></button>
+    </header>
+    <div class="layout">
+      <aside class="intro">
+        <p class="bio" id="about">Продуктовый дизайнер<br>из <span style="white-space:nowrap">Санкт-Петербурга</span></p>
+        <nav class="mobile-nav" aria-label="Ссылки"><a href="resume.html">Резюме</a><a href="https://t.me/sellywood" target="_blank" rel="noreferrer">Telegram</a></nav>
+        <div class="lab"><p class="lab-title"><span class="lab-label">Экспериментирую с</span><span class="lab-tool lab-tool--claude"><span class="lab-tool-icon"><img src="assets/claude-logo.svg" width="19" height="19" alt=""></span><span class="lab-tool-name">Claude</span></span></p></div>
+        <div class="resume-side">
+          <h2>Образование</h2>
+          <p>Колледж технологий моделирования и управления (при СПбГУПТД):</p>
+          <p>Веб-дизайнер<span class="date">2022—2026</span>Красный диплом с отличием</p>
+          <h2>Дополнительное образование</h2>
+          <p>Formfactor<br>Курс по продуктовому дизайну.<span class="date">Март 2025 — Настоящее время</span></p>
+          <p>Учеба с ментором<br>Совершенствовала навыки UX/UI-дизайна под руководством опытного наставника<span class="date">Июль — Сентябрь 2024</span></p>
+          <p>BK Digital camp<br>Управление продуктом, маркетинг, продуктовые исследования. Углубилась подробнее в ux часть продукта и отточила свои навыки<span class="date">Октябрь — Декабрь 2025</span></p>
+          <h2>Навыки</h2>
+          <ul><li>Figma</li><li>Claude code</li><li>Adobe creative suit</li><li>Tilda/framer</li><li>Rive</li><li>Английский B2</li></ul>
+          <h2>Активности</h2>
+          <p>Профессионалы<br>Заняла третье место на чемпионате по профессиональному мастерству в направлении «Цифровой дизайн с применением ИИ»<span class="date">Февраль 2025</span></p>
+          <p>Проект «Спектр»<br>Участвовала в Молодёжном образовательном проекте при поддержке «Росмолодёжи» по веб-дизайну. Выезжала с командой в загородную базу для защиты проектов<span class="date">Май 2024</span></p>
+          <h2>Контакты</h2>
+          <ul><li><a href="mailto:lsafrazyan5@mail.ru">lsafrazyan5@mail.ru</a></li><li>tg: <a href="https://t.me/sellywood" target="_blank" rel="noreferrer">@sellywood</a></li></ul>
+        </div>
+        <div class="years">©2026</div>
+      </aside>
+      <section class="cases" id="cases" aria-label="Кейсы">
+        <a class="case" id="case-1" href="case/rzd-bonus.html">
+          <div class="case-media"><img src="assets/case-cover.jpg" width="2400" height="1003" alt="Обложка кейса: Как я увеличила вовлечение в пользование программой РЖД бонус" decoding="async"></div>
+          <div class="case-copy"><h2>Как я увеличила вовлечение в пользование программой РЖД бонус</h2><p>Было проведено открытое исследование, во время которого было изучено 100+ отзывов пользователей</p></div>
+        </a>
+        <a class="case" id="case-2" href="case/hire.html">
+          <div class="case-media case-media--flush"><img src="assets/case-hire-cover.jpg" width="1200" height="675" loading="lazy" alt="Обложка кейса: Разработка дизайн-проекта сайта-платформы для поиска работы «Hire»" decoding="async"></div>
+          <div class="case-copy"><h2>Разработка дизайн-проекта сайта-платформы для поиска работы «Hire»</h2></div>
+        </a>
+      </section>
+    </div>
+  </main>
+  <script src="js/theme.js"></script>
+  <script src="js/emoji.js"></script>
+</body>
+</html>

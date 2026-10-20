@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Резюме — Сафразян Лидия</title>
+  <meta name="description" content="Резюме: Сафразян Лидия, продуктовый дизайнер из Санкт-Петербурга">
+  <script>
+    (() => {
+      let theme = "light";
+      try { if (localStorage.getItem("portfolio-theme") === "dark") theme = "dark"; } catch {}
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="site page-resume" id="top">
+    <header>
+      <h1 class="name"><a id="name" href="index.html"><img class="avatar" src="assets/avatar.jpg" width="40" height="40" alt="Аватар Лидии"><span>Сафразян Лидия</span></a></h1>
+      <nav class="nav" aria-label="Основная навигация"><a href="resume.html">Резюме</a><a href="https://t.me/sellywood" target="_blank" rel="noreferrer">Telegram</a></nav>
+      <a class="write" id="write" href="https://t.me/sellywood" target="_blank" rel="noopener noreferrer"><span>Написать</span><span class="keys" aria-hidden="true"><i class="key">T</i></span></a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Включить тёмную тему" aria-pressed="false"><span class="theme-icon" aria-hidden="true"><svg class="theme-glyph theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="theme-glyph theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 14.5A8.6 8.6 0 0 1 9.5 3.8a8.6 8.6 0 1 0 10.7 10.7Z"/></svg></span></button>
+    </header>
+    <div class="layout">
+      <aside class="intro">
+        <a class="back" href="index.html">← На главную</a>
+        <h2 class="case-title">Сафразян Лидия</h2>
+        <p class="bio">Продуктовый дизайнер<br>из <span style="white-space:nowrap">Санкт-Петербурга</span></p>
+        <img class="resume-photo" src="assets/resume-photo.jpg" width="450" height="556" alt="Фото Лидии Сафразян" decoding="async">
+        <nav class="mobile-nav" aria-label="Ссылки"><a href="resume.html">Резюме</a><a href="https://t.me/sellywood" target="_blank" rel="noreferrer">Telegram</a></nav>
+        <div class="years">©2026</div>
+      </aside>
+      <article class="article">
+        <section id="contacts"><h2>Контакты</h2>
+          <ul class="contact-list"><li>Telegram: <a href="https://t.me/sellywood" target="_blank" rel="noreferrer">@sellywood</a></li><li>✉️ <a href="mailto:lsafrazyan5@mail.ru">lsafrazyan5@mail.ru</a></li></ul>
+        </section>
+        <figure class="cover"><img src="assets/resume-art.jpg" width="1200" height="849" loading="lazy" decoding="async" alt="Иллюстрация из резюме"></figure>
+        <section id="cases-list"><h2>Кейсы:</h2>
+          <a class="case" href="case/rzd-bonus.html">
+            <div class="cover"><img src="assets/resume-case-cover.jpg" width="2400" height="1350" loading="lazy" decoding="async" alt="Обложка кейса: Как я увеличила вовлечение в пользование программой РЖД бонус"></div>
+            <div class="case-copy" style="padding-top:0"><h2>Как я увеличила вовлечение в пользование программой РЖД бонус</h2><p>Подробнее о кейсе</p></div>
+          </a>
+        </section>
+      </article>
+    </div>
+  </main>
+  <script src="js/theme.js"></script>
+  <script src="js/emoji.js"></script>
+</body>
+</html>
