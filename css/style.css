@@ -329,3 +329,42 @@ strong,b,th,h1,h2,h3,summary{font-weight:500}
 /* единый шрифт во всём контенте */
 button,input,textarea,select,table,th,td,summary,details,code,pre,kbd,samp,blockquote,figcaption,li,p,a{font-family:inherit}
 code,pre,kbd,samp{font-size:inherit}
+
+/* ===== Кейсы: боковая панель, оглавление, блок ссылок ===== */
+.page-case .years{position:static;margin-top:24px}
+.toc-details>summary{display:none}
+.toc a.is-active{font-weight:500;color:var(--link)}
+.toc a{color:var(--muted)}
+.toc a.is-active,.toc a:hover{color:var(--link)}
+@media(min-width:821px){
+.page-case .intro{max-height:calc(100vh - 128px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding-bottom:24px;padding-right:8px}
+}
+@media(max-width:820px){
+.page-case .intro{max-height:none;overflow:visible}
+.toc-details{border:1px solid var(--button-hover);border-radius:12px}
+.toc-details>summary{display:flex;align-items:center;min-height:44px;padding:8px 14px;cursor:pointer;font-weight:500;list-style:none}
+.toc-details>summary::-webkit-details-marker{display:none}
+.toc-details>summary::after{content:"";margin-left:auto;width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);transition:transform .2s}
+.toc-details[open]>summary::after{transform:rotate(-135deg)}
+.toc-details .toc{padding:0 14px 8px}
+}
+.link-block{margin:0 0 32px}
+.link-row{display:flex;flex-wrap:wrap;gap:12px}
+.link-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;background:var(--button);color:var(--link);font-family:inherit;font-size:var(--fs-ui);font-weight:500;line-height:1.2;letter-spacing:var(--ls-ui);transition:background-color .2s}
+.link-btn:hover{background:var(--button-hover)}
+.link-btn:focus-visible{outline:2px solid var(--mobile-link);outline-offset:2px}
+.link-arrow{flex-shrink:0}
+.link-note{margin:10px 0 0;font-size:var(--fs-small);line-height:1.4;color:#767676}
+html[data-theme=dark] .link-note{color:var(--secondary)}
+@media(max-width:820px){.link-row{flex-direction:column}.link-btn{width:100%}}
+@media(prefers-reduced-motion:reduce){.link-btn,.toc-details>summary::after{transition:none}}
+
+/* Обводка слайдов Hire */
+:root{--slide-line:rgba(0,0,0,.12)}
+html[data-theme=dark]{--slide-line:rgba(255,255,255,.18)}
+.page-hire .article figure img{box-shadow:0 0 0 1px var(--slide-line)}
+.link-btn{min-height:44px;height:auto;padding:10px 16px;line-height:1.25;text-align:center}
+.link-btn>span{min-width:0}
+.link-arrow{flex-shrink:0}
+.years-end{display:none}
+@media(max-width:820px){.page-case .intro .years{display:none}.page-case .years-end{display:block;margin-top:32px;text-align:left}}
