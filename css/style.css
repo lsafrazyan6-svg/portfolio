@@ -319,3 +319,13 @@ strong,b,th,h1,h2,h3,summary{font-weight:500}
 .site-link{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 24px}
 .site-link .write{position:static;margin:0}
 .site-link-note{color:var(--muted);font-size:var(--fs-small)}
+
+/* ===== Правки 20.10.2026 (3): разрядка UI, названия записей, бейдж, шрифт ===== */
+:root{--ls-ui:.04em}
+.nav,.mobile-nav,.write,.site>header .nav a,.name,.name a,.pager,.toc a,.back{letter-spacing:var(--ls-ui)}
+.name,.name a{letter-spacing:.02em}
+.entry-title{font-weight:500}
+.badge{display:inline-flex;align-items:center;vertical-align:middle;margin-left:8px;padding:2px 10px;border-radius:999px;background:var(--button);color:var(--badge-ink);border:1px solid var(--card-line);font-size:var(--fs-small);font-weight:500;line-height:1.4;letter-spacing:.02em;white-space:nowrap}
+/* единый шрифт во всём контенте */
+button,input,textarea,select,table,th,td,summary,details,code,pre,kbd,samp,blockquote,figcaption,li,p,a{font-family:inherit}
+code,pre,kbd,samp{font-size:inherit}
