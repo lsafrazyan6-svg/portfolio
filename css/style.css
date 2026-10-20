@@ -314,3 +314,8 @@ strong,b,th,h1,h2,h3,summary{font-weight:500}
 .case-media--flush,html[data-theme=dark] .case-media--flush{padding:0;background:transparent;overflow:hidden}
 .case-media--flush>img{display:block;width:100%;height:auto;aspect-ratio:1200/675;object-fit:cover}
 @media(max-width:820px){.case-media--flush,html[data-theme=dark] .case-media--flush{padding:0}}
+
+/* Ссылка на сайт Hire (верх и конец кейса) */
+.site-link{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 24px}
+.site-link .write{position:static;margin:0}
+.site-link-note{color:var(--muted);font-size:var(--fs-small)}
