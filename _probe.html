@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><body><pre id="out">r</pre><script>
+const pages=["index.html","resume.html","case/rzd-bonus.html","case/hire.html"],widths=[1470,390];const res=[];
+(async()=>{for(const p of pages)for(const w of widths){await new Promise(r=>{const f=document.createElement("iframe");f.style.cssText="position:absolute;left:0;top:0;border:0;height:900px;width:"+w+"px";f.src=p;f.onload=()=>setTimeout(()=>{
+const D=f.contentDocument,W=f.contentWindow,out=[];
+const imgs=[...D.querySelectorAll(".article img,.resume-photo")].filter(i=>!i.dataset.noZoom||true);let vis=0;const hid=new Set();
+imgs.forEach(i=>{const c=W.getComputedStyle(i);const ok=/rgba?\(/.test(c.boxShadow)&&c.boxShadow!=="none";if(ok)vis++;let a=i.parentElement;while(a&&!a.classList.contains("article")&&a!==D.body){const o=W.getComputedStyle(a);if(o.overflowX!=="visible"||o.overflowY!=="visible"){hid.add(a.tagName.toLowerCase()+"."+a.className.split(" ")[0]+" overflow="+o.overflowX)}a=a.parentElement}});
+out.push("imgs="+imgs.length+" withShadow="+vis+(hid.size?" clipAncestors="+[...hid].join(";"):""));
+const textLeft=(e)=>{const rg=D.createRange();rg.selectNodeContents(e);const rs=[...rg.getClientRects()].filter(x=>x.width>0);return rs.length?Math.min(...rs.map(x=>x.left)):null};
+const cont=(e)=>{const c=e.closest("aside.intro")||e.closest("article.article")||e.closest(".site");const cs=W.getComputedStyle(c);return c.getBoundingClientRect().left+parseFloat(cs.paddingLeft)+parseFloat(cs.borderLeftWidth)};
+const chk=(label,sel,mode)=>D.querySelectorAll(sel).forEach(e=>{const cs=W.getComputedStyle(e);if(cs.display==="none"||!e.getBoundingClientRect().width)return;const L=mode==="text"?textLeft(e):e.getBoundingClientRect().left;if(L==null)return;const d=Math.round((L-cont(e))*10)/10;if(Math.abs(d)>1)out.push("OFFSET "+d+" "+label+" "+(e.textContent||"").trim().slice(0,16))});
+chk(".back svg",".back svg");chk(".back text",".back span","text");chk("title",".case-title","text");chk("h2",".article h2","text");chk("toc-box",".toc-box");chk("link-btn",".link-btn");chk("quick",".quick-links");chk("contact svg",".contact-links svg");chk("contact text",".contact-links span","text");chk("years",".years","text");chk("photo",".about img");chk("bio",".bio","text");chk("lab",".lab-title .lab-label","text");chk("cmp",".cmp");chk("resume-side h2",".resume-side h2","text");chk("cases",".case-media");
+res.push("## "+p+" @"+w+" sw="+D.documentElement.scrollWidth+"\n"+out.join("\n"));f.remove();r()},900);document.body.appendChild(f)})}
+document.getElementById("out").textContent=res.join("\n");document.title="done"})();
+</script>
