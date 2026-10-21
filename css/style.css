@@ -723,3 +723,6 @@ html[data-theme=dark]{--slide-line:rgba(255,255,255,.2)}
 
 /* Две колонки: зазор 40px, сетка по центру контейнера (десктоп) */
 @media(min-width:821px){.layout,.page-home .layout,.page-case .layout,.page-resume .layout{--gap:40px;gap:40px;justify-content:center}}
+
+/* Главная, десктоп: обложки кейсов крупнее — правая колонка забирает всё место */
+@media(min-width:821px){.page-home .layout{--left:360px;grid-template-columns:var(--left) minmax(0,1fr)}.page-home .case-media{max-width:none}}
