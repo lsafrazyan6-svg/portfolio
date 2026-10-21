@@ -469,7 +469,6 @@ html,body{max-width:100%;overflow-x:clip}
 /* ===== Иконки из пака mishanaer-icons: файлы как есть, размер только здесь ===== */
 svg.i16{width:16px;height:16px}svg.i18{width:18px;height:18px}svg.i20{width:20px;height:20px}svg.i22{width:22px;height:22px}svg.i24{width:24px;height:24px}
 svg.icon,svg.link-arrow,svg.theme-glyph{display:block;flex-shrink:0}
-.cmp-frame.is-mobile{aspect-ratio:360/780;width:min(100%,420px);margin-inline:auto}
 
 /* =====================================================================
    КАНОН ОТСТУПОВ (visual-design-foundations): шкала 4/8/12/16/24/32/48.
@@ -713,7 +712,11 @@ html[data-theme=dark]{--slide-line:rgba(255,255,255,.2)}
 .collage{gap:8px}
 }
 @media(max-width:820px){.back{margin-bottom:0}}
-.cmp-frame.is-mobile{aspect-ratio:576/1426;width:min(100%,420px);max-height:80vh;margin-inline:auto}
 .cmp-img{object-position:top}
-.cmp-frame.is-mobile{aspect-ratio:720/1560;max-height:none}
-.cmp-frame.is-mobile .cmp-img{object-fit:cover;object-position:top center}
+/* Блок сравнения: заголовок → вкладки 8, вкладки → рамка 8 (и на мобиле) */
+:root{--cmp-gap:8px}
+#compare h2,.cmp h2{margin:0 0 var(--cmp-gap)}
+#compare .cmp-tabs,.cmp .cmp-tabs{margin:0 0 var(--cmp-gap);padding:0}
+#compare .cmp-frame{margin-top:0}
+.cmp-label{font-size:max(var(--fs-small),14px)}
+.cmp-knob{width:48px;height:48px}

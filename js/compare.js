@@ -9,19 +9,8 @@
   const tabs = [...root.querySelectorAll(".cmp-tab")];
   const names = { tickets: "Выбор билета", bonus: "РЖД Бонус", passengers: "Данные пассажира", success: "Успешная оплата" };
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const narrow = window.matchMedia("(max-width: 820px)");
-  const HAS_M = new Set(["tickets", "bonus", "passengers"]);
-  let slug0 = "tickets";
-  const useM = (slug) => narrow.matches && HAS_M.has(slug);
-  const src = (slug, k) => "../assets/compare/" + slug + (useM(slug) ? "-m-" : "-") + k + ".jpg";
-  const apply = (slug) => {
-    const m = useM(slug);
-    frame.classList.toggle("is-mobile", m);
-    [before, after].forEach((i) => { i.width = m ? 720 : 2400; i.height = m ? 1560 : 1500; });
-    before.src = src(slug, "before"); after.src = src(slug, "after");
-  };
-  (narrow.addEventListener ? narrow.addEventListener("change", () => apply(slug0)) : narrow.addListener(() => apply(slug0)));
-  apply(slug0);
+  const src = (slug, k) => "../assets/compare/" + slug + "-" + k + ".jpg";
+  const apply = (slug) => { before.src = src(slug, "before"); after.src = src(slug, "after"); };
   let pos = 50;
   const set = (v) => {
     pos = Math.min(100, Math.max(0, v));
@@ -51,7 +40,7 @@
     frame.setAttribute("aria-labelledby", tab.id);
     set(50);
     const swap = () => {
-      slug0 = slug; apply(slug);
+      apply(slug);
       before.alt = "Оригинал РЖД: " + names[slug]; after.alt = "Редизайн: " + names[slug];
       frame.classList.remove("is-swap");
     };
