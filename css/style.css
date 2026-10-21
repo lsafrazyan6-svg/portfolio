@@ -739,3 +739,7 @@ html[data-theme=dark]{--slide-line:rgba(255,255,255,.2)}
 /* Сравнение: заголовок → вкладки 16, вкладки → до/после 24 */
 #compare h2,.cmp h2{margin:0 0 16px}
 #compare .cmp-tabs,.cmp .cmp-tabs{margin:0 0 24px}
+
+/* Плашка-раскрывашка: стрелка по верху, по центру первой строки */
+.toggle>summary{align-items:flex-start}
+.toggle>summary .chev{margin-top:calc((1lh - 24px) / 2)}
