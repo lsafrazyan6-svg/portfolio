@@ -720,3 +720,6 @@ html[data-theme=dark]{--slide-line:rgba(255,255,255,.2)}
 #compare .cmp-frame{margin-top:0}
 .cmp-label{font-size:max(var(--fs-small),14px)}
 .cmp-knob{width:48px;height:48px}
+
+/* Две колонки: зазор 40px, сетка по центру контейнера (десктоп) */
+@media(min-width:821px){.layout,.page-home .layout,.page-case .layout,.page-resume .layout{--gap:40px;gap:40px;justify-content:center}}
