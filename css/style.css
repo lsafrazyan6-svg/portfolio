@@ -597,3 +597,66 @@ html[data-theme=dark] .toc-clip::after{background:linear-gradient(to bottom,rgba
 .contact-list a{display:inline-flex;align-items:center;min-height:var(--tap);padding:0}
 .contact-list li+li{margin-top:var(--space-1)}
 @media(max-width:820px){.toc-more{margin-top:var(--space-1)}}
+
+/* =====================================================================
+   Правки 21.10 (режим «Правки»)
+   ===================================================================== */
+:root{--gap-section:24px}
+@media(max-width:820px){:root{--gap-section:24px}}
+/* главная: колонка резюме */
+.resume-side h2{margin:var(--gap-section) 0 var(--space-1)}
+.resume-side h2:first-child{margin-top:0}
+/* единый шрифт-ритм ссылок «Резюме» и pager */
+.pager a,a[href$="resume.html"]{letter-spacing:var(--ls-ui);font-kerning:normal}
+/* заголовок кейса: контейнер по панели, без висячих слов, бейдж сверху */
+.case-title{max-width:none;text-wrap:pretty}
+.case-title .badge{display:flex;width:fit-content;margin:0 0 var(--space-1)}
+/* контакты: без левого отступа списка, иконка и текст у края контейнера */
+.contact-block .contact-links{margin:0;padding:0}
+.contact-block .contact-links li{margin:0;padding:0}
+.contact-title{margin:0;font-size:var(--fs-h3);font-weight:500}
+/* ссылка-подпись под кнопками: одинаково сверху и снизу */
+.link-block .link-note{margin:var(--space-1) 0 0}
+/* оглавление: окно с прокруткой и дымками */
+.toc-box{border:1px solid var(--button-hover);border-radius:12px;padding:var(--space-2) var(--space-2) var(--space-1);background:var(--page);overflow:hidden}
+.toc-label{display:block;margin:0 0 var(--space-1);font-weight:500}
+.toc-win{position:relative}
+.toc-clip{max-height:calc(var(--tap) * 4);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scroll-behavior:auto;outline-offset:2px;transition:none}
+.toc-clip::after{content:none}
+.toc-win::before,.toc-win::after{content:"";position:absolute;left:0;right:0;height:40px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:1}
+.toc-win::before{top:0;background:linear-gradient(to top,rgba(255,255,255,0),var(--page))}
+.toc-win::after{bottom:0;background:linear-gradient(to bottom,rgba(255,255,255,0),var(--page))}
+html[data-theme=dark] .toc-win::before{background:linear-gradient(to top,rgba(20,20,20,0),var(--page))}
+html[data-theme=dark] .toc-win::after{background:linear-gradient(to bottom,rgba(20,20,20,0),var(--page))}
+.toc-win.has-top::before,.toc-win.has-bottom::after{opacity:1}
+.toc-clip:focus-visible{outline:2px solid var(--mobile-link)}
+@media(prefers-reduced-motion:reduce){.toc-win::before,.toc-win::after{transition:none}}
+/* обводка картинок кейсов — одно правило для обоих кейсов и резюме (изнутри, видна на белом) */
+.page-case .article figure img,.page-case .article .cover img,.page-resume .article figure img,.page-resume .resume-photo,.page-hire .article figure img{box-shadow:none;outline:1px solid var(--slide-line);outline-offset:-1px}
+/* резюме: фото слева от «обо мне» */
+.about{display:flex;align-items:flex-start;gap:var(--space-2);margin:0}
+.about .resume-photo{width:120px;height:120px;aspect-ratio:1/1;margin:0;flex-shrink:0;object-fit:cover;border-radius:20px}
+.about-text{min-width:0}
+.about-text .case-title{margin:0 0 var(--space-1)}
+.about-text .bio{margin:0}
+.page-resume .years{position:static;margin:var(--space-4) 0 0;text-align:left}
+.page-resume #cases-list h2{margin:0 0 var(--space-2)}
+.page-resume a.case .cover{margin:0}
+.page-resume .case-copy{padding-top:var(--space-2)}
+@media(max-width:820px){
+.about .resume-photo{width:96px;height:96px;border-radius:16px}
+.page-resume #cases-list{margin-top:var(--space-3)}
+}
+
+/* Коллаж «Активности» (резюме): 2×2, зазор 8, пропорции кадров из Figma */
+.collage{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"a b" "c d";gap:var(--space-1);margin:0}
+.collage figure{margin:0;min-width:0}
+.collage .act-a{grid-area:a}.collage .act-b{grid-area:b}.collage .act-c{grid-area:c}.collage .act-d{grid-area:d}
+.collage .act-a img,.collage .act-c img{width:100%;height:auto;display:block}
+.collage .act-a img{aspect-ratio:477/673;object-fit:cover}
+.collage .act-c img{aspect-ratio:477/340;object-fit:cover}
+.collage .act-b,.collage .act-d{display:flex}
+.collage .act-b img,.collage .act-d img{width:100%;height:100%;display:block;object-fit:cover}
+.collage img{border-radius:20px;background:var(--surface)}
+@media(max-width:820px){.collage img{border-radius:12px}}
+.page-resume #activities{margin-bottom:var(--space-5)}

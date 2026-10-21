@@ -1,32 +1,19 @@
-/* Оглавление кейса: подсветка текущего раздела, подпрокрутка панели на десктопе,
-   на мобиле — плашка с первыми пунктами и кнопкой «Показать всё». */
+/* Оглавление кейса: окно фиксированной высоты, внутри листается; дымки сверху/снизу
+   показывают, что есть ещё; активный пункт (IntersectionObserver) подпрокручивается в окно. */
 (() => {
+  const clip = document.querySelector(".toc-clip");
+  const win = document.querySelector(".toc-win");
   const links = [...document.querySelectorAll(".toc a[href^='#']")];
-  const box = document.querySelector(".toc-box");
-  if (!box || !links.length) return;
-  const clip = box.querySelector(".toc-clip");
-  const btn = box.querySelector(".toc-more");
-  const label = btn.querySelector("span");
-  const mq = window.matchMedia("(max-width: 820px)");
+  if (!clip || !win || !links.length) return;
+  const edges = () => {
+    const max = clip.scrollHeight - clip.clientHeight;
+    win.classList.toggle("has-top", clip.scrollTop > 2);
+    win.classList.toggle("has-bottom", max > 2 && clip.scrollTop < max - 2);
+  };
+  clip.addEventListener("scroll", edges, { passive: true });
+  window.addEventListener("resize", edges);
+  edges();
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-  let open = false;
-  const collapsed = () => { const li = clip.querySelector("li"); return Math.round((li ? li.getBoundingClientRect().height : 48) * 3); };
-  const layout = () => {
-    if (!mq.matches) { clip.style.maxHeight = ""; box.classList.remove("is-open"); return; }
-    clip.style.maxHeight = (open ? clip.scrollHeight : collapsed()) + "px";
-  };
-  const set = (v) => {
-    open = v;
-    box.classList.toggle("is-open", v);
-    btn.setAttribute("aria-expanded", String(v));
-    label.textContent = v ? "Свернуть" : "Показать всё";
-    layout();
-  };
-  btn.addEventListener("click", () => set(!open));
-  const onMq = () => { set(false); layout(); };
-  (mq.addEventListener ? mq.addEventListener("change", onMq) : mq.addListener(onMq));
-  window.addEventListener("resize", layout);
-  layout();
   const map = new Map();
   links.forEach((a) => { const t = document.getElementById(a.getAttribute("href").slice(1)); if (t) map.set(t, a); });
   let current = null;
@@ -34,11 +21,8 @@
     if (a === current) return;
     if (current) { current.classList.remove("is-active"); current.removeAttribute("aria-current"); }
     current = a; a.classList.add("is-active"); a.setAttribute("aria-current", "true");
-    const panel = a.closest(".intro");
-    if (panel && !mq.matches && panel.scrollHeight > panel.clientHeight) {
-      const pr = panel.getBoundingClientRect(), ar = a.getBoundingClientRect();
-      if (ar.top < pr.top + 8 || ar.bottom > pr.bottom - 8) panel.scrollTop += ar.top - pr.top - pr.height / 2 + ar.height / 2;
-    }
+    const cr = clip.getBoundingClientRect(), ar = a.getBoundingClientRect();
+    if (ar.top < cr.top || ar.bottom > cr.bottom) clip.scrollTo({ top: clip.scrollTop + ar.top - cr.top - (cr.height - ar.height) / 2, behavior: reduce.matches ? "auto" : "smooth" });
   };
   const visible = new Set();
   const io = new IntersectionObserver((entries) => {
