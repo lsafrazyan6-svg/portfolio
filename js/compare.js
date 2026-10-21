@@ -9,6 +9,19 @@
   const tabs = [...root.querySelectorAll(".cmp-tab")];
   const names = { tickets: "Выбор билета", bonus: "РЖД Бонус", passengers: "Данные пассажира", success: "Успешная оплата" };
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const narrow = window.matchMedia("(max-width: 820px)");
+  const HAS_M = new Set(["tickets", "bonus", "passengers"]);
+  let slug0 = "tickets";
+  const useM = (slug) => narrow.matches && HAS_M.has(slug);
+  const src = (slug, k) => "../assets/compare/" + slug + (useM(slug) ? "-m-" : "-") + k + ".jpg";
+  const apply = (slug) => {
+    const m = useM(slug);
+    frame.classList.toggle("is-mobile", m);
+    [before, after].forEach((i) => { i.width = m ? 720 : 2400; i.height = m ? 1560 : 1500; });
+    before.src = src(slug, "before"); after.src = src(slug, "after");
+  };
+  (narrow.addEventListener ? narrow.addEventListener("change", () => apply(slug0)) : narrow.addListener(() => apply(slug0)));
+  apply(slug0);
   let pos = 50;
   const set = (v) => {
     pos = Math.min(100, Math.max(0, v));
@@ -31,14 +44,14 @@
     else if (e.key === "Home") { e.preventDefault(); set(0); }
     else if (e.key === "End") { e.preventDefault(); set(100); }
   });
-  const preload = (slug) => { ["before", "after"].forEach((k) => { const i = new Image(); i.src = "../assets/compare/" + slug + "-" + k + ".jpg"; }); };
+  const preload = (slug) => { ["before", "after"].forEach((k) => { const i = new Image(); i.src = src(slug, k); }); };
   const select = (tab, focus) => {
     const slug = tab.dataset.slug;
     tabs.forEach((t) => { const on = t === tab; t.setAttribute("aria-selected", on); t.tabIndex = on ? 0 : -1; });
     frame.setAttribute("aria-labelledby", tab.id);
     set(50);
     const swap = () => {
-      before.src = "../assets/compare/" + slug + "-before.jpg"; after.src = "../assets/compare/" + slug + "-after.jpg";
+      slug0 = slug; apply(slug);
       before.alt = "Оригинал РЖД: " + names[slug]; after.alt = "Редизайн: " + names[slug];
       frame.classList.remove("is-swap");
     };
