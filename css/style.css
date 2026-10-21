@@ -669,3 +669,4 @@ html[data-theme=dark]{--slide-line:rgba(255,255,255,.2)}
 /* зона нажатия расширяется за видимый край, видимое — по левому краю контейнера */
 .contact-links a,.back,.toc a{margin-left:0;padding-left:0}
 .contact-links svg.icon,.back svg.icon{margin-left:0}
+@media(max-width:820px){.cmp{overflow:visible}}
