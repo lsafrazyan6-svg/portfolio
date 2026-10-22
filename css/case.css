@@ -6,6 +6,7 @@
   --content:1296px;
   --muted:#878787;
   --line:#e2e2e3;
+  --toc-line:#e2d6d6;   /* тёплая линия слева у «Содержания», как в Figma */
   --surface:#f6f6f7;
   --ok:#2f9e4f;   --ok-bg:#eaf7ee;
   --mid:#c98a00;  --mid-bg:#fdf5dc;
@@ -14,6 +15,7 @@
 html[data-theme=dark]{
   --muted:#a0a0a0;
   --line:#353535;
+  --toc-line:#4a3f3f;
   --surface:#1f1f1f;
   --ok:#5fcf7d;   --ok-bg:rgba(95,207,125,.12);
   --mid:#f0c04a;  --mid-bg:rgba(240,192,74,.12);
@@ -39,7 +41,7 @@ html[data-theme=dark] .status{background:rgba(255,92,80,.14);color:#ff8a80;borde
 .train{display:block;width:70px;height:62px;margin-bottom:-2px}
 
 /* Оглавление */
-.toc-box{display:flex;flex-direction:column;gap:8px;padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--page)}
+.toc-box{display:flex;flex-direction:column;gap:8px;padding:16px 16px 8px;border:1px solid transparent;border-left-color:var(--toc-line);border-radius:16px;background:var(--page)}
 .toc-label{font-size:18px;line-height:27px;font-weight:500}
 .toc-win{position:relative}
 .toc-clip{max-height:176px;overflow-y:auto;scrollbar-width:none}

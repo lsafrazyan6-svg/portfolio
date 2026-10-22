@@ -752,3 +752,7 @@ html[data-theme=dark]{--slide-line:rgba(255,255,255,.2)}
 #case-title.is-ready .ch{animation:edge-in 620ms cubic-bezier(.22,1,.36,1) both;animation-delay:var(--d,0ms)}
 @keyframes edge-in{from{opacity:0;transform:translateY(.45em);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}
 @media(prefers-reduced-motion:reduce){#case-title.is-ready .ch{animation:none}}
+
+/* «Содержание»: тонкая тёплая линия слева со скруглением, как в Figma (кейс РЖД — в case.css) */
+.toc-box{border:1px solid transparent;border-left-color:#e2d6d6;border-radius:16px}
+html[data-theme=dark] .toc-box{border-left-color:#4a3f3f}
