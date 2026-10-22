@@ -61,8 +61,6 @@
   function open(i) {
     if (!root) build();
     lastFocus = document.activeElement; index = i; show();
-    const pic = imgs[i].closest(".rs-pic");
-    root.style.setProperty("--lb-tilt", pic ? getComputedStyle(pic).getPropertyValue("--tilt").trim() || "0deg" : "0deg");
     root.classList.remove("is-open"); root.style.display = "flex";
     document.body.style.overflow = "hidden"; document.documentElement.style.overscrollBehavior = "none";
     if (reduce.matches) root.classList.add("is-open"); else requestAnimationFrame(() => root.classList.add("is-open"));
