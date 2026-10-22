@@ -2,6 +2,13 @@
 
 Статический сайт: `index.html`, `resume.html`, `case/rzd-bonus.html`, `case/hire.html`, стили в `css/`, картинки в `assets/`.
 
+Публичный сайт: https://lsafrazyan6-svg.github.io/portfolio/ (GitHub Pages из ветки `main`).
+
+Главная (`index.html`) использует свой файл стилей `css/home.css`. Остальные страницы пока на `css/style.css`.
+- Шрифты: Inter Tight для текста, Lora Medium для имени.
+- Цвета: текст #1F1F1F, ссылки и кнопки #1F2836. Не использовать #020202: Лидии он режет глаза.
+- Трекинг 0. Размеры, отступы и межстрочные интервалы только целыми числами.
+
 ## Макеты в Figma
 
 Файл: https://www.figma.com/design/ElxSkV36lKYK0qsd8ZxvgG/, страница «Сайт — 1440 / 360».
