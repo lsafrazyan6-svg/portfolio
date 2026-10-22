@@ -743,3 +743,4 @@ html[data-theme=dark]{--slide-line:rgba(255,255,255,.2)}
 /* Плашка-раскрывашка: стрелка по верху, по центру первой строки */
 .toggle>summary{align-items:flex-start}
 .toggle>summary .chev{margin-top:calc((1lh - 24px) / 2)}
+
