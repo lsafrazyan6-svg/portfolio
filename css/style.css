@@ -744,3 +744,11 @@ html[data-theme=dark]{--slide-line:rgba(255,255,255,.2)}
 .toggle>summary{align-items:flex-start}
 .toggle>summary .chev{margin-top:calc((1lh - 24px) / 2)}
 
+
+/* Название кейса: «каскад от краёв» (js/edge-title.js), как в кейсе РЖД */
+#case-title .w{display:inline-block;white-space:nowrap}
+#case-title .ch{display:inline-block}
+#case-title.is-split .ch{opacity:0}
+#case-title.is-ready .ch{animation:edge-in 620ms cubic-bezier(.22,1,.36,1) both;animation-delay:var(--d,0ms)}
+@keyframes edge-in{from{opacity:0;transform:translateY(.45em);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}
+@media(prefers-reduced-motion:reduce){#case-title.is-ready .ch{animation:none}}
