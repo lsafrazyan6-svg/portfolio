@@ -9,7 +9,8 @@
   el.setAttribute("aria-label", text);
   el.textContent = "";
   const chars = [];
-  text.split(/\s+/).forEach((word, wi) => {
+  // делим только по обычным пробелам: слова, склеенные неразрывным пробелом (typo-nbsp.js), остаются вместе
+  text.split(/[ \t\n\r]+/).forEach((word, wi) => {
     if (wi) el.append(" ");
     const w = document.createElement("span");
     w.className = "w";

@@ -41,7 +41,9 @@ html[data-theme=dark] .status{background:rgba(255,92,80,.14);color:#ff8a80;borde
 .train{display:block;width:70px;height:62px;margin-bottom:-2px}
 
 /* Оглавление */
-.toc-box{display:flex;flex-direction:column;gap:8px;padding:16px 16px 8px;border:1px solid transparent;border-left-color:var(--toc-line);border-radius:16px;background:var(--page)}
+/* «Содержание» — заголовок над плашкой; в плашке только прокручиваемый список */
+.toc-nav{display:flex;flex-direction:column;gap:8px}
+.toc-box{padding:8px 16px;border:1px solid transparent;border-left-color:var(--toc-line);border-radius:16px;background:var(--page)}
 .toc-label{font-size:18px;line-height:27px;font-weight:500}
 .toc-win{position:relative}
 .toc-clip{max-height:176px;overflow-y:auto;scrollbar-width:none}
@@ -148,6 +150,8 @@ html[data-theme=dark] .pill--biz{background:rgba(64,219,203,.14);color:#6fe3d6}
 .res{--c:var(--ok);--bg:var(--ok-bg);display:flex;flex-direction:column;gap:16px;padding:24px;border-radius:20px;background:var(--bg)}
 .res--mid{--c:var(--mid);--bg:var(--mid-bg)}
 .res--bad{--c:var(--bad);--bg:var(--bad-bg)}
+/* гипотеза сверху, статус (чип, счёт, полоска) прижат к низу — в ряду на одной линии */
+.res-status{margin-top:auto;display:flex;flex-direction:column;gap:16px}
 .res-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .res-tag{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 12px;border-radius:16px;background:var(--page);color:var(--ink);font-size:15px;line-height:20px;font-weight:500;white-space:nowrap}
 .res-tag::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--c)}

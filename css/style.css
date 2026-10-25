@@ -756,6 +756,10 @@ html[data-theme=dark]{--slide-line:rgba(255,255,255,.2)}
 /* «Содержание»: тонкая тёплая линия слева со скруглением, как в Figma (кейс РЖД — в case.css) */
 .toc-box{border:1px solid transparent;border-left-color:#e2d6d6;border-radius:16px}
 html[data-theme=dark] .toc-box{border-left-color:#4a3f3f}
+/* «Содержание» — заголовок над плашкой; в плашке только прокручиваемый список */
+.toc-nav{display:flex;flex-direction:column;gap:8px}
+.toc-nav>.toc-label{display:block;margin:0}
+.toc-nav>.toc-box{padding:8px 16px}
 
 /* ===== Итоговые экраны (Hire): компьютер + телефон, клик открывает лайтбокс ===== */
 .scr-frame{border-radius:20px;background:var(--surface);box-shadow:0 0 0 1px var(--slide-line);padding:32px}

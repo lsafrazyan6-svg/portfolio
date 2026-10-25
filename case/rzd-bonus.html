@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/case.css">
   <link rel="stylesheet" href="../css/tg-button.css">
+  <link rel="stylesheet" href="../css/solution.css">
 </head>
 <body>
   <header class="hdr">
@@ -40,9 +41,9 @@
         <div class="title-row"><span class="status">В процессе</span><img class="train" src="../assets/rzd-train.svg" width="70" height="62" alt=""></div>
         <h1 class="case-h1" id="case-title">Как я увеличила вовлечение в пользование программой РЖД бонус</h1>
       </div>
-      <nav class="toc-box" aria-label="Содержание">
+      <nav class="toc-nav" aria-label="Содержание">
         <p class="toc-label">Содержание</p>
-        <div class="toc-win"><div class="toc-clip" tabindex="0"><ul class="toc">
+        <div class="toc-box"><div class="toc-win"><div class="toc-clip" tabindex="0"><ul class="toc">
           <li><a href="#problem">Проблема</a></li>
           <li><a href="#ux-audit">UX-аудит</a></li>
           <li><a href="#usability-test">Модерируемый юзабилити тест существующего интерфейса</a></li>
@@ -50,8 +51,9 @@
           <li><a href="#benchmarking">Бенчмаркинг</a></li>
           <li><a href="#user-flow">User flow</a></li>
           <li><a href="#hypotheses">Приоритизация гипотез</a></li>
+          <li><a href="#solution">Решение</a></li>
           <li><a href="#usability-test-2">Модерируемый юзабилити тест обновленного интерфейса</a></li>
-        </ul></div></div>
+        </ul></div></div></div>
       </nav>
     </aside>
 
@@ -196,12 +198,12 @@
         <div class="results-head"><h2 class="h-title">Результаты теста</h2><a class="lnk body" href="https://docs.google.com/spreadsheets/d/19kH4MoQEbnKypcyntnrI3RommL26Pzhi/edit?usp=share_link&amp;ouid=115922673669813917495&amp;rtpof=true&amp;sd=true" target="_blank" rel="noreferrer">Таблица в Google Docs</a></div>
         <p>Тест с 14 респондентами показал следующее:</p>
         <ul class="results">
-          <li class="res"><div class="res-top"><span class="res-tag">Подтвердилось</span><span class="res-num">10<small>/14</small></span></div><div class="res-bar" aria-hidden="true"><i style="--v:71%"></i></div><p>Респонденты воспринимают РЖД и РЖД Бонус как одну сущность</p></li>
-          <li class="res"><div class="res-top"><span class="res-tag">Подтвердилось</span><span class="res-num">14<small>/14</small></span></div><div class="res-bar" aria-hidden="true"><i style="--v:100%"></i></div><p>Респонденты считают, что вся информация, нужная пользователю, находится в личном кабинете РЖД</p></li>
-          <li class="res"><div class="res-top"><span class="res-tag">Подтвердилось</span><span class="res-num">10<small>/14</small></span></div><div class="res-bar" aria-hidden="true"><i style="--v:71%"></i></div><p>Пользователи не понимают различие между премиальными, туристическими и квалификационными баллами</p></li>
-          <li class="res"><div class="res-top"><span class="res-tag">Подтвердилось</span><span class="res-num">9<small>/14</small></span></div><div class="res-bar" aria-hidden="true"><i style="--v:64%"></i></div><p>Пользователям не понятно, как начисляются баллы, считают, что баллы капают автоматически</p></li>
-          <li class="res res--mid"><div class="res-top"><span class="res-tag">Подтвердилось частично</span><span class="res-num">5<small>/14</small></span></div><div class="res-bar" aria-hidden="true"><i style="--v:36%"></i></div><p>Одни замечают дропдаун РЖД Бонус и нажимают, но не понимают, подходят ли они под программу — другие не видят его вообще — третьи видят, читают, но их это не привлекает</p></li>
-          <li class="res res--bad"><div class="res-top"><span class="res-tag">Не подтвердилось</span><span class="res-num">2<small>/14</small></span></div><div class="res-bar" aria-hidden="true"><i style="--v:14%"></i></div><p>Пользователи замечают раздел «история», но отмечают неудобное представление данных</p></li>
+          <li class="res"><p>Респонденты воспринимают РЖД и РЖД Бонус как одну сущность</p><div class="res-status"><div class="res-top"><span class="res-tag">Подтвердилось</span><span class="res-num">10<small>/14</small></span></div><div class="res-bar" aria-hidden="true"><i style="--v:71%"></i></div></div></li>
+          <li class="res"><p>Респонденты считают, что вся информация, нужная пользователю, находится в личном кабинете РЖД</p><div class="res-status"><div class="res-top"><span class="res-tag">Подтвердилось</span><span class="res-num">14<small>/14</small></span></div><div class="res-bar" aria-hidden="true"><i style="--v:100%"></i></div></div></li>
+          <li class="res"><p>Пользователи не понимают различие между премиальными, туристическими и квалификационными баллами</p><div class="res-status"><div class="res-top"><span class="res-tag">Подтвердилось</span><span class="res-num">10<small>/14</small></span></div><div class="res-bar" aria-hidden="true"><i style="--v:71%"></i></div></div></li>
+          <li class="res"><p>Пользователям не понятно, как начисляются баллы, считают, что баллы капают автоматически</p><div class="res-status"><div class="res-top"><span class="res-tag">Подтвердилось</span><span class="res-num">9<small>/14</small></span></div><div class="res-bar" aria-hidden="true"><i style="--v:64%"></i></div></div></li>
+          <li class="res res--mid"><p>Одни замечают дропдаун РЖД Бонус и нажимают, но не понимают, подходят ли они под программу — другие не видят его вообще — третьи видят, читают, но их это не привлекает</p><div class="res-status"><div class="res-top"><span class="res-tag">Подтвердилось частично</span><span class="res-num">5<small>/14</small></span></div><div class="res-bar" aria-hidden="true"><i style="--v:36%"></i></div></div></li>
+          <li class="res res--bad"><p>Пользователи замечают раздел «история», но отмечают неудобное представление данных</p><div class="res-status"><div class="res-top"><span class="res-tag">Не подтвердилось</span><span class="res-num">2<small>/14</small></span></div><div class="res-bar" aria-hidden="true"><i style="--v:14%"></i></div></div></li>
         </ul>
       </section>
 
@@ -235,6 +237,45 @@
         <div class="table-wrap ice"><table><thead><tr><th scope="col">Гипотеза</th><th scope="col">Impact</th><th scope="col">Confidence</th><th scope="col">Ease</th><th scope="col">ICE Score</th></tr></thead><tbody><tr><td><p>Если сделать баннер о программе лояльности в результатах поиска заметнее и понятнее объяснить в нём выгоду, то вовлечённость пользователей в программу вырастет.</p></td><td class="num" data-label="Impact"><p>10</p></td><td class="num" data-label="Confidence"><p>10</p></td><td class="num" data-label="Ease"><p>7</p></td><td class="num" data-label="ICE"><p>700</p></td></tr><tr><td><p>Если сделать РЖД БОНУС частью личного кабинета РЖД, вынести баланс баллов в хедер, то пользователи будут находить программу без подсказки.</p></td><td class="num" data-label="Impact"><p>10</p></td><td class="num" data-label="Confidence"><p>10</p></td><td class="num" data-label="Ease"><p>5</p></td><td class="num" data-label="ICE"><p>500</p></td></tr><tr><td><p>Если показывать будущее начисление баллов на экране успешной покупки и отражать его в истории со статусом «в обработке», то пользователи смогут чётко объяснить, что происходит с их баллами после покупки.</p></td><td class="num" data-label="Impact"><p>6</p></td><td class="num" data-label="Confidence"><p>8</p></td><td class="num" data-label="Ease"><p>10</p></td><td class="num" data-label="ICE"><p>480</p></td></tr><tr><td><p>Если собрать в блок частых вопросов те вопросы, которые возникали у пользователей в исследовании, то они будут находить ответы о баллах самостоятельно и быстрее.</p></td><td class="num" data-label="Impact"><p>5</p></td><td class="num" data-label="Confidence"><p>8</p></td><td class="num" data-label="Ease"><p>10</p></td><td class="num" data-label="ICE"><p>400</p></td></tr><tr><td><p>Если переименовать типы баллов понятными словами, переработать их пиктограммы и поставить премиальные баллы первыми как более востребованные, объяснив туристические так же полно, то пользователи будут понимать разницу между типами баллов.</p></td><td class="num" data-label="Impact"><p>6</p></td><td class="num" data-label="Confidence"><p>7</p></td><td class="num" data-label="Ease"><p>8</p></td><td class="num" data-label="ICE"><p>336</p></td></tr><tr><td><p>Если перенести списание баллов на этап выбора способа оплаты, дать выбор «списать или накопить» и показывать выгоду сразу в рублях, то пользователи будут чаще применять баллы при покупке.</p></td><td class="num" data-label="Impact"><p>7</p></td><td class="num" data-label="Confidence"><p>7</p></td><td class="num" data-label="Ease"><p>6</p></td><td class="num" data-label="ICE"><p>294</p></td></tr></tbody></table></div>
       </section>
 
+      <section id="solution" class="sol" aria-labelledby="sol-title">
+        <h2 class="h-title" id="sol-title">Решение</h2>
+        <div class="sol-body">
+          <div class="sol-frame" id="sol-frame" role="tabpanel" aria-labelledby="sol-card-1" data-active="1">
+            <div class="sol-scene">
+              <div class="sol-layer sol-after">
+                <img class="sol-img" data-no-zoom src="../assets/compare/tickets-after.jpg" width="2400" height="1500" alt="Редизайн: Выбор билета" loading="lazy" decoding="async">
+                <span class="sol-mark" data-card="1" data-type="mod" style="--l:7.3;--t:26.2;--w:20.5;--h:26.7"></span>
+                <span class="sol-mark" data-card="2" data-type="mod" style="--l:28.9;--t:26.2;--w:15.1;--h:4.0"></span>
+              </div>
+              <div class="sol-layer sol-before">
+                <img class="sol-img" data-no-zoom src="../assets/compare/tickets-before.jpg" width="2400" height="1500" alt="Оригинал РЖД: Выбор билета" loading="lazy" decoding="async">
+                <span class="sol-mark" data-card="1" data-type="mod" style="--l:8.1;--t:20.0;--w:20.2;--h:21.8"></span>
+                <span class="sol-mark" data-card="2" data-type="mod" style="--l:68.2;--t:35.8;--w:22.9;--h:4.0"></span>
+                <span class="sol-mark" data-card="3" data-type="del" style="--l:29.4;--t:23.2;--w:62.5;--h:8.4"></span>
+              </div>
+            </div>
+            <span class="cmp-label cmp-label-before">До</span><span class="cmp-label cmp-label-after">После</span>
+            <button class="sol-full" type="button" aria-label="Приблизить" aria-pressed="true"><span class="sol-full-pill"><span class="sol-full-st sol-full-out"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg><span>Весь экран</span></span><span class="sol-full-st sol-full-in"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg><span>Приблизить</span></span></span></button>
+            <span class="sol-line" aria-hidden="true"></span>
+            <div class="cmp-handle" role="slider" tabindex="0" aria-label="Сравнение: оригинал и редизайн" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="horizontal"><span class="cmp-knob"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M7.293 5.293a1 1 0 1 1 1.414 1.414L3.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414zm8 0a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L20.586 12l-5.293-5.293a1 1 0 0 1 0-1.414"/></svg></span></div>
+          </div>
+          <div class="sol-side">
+          <div class="sol-stack" role="tablist" aria-label="Изменения на экране «Выбор билета»">
+            <button class="sol-card" role="tab" id="sol-card-1" aria-selected="true" aria-controls="sol-frame" tabindex="0" type="button" data-d="0" data-type="mod" data-scale="1.8" data-fx="18" data-fy="37" data-from="100" data-to="0"><span class="sol-card-in"><span class="sol-chip"><svg class="sol-ico" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg><span>Изменили</span></span><span class="sol-what">Баннер, на котором даже было непонятно, о чём он, стал яркой точкой входа в программу лояльности: кратко и понятно объясняет, что это за программа.</span><span class="sol-why"><span class="sol-k">Почему:</span> В оригинале точки входа в программу еле заметны и не объясняют выгоду; <span class="sol-num">5 из 14</span> респондентов не замечали блок РЖД Бонус или не видели в нём пользы.</span></span></button>
+            <button class="sol-card" role="tab" id="sol-card-2" aria-selected="false" aria-controls="sol-frame" tabindex="-1" type="button" data-d="1" data-type="mod" data-scale="1.3" data-fx="60" data-fy="32" data-from="100" data-to="0"><span class="sol-card-in"><span class="sol-chip"><svg class="sol-ico" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg><span>Изменили</span></span><span class="sol-what">Три режима цен → два: «Цены в ₽» и «Цены в баллах», сразу над рейсами.</span><span class="sol-why"><span class="sol-k">Почему:</span> <span class="sol-num">10 из 14</span> респондентов не понимали, чем отличаются типы баллов. Туристические баллы нужны только для турпоездок, а такие поездки обычно выбирают и покупают со страницы тура — оттуда уже ведёт ссылка на поиск с нужными данными.</span></span></button>
+            <button class="sol-card" role="tab" id="sol-card-3" aria-selected="false" aria-controls="sol-frame" tabindex="-1" type="button" data-d="2" data-type="del" data-scale="1.35" data-fx="60" data-fy="27" data-from="0" data-to="100"><span class="sol-card-in"><span class="sol-chip"><svg class="sol-ico" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg><span>Убрали</span></span><span class="sol-what">Плашку «Показаны не все варианты» над выдачей.</span><span class="sol-why"><span class="sol-k">Почему:</span> Место сразу под поиском — самое важное на экране, а плашка забивала его и ломала композицию. Если сообщение нужно, его можно поставить между карточками рейсов или сбоку, в колонке фильтров.</span></span></button>
+          </div>
+          <div class="sol-ctrl">
+            <div class="sol-nav">
+              <p class="sol-count" aria-live="polite"><span class="sol-cur">1</span> / 3</p>
+              <button class="sol-btn sol-prev" type="button" aria-label="Предыдущее изменение" disabled><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+              <button class="sol-btn sol-next" type="button" aria-label="Следующее изменение"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
       <section id="usability-test-2">
         <h2 class="h-title">Модерируемый юзабилити тест обновленного интерфейса</h2>
         <p class="measure">После окончания проектирования будет реализован прототип на локальном хосте с помощью Claude Code и проведен повторный UX-тест</p>
@@ -255,12 +296,14 @@
       </div>
     </article>
   </main>
+  <script src="../js/typo-nbsp.js"></script>
   <script src="../js/theme.js"></script>
   <script src="../js/emoji.js"></script>
   <script src="../js/tg-button.js"></script>
   <script src="../js/lightbox.js"></script>
   <script src="../js/toc.js"></script>
   <script src="../js/compare.js"></script>
+  <script src="../js/solution.js"></script>
   <script src="../js/edge-title.js"></script>
 </body>
 </html>
