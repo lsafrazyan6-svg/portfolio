@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/case.css">
+  <link rel="stylesheet" href="../css/tg-button.css">
 </head>
 <body>
   <header class="hdr">
@@ -25,7 +26,7 @@
       <nav class="hdr-nav" aria-label="Основная навигация">
         <a class="resume-link" href="../resume.html">Резюме</a>
         <div class="dock">
-          <a class="write" id="write" href="https://t.me/sellywood" target="_blank" rel="noopener noreferrer"><span>Написать в тг</span><span class="keys" aria-hidden="true"><i class="key">T</i></span></a>
+          <a class="write tg-fx" id="write" href="https://t.me/sellywood" target="_blank" rel="noopener noreferrer"><span>Написать в тг</span><span class="keys" aria-hidden="true"><i class="key">T</i></span></a>
           <span class="slash" aria-hidden="true">/</span>
           <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Включить тёмную тему" aria-pressed="false"><span class="theme-icon" aria-hidden="true"><svg class="theme-glyph theme-sun" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><g clip-path="url(#a)"><path fill="currentColor" d="M12 19a1 1 0 0 1 1 1v2.5a1 1 0 1 1-2 0V20a1 1 0 0 1 1-1m-6.364-2.05a1 1 0 0 1 1.414 1.414l-1.768 1.768a1 1 0 0 1-1.414-1.414zm11.314 0a1 1 0 0 1 1.414 0l1.768 1.767a1 1 0 0 1-1.414 1.415l-1.768-1.769a1 1 0 0 1 0-1.414M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6m-8 2a1 1 0 1 1 0 2H1.5a1 1 0 0 1 0-2zm18.5 0a1 1 0 1 1 0 2H20a1 1 0 0 1 0-2zM3.868 3.868a1 1 0 0 1 1.414 0l1.769 1.768A1 1 0 0 1 5.636 7.05L3.868 5.282a1 1 0 0 1 0-1.414m14.85 0a1 1 0 0 1 1.414 1.414L18.364 7.05a1.001 1.001 0 0 1-1.415-1.414zM12 .5a1 1 0 0 1 1 1V4a1 1 0 1 1-2 0V1.5a1 1 0 0 1 1-1"/></g><defs><clipPath id="a"><path fill="currentColor" d="M0 0h24v24H0z"/></clipPath></defs></svg><svg class="theme-glyph theme-moon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M9.368 1.323a1.45 1.45 0 0 1 1.468.656c.29.448.353 1.069.05 1.61a7 7 0 0 0 9.526 9.524l.102-.052a1.57 1.57 0 0 1 1.508.103c.467.302.808.902.628 1.595C21.426 19.5 17.123 23 12 23 5.925 23 1 18.075 1 12 1 6.878 4.501 2.575 9.24 1.35zm-.722 2.323a9 9 0 1 0 11.709 11.707A9 9 0 0 1 8.646 3.646"/></svg></span></button>
         </div>
@@ -256,6 +257,7 @@
   </main>
   <script src="../js/theme.js"></script>
   <script src="../js/emoji.js"></script>
+  <script src="../js/tg-button.js"></script>
   <script src="../js/lightbox.js"></script>
   <script src="../js/toc.js"></script>
   <script src="../js/compare.js"></script>
