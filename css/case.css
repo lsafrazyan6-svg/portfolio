@@ -345,3 +345,24 @@ html[data-theme=dark] .audit-note-num{color:#ff8d86}
 .disclosure-vertical{transform-origin:320px 320px;transition:opacity .16s}
 .toggle[open] .disclosure-vertical{opacity:0}
 @media(prefers-reduced-motion:reduce){.disclosure-vertical{transition:none}}
+
+.test-heading{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.test-heading .h-title{min-width:0}
+.test-respondents{display:flex;align-items:center;flex-shrink:0;padding-left:10px}
+.test-respondents img{display:block;width:40px;height:40px;border-radius:50%;object-fit:cover;margin-left:-10px;outline:2px solid var(--page)}
+@media(max-width:600px){.test-heading{gap:12px}.test-respondents img{width:32px;height:32px}.test-respondents{padding-left:12px}.test-respondents img{margin-left:-12px}}
+
+/* Согласованная шкала и результаты в формате чисел с выводами. */
+.rzd-centered .article h2{font-size:32px;line-height:40px}
+.rzd-centered .article h3{font-size:20px;line-height:28px}
+.rzd-centered .article p,.rzd-centered .article li,.rzd-centered .article td,.rzd-centered .article th{font-size:16px;line-height:24px}
+.audit-notes{align-items:start}
+.audit-notes>p{align-self:start;height:auto}
+.rzd-centered .results-metrics{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:40px !important;row-gap:40px !important;align-items:start}
+.result-metric{display:flex;flex-direction:column;gap:12px;min-width:0}
+.result-count{display:flex;align-items:baseline;gap:8px;color:#a84e48;font-size:56px;line-height:1.1;font-weight:400;font-variant-numeric:tabular-nums}
+.result-count small{font-size:20px;line-height:28px}
+html[data-theme=dark] .result-count{color:#d58b83}
+@media(max-width:820px){.rzd-centered .results-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px !important}}
+@media(max-width:480px){.rzd-centered .results-metrics{grid-template-columns:minmax(0,1fr)}.result-count{font-size:48px}.test-heading{align-items:flex-start}}
+.rzd-centered .toggle:not([open])>summary .disclosure-icon,.rzd-centered .toggle[open]>summary .disclosure-icon{transform:none;transition:none}
