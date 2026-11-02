@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Как я увеличила вовлечение в пользование программой РЖД бонус — Сафразян Лидия</title>
-  <meta name="description" content="Кейс: Как я увеличила вовлечение в пользование программой РЖД бонус">
+  <title>Как я увеличила вовлечение в пользование программой лояльности РЖД Бонус — Сафразян Лидия</title>
+  <meta name="description" content="Кейс: Как я увеличила вовлечение в пользование программой лояльности РЖД Бонус">
   <script>
     (() => {
       let theme = "light";
@@ -16,11 +16,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/case.css">
+  <link rel="stylesheet" href="../css/case.css?v=20261102f">
   <link rel="stylesheet" href="../css/tg-button.css">
   <link rel="stylesheet" href="../css/solution.css">
 </head>
-<body>
+<body class="rzd-centered">
   <header class="hdr">
     <div class="hdr-in">
       <a class="name" id="name" href="../index.html"><img class="avatar" src="../assets/avatar.jpg" width="40" height="40" alt="Аватар Лидии"><span>Сафразян Лидия</span></a>
@@ -39,11 +39,11 @@
       <div class="aside-head">
         <a class="back" href="../index.html#cases"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 12l9 9M3 12h18"/></svg><span>Все кейсы</span></a>
         <div class="title-row"><span class="status">В процессе</span><img class="train" src="../assets/rzd-train.svg" width="70" height="62" alt=""></div>
-        <h1 class="case-h1" id="case-title">Как я увеличила вовлечение в пользование программой РЖД бонус</h1>
+        <h1 class="case-h1" id="case-title">Как я увеличила вовлечение в пользование программой лояльности РЖД Бонус</h1>
       </div>
       <nav class="toc-nav" aria-label="Содержание">
         <p class="toc-label">Содержание</p>
-        <div class="toc-box"><div class="toc-win"><div class="toc-clip" tabindex="0"><ul class="toc">
+        <ul class="toc">
           <li><a href="#problem">Проблема</a></li>
           <li><a href="#ux-audit">UX-аудит</a></li>
           <li><a href="#usability-test">Модерируемый юзабилити тест существующего интерфейса</a></li>
@@ -53,16 +53,14 @@
           <li><a href="#hypotheses">Приоритизация гипотез</a></li>
           <li><a href="#solution">Решение</a></li>
           <li><a href="#usability-test-2">Модерируемый юзабилити тест обновленного интерфейса</a></li>
-        </ul></div></div></div>
+        </ul>
       </nav>
     </aside>
 
     <article class="article">
       <div class="stack-40">
-        <img class="media hero" src="../assets/rzd-hero.jpg" width="1920" height="942" alt="Билет: «РЖД Бонус — это, оказывается, отдельное государство». Пользователь покупает билет на РЖД, но не пользуется программой лояльности: она существует в двух местах — отдельный сайт, отдельный аккаунт, отдельный путь." decoding="async">
         <section class="cmp" id="compare" aria-label="Оригинал и редизайн">
           <div class="cmp-head">
-            <p class="h-sub">Можно сравнить прямо сейчас, выбирайте страницу :)</p>
             <a class="link-btn" href="https://lsafrazyan6-svg.github.io/rzd-bonus/" target="_blank" rel="noopener noreferrer"><span>Открыть прототип</span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M8 2a1 1 0 0 1 0 2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2a1 1 0 1 1 2 0v2a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4zm13 0a1 1 0 0 1 1 1v9a1 1 0 1 1-2 0V5.414l-7.293 7.293a1 1 0 1 1-1.414-1.414L18.586 4H12a1 1 0 1 1 0-2z"/></svg></a>
           </div>
           <div class="cmp-body"><div class="cmp-tabs" role="tablist" aria-label="Страница"><button class="cmp-tab" role="tab" id="cmp-tab-tickets" aria-selected="true" aria-controls="cmp-frame" tabindex="0" data-slug="tickets" type="button">Выбор билета</button><button class="cmp-tab" role="tab" id="cmp-tab-bonus" aria-selected="false" aria-controls="cmp-frame" tabindex="-1" data-slug="bonus" type="button">РЖД Бонус</button><button class="cmp-tab" role="tab" id="cmp-tab-passengers" aria-selected="false" aria-controls="cmp-frame" tabindex="-1" data-slug="passengers" type="button">Данные пассажира</button><button class="cmp-tab" role="tab" id="cmp-tab-success" aria-selected="false" aria-controls="cmp-frame" tabindex="-1" data-slug="success" type="button">Успешная оплата</button></div><div class="cmp-frame" id="cmp-frame" role="tabpanel" aria-labelledby="cmp-tab-tickets"><img class="cmp-img cmp-after" data-no-zoom src="../assets/compare/tickets-after.jpg" width="2400" height="1500" alt="Редизайн: Выбор билета" decoding="async"><div class="cmp-before-wrap"><img class="cmp-img cmp-before" data-no-zoom src="../assets/compare/tickets-before.jpg" width="2400" height="1500" alt="Оригинал РЖД: Выбор билета" decoding="async"></div><span class="cmp-label cmp-label-before">До</span><span class="cmp-label cmp-label-after">После</span><div class="cmp-handle" role="slider" tabindex="0" aria-label="Сравнение: оригинал и редизайн" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="horizontal"><span class="cmp-knob"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M7.293 5.293a1 1 0 1 1 1.414 1.414L3.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414zm8 0a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L20.586 12l-5.293-5.293a1 1 0 0 1 0-1.414"/></svg></span></div></div></div>
@@ -301,7 +299,6 @@
   <script src="../js/emoji.js"></script>
   <script src="../js/tg-button.js"></script>
   <script src="../js/lightbox.js"></script>
-  <script src="../js/toc.js"></script>
   <script src="../js/compare.js"></script>
   <script src="../js/solution.js"></script>
   <script src="../js/edge-title.js"></script>
