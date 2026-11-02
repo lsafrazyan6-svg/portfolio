@@ -385,3 +385,13 @@ html[data-theme=dark] .rzd-centered .result-count{color:#ff453a}
 .result-hypothesis::before{content:"";display:block;flex:0 0 5px;width:5px;height:5px;border-radius:50%;background:currentColor;align-self:flex-start;margin-top:9px}
 
 .rzd-centered .toggle,.rzd-centered .toggle-accent,.rzd-centered .toggle>summary{background:transparent}
+
+/* Компактные статусы: мягкие плашки без иконок. */
+.rzd-centered .result-hypothesis{display:inline-flex;align-self:flex-start;width:fit-content;max-width:100%;padding:4px 10px;border-radius:14px;font-size:14px;line-height:20px;gap:0}
+.result-hypothesis::before{content:none}
+.rzd-centered .result-hypothesis--yes{background:#d9fee0;color:#286f39}
+.rzd-centered .result-hypothesis--partial{background:#fff1c9;color:#785800}
+.rzd-centered .result-hypothesis--no{background:#ffe2de;color:#a4312b}
+html[data-theme=dark] .rzd-centered .result-hypothesis--yes{background:rgba(95,207,125,.14);color:#7fdc97}
+html[data-theme=dark] .rzd-centered .result-hypothesis--partial{background:rgba(240,192,74,.14);color:#e9c66d}
+html[data-theme=dark] .rzd-centered .result-hypothesis--no{background:rgba(255,123,123,.14);color:#f39992}
