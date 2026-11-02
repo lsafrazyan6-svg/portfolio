@@ -321,14 +321,14 @@ html[data-theme=dark] .rzd-centered .test-fact--time{background:rgba(64,219,203,
 .audit-annotated{margin:0;min-width:0}
 .audit-shot{position:relative;isolation:isolate}
 .audit-shot .media{display:block;width:100%;height:auto}
-.audit-connectors{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;color:#f23996;overflow:visible}
+.audit-connectors{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;color:#ed2118;overflow:visible}
 .audit-highlight{stroke:currentColor;stroke-width:2.5;fill:none}
 .audit-leader{stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#audit-tip)}
-.audit-pin circle{fill:#f23996;stroke:white;stroke-width:1.5}
-.audit-pin-label{fill:white;font-family:Arial,sans-serif;font-size:13px;font-weight:600}
+.audit-pin circle{fill:rgba(237,33,24,.12);stroke:rgba(237,33,24,.65);stroke-width:1}
+.audit-pin-label{fill:rgba(200,24,18,.85);font-family:Arial,sans-serif;font-size:13px;font-weight:600}
 .audit-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding-top:16px}
 .rzd-centered .audit-notes p{padding:16px;background:var(--surface);border-radius:16px;font-size:16px;line-height:24px}
-.audit-note-num{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#f23996;color:#fff;font-size:14px;margin-right:6px}
+.audit-note-num{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(237,33,24,.12);color:#ba1a14;font-size:14px;margin-right:6px}
 @media(max-width:600px){.audit-notes{grid-template-columns:1fr;gap:12px}.rzd-centered .audit-notes p{padding:12px}.audit-connectors .audit-leader{stroke-width:3}.audit-highlight{stroke-width:4}}
 
 .rzd-centered #ux-audit .entries{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
@@ -336,3 +336,5 @@ html[data-theme=dark] .rzd-centered .test-fact--time{background:rgba(64,219,203,
 .audit-entry-note{padding-top:16px}
 .rzd-centered .audit-entry-note p{padding:16px;background:var(--surface);border-radius:16px;font-size:16px;line-height:24px}
 @media(max-width:820px){.rzd-centered #ux-audit .entries{grid-template-columns:minmax(0,1fr);gap:32px}}
+
+html[data-theme=dark] .audit-note-num{color:#ff8d86}
