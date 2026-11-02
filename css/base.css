@@ -49,7 +49,7 @@ h2,h3,p,ul{margin:0}
 .name:hover,.name:focus-visible{opacity:.6}
 .avatar{display:block;width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0}
 .hdr-nav{display:flex;align-items:center;gap:24px}
-.resume-link{color:var(--link);font-size:18px;line-height:24px;font-style:italic;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:opacity .2s}
+.resume-link{letter-spacing:.025em;font-kerning:none;color:var(--link);font-size:18px;line-height:24px;font-style:italic;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:opacity .2s}
 .resume-link:hover,.resume-link:focus-visible{opacity:.6}
 .dock{display:flex;align-items:center;gap:16px}
 .write{display:inline-flex;align-items:center;gap:4px;height:44px;padding:0 14px;border-radius:12px;background:var(--button);color:var(--link);font-size:18px;line-height:24px;white-space:nowrap;transition:background-color .2s}
