@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/base.css?v=20261102-resume">
-  <link rel="stylesheet" href="css/home.css?v=20261102-resume">
+  <link rel="stylesheet" href="css/home.css?v=20261102-hero">
   <link rel="stylesheet" href="css/tg-button.css">
 </head>
 <body>
@@ -24,9 +24,14 @@
   <main class="home" id="top">
     <div class="layout">
       <aside class="intro">
-        <img class="home-portrait" src="assets/resume-photo.jpg" width="450" height="556" alt="Фото Лидии Сафразян">
-        <h1 class="home-name">Сафразян Лидия</h1>
-        <p class="bio">Продуктовый дизайнер<br>из <span style="white-space:nowrap">Санкт-Петербурга</span></p>
+        <div class="home-hero">
+          <div class="home-copy">
+            <h1 class="home-name"><span class="home-greeting">Привет, я</span> Лидия</h1>
+            <p class="bio">Продуктовый дизайнер</p>
+            <p class="home-location"><time id="home-clock" aria-label="Текущее время в Санкт-Петербурге"></time><span>в Санкт-Петербурге</span></p>
+          </div>
+          <img class="home-portrait" src="assets/resume-photo.jpg" width="450" height="556" alt="Лидия Сафразян">
+        </div>
         <div class="home-actions">
         <a class="home-resume" href="resume.html">Резюме</a>
         <a class="write tg-fx home-write" id="write" href="https://t.me/sellywood" target="_blank" rel="noopener noreferrer"><span>Написать в тг</span><span class="keys" aria-hidden="true"><i class="key">T</i></span></a>
@@ -57,6 +62,7 @@
   </main>
   <script src="js/typo-nbsp.js"></script>
   <script src="js/theme.js"></script>
+  <script src="js/home-clock.js"></script>
   <script src="js/emoji.js"></script>
   <script src="js/tg-button.js"></script>
 </body>
