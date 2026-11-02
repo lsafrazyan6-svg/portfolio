@@ -338,3 +338,10 @@ html[data-theme=dark] .rzd-centered .test-fact--time{background:rgba(64,219,203,
 @media(max-width:820px){.rzd-centered #ux-audit .entries{grid-template-columns:minmax(0,1fr);gap:32px}}
 
 html[data-theme=dark] .audit-note-num{color:#ff8d86}
+
+/* Спокойные раскрывающиеся блоки без обводок. */
+.rzd-centered .toggle{border:0;box-shadow:none}
+.rzd-centered .toggle .disclosure-icon{width:20px;height:20px;transform:none}
+.disclosure-vertical{transform-origin:320px 320px;transition:opacity .16s}
+.toggle[open] .disclosure-vertical{opacity:0}
+@media(prefers-reduced-motion:reduce){.disclosure-vertical{transition:none}}
