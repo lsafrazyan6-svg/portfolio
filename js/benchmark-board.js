@@ -9,8 +9,27 @@
   let scale = 1, x = 0, y = 0, fitScale = 1, last = null;
   const bounds = () => viewport.getBoundingClientRect();
   const local = e => { const r = bounds(); return { x: e.clientX - r.left, y: e.clientY - r.top }; };
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let rendered = null, animation = 0, frameTime = 0;
+  const draw = time => {
+    const dt = Math.min(40, frameTime ? time - frameTime : 16.7);
+    frameTime = time;
+    const alpha = 1 - Math.exp(-dt / 55);
+    rendered.x += (x - rendered.x) * alpha;
+    rendered.y += (y - rendered.y) * alpha;
+    rendered.scale += (scale - rendered.scale) * alpha;
+    const settled = Math.abs(rendered.x-x) < .1 && Math.abs(rendered.y-y) < .1 && Math.abs(rendered.scale-scale) < .00005;
+    if (settled) rendered = {x,y,scale};
+    img.style.transform = `translate(${rendered.x}px,${rendered.y}px) scale(${rendered.scale})`;
+    if (!settled) animation = requestAnimationFrame(draw);
+    else { animation = 0; frameTime = 0; }
+  };
   const paint = () => {
-    img.style.transform = `translate(${x}px,${y}px) scale(${scale})`;
+    if (!rendered || pointers.size || reduceMotion.matches) {
+      if (animation) cancelAnimationFrame(animation);
+      animation = 0; frameTime = 0; rendered = {x,y,scale};
+      img.style.transform = `translate(${x}px,${y}px) scale(${scale})`;
+    } else if (!animation) animation = requestAnimationFrame(draw);
     output.value = `${Math.round(scale * 100)}%`;
     root.querySelector('[data-board-out]').disabled = scale <= fitScale * .5 + .0001;
     root.querySelector('[data-board-in]').disabled = scale >= 2;
@@ -23,11 +42,13 @@
     scale = value; paint();
   };
   const center = () => ({ x: viewport.clientWidth / 2, y: viewport.clientHeight / 2 });
+  const contentWidth = Number(img.getAttribute('width'));
+  const contentHeight = Number(img.getAttribute('height'));
   const fit = () => {
     if (!img.naturalWidth) return;
-    fitScale = Math.min((viewport.clientWidth - 64) / img.naturalWidth, (viewport.clientHeight - 64) / img.naturalHeight);
-    scale = fitScale; x = (viewport.clientWidth - img.naturalWidth * scale) / 2;
-    y = (viewport.clientHeight - img.naturalHeight * scale) / 2; paint();
+    fitScale = Math.min((viewport.clientWidth - 64) / contentWidth, (viewport.clientHeight - 64) / contentHeight);
+    scale = fitScale; x = (viewport.clientWidth - contentWidth * scale) / 2;
+    y = (viewport.clientHeight - contentHeight * scale) / 2; paint();
   };
   const gesture = () => {
     const ps = [...pointers.values()];
@@ -54,8 +75,16 @@
   ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(name => viewport.addEventListener(name, release));
   viewport.addEventListener('wheel', e => {
     e.preventDefault();
-    zoom(scale * Math.exp(-e.deltaY * (e.deltaMode === 1 ? .04 : .002)), local(e));
+    const pixels = e.deltaY * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? viewport.clientHeight : 1);
+    zoom(scale * Math.exp(-Math.max(-120, Math.min(120, pixels)) * .0015), local(e));
   }, { passive: false });
+  let safariScale = null;
+  viewport.addEventListener('gesturestart', e => { e.preventDefault(); safariScale = scale; }, {passive:false});
+  viewport.addEventListener('gesturechange', e => {
+    e.preventDefault();
+    if (safariScale && pointers.size < 2) zoom(safariScale * e.scale, Number.isFinite(e.clientX) ? local(e) : center());
+  }, {passive:false});
+  viewport.addEventListener('gestureend', () => { safariScale = null; });
   viewport.addEventListener('dblclick', e => zoom(scale * 1.6, local(e)));
   viewport.addEventListener('keydown', e => {
     if (['+', '=', '-', '0', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) e.preventDefault();

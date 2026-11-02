@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/case.css?v=20261102-benchmark-board">
+  <link rel="stylesheet" href="../css/case.css?v=20261102-hd-final">
   <link rel="stylesheet" href="../css/tg-button.css">
   <link rel="stylesheet" href="../css/solution.css">
 </head>
@@ -48,10 +48,10 @@
         <details class="toc-details"><summary class="toc-label">Содержание <svg data-icon="sf:chevron.down" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 640" fill="currentColor"><path fill-rule="evenodd" d="M311.73,449.57 C308.45,448.40 300.63,442.30 297.43,438.42 C294.77,435.18 267.29,406.03 249.36,387.42 C246.14,384.07 238.10,375.52 231.50,368.42 C224.90,361.31 217.70,353.68 215.50,351.46 C211.79,347.72 189.73,324.44 173.36,307.00 C169.49,302.88 164.56,297.70 162.41,295.50 C160.26,293.30 151.26,283.85 142.42,274.50 C92.20,221.43 95.55,225.75 95.55,214.00 C95.55,205.04 97.69,200.18 103.84,195.25 C109.14,190.99 111.95,190.00 118.75,190.00 C127.67,190.00 131.42,192.48 145.76,207.84 C152.77,215.34 160.10,223.06 162.06,224.99 C164.02,226.92 181.53,245.38 200.98,266.00 C220.43,286.62 238.18,305.31 240.42,307.53 C242.66,309.75 250.53,318.07 257.91,326.03 C265.28,333.99 272.93,342.12 274.91,344.09 C278.75,347.93 307.62,378.29 315.08,386.34 L319.56,391.18 L336.03,373.88 C345.09,364.36 356.32,352.51 361.00,347.55 C365.68,342.59 371.52,336.46 374.00,333.92 C378.22,329.60 395.61,311.18 414.97,290.53 C419.62,285.56 424.65,280.38 426.13,279.00 C427.61,277.62 444.93,259.40 464.61,238.50 C484.28,217.60 502.44,198.66 504.94,196.41 C510.32,191.59 514.44,189.99 521.40,190.02 C530.37,190.06 538.96,195.86 542.45,204.22 C544.42,208.94 544.45,218.99 542.50,223.65 C540.87,227.54 530.09,239.60 501.02,270.00 C490.77,280.73 479.07,293.10 475.03,297.50 C470.98,301.90 466.73,306.46 465.58,307.64 C453.39,320.19 444.03,330.03 431.49,343.50 C423.29,352.30 415.38,360.62 413.91,362.00 C412.44,363.38 403.45,372.82 393.94,383.00 C335.92,445.04 332.57,448.37 326.68,449.85 C320.81,451.33 316.44,451.25 311.73,449.57 Z"/></svg></summary>
         <ul class="toc">
           <li><a href="#ux-audit">UX-аудит</a></li>
+          <li><a href="#user-flow">User flow</a></li>
           <li><a href="#usability-test">Результаты UX-теста текущего интерфейса</a></li>
           <li><a href="#results">Результаты теста</a></li>
           <li><a href="#benchmarking">Бенчмаркинг</a></li>
-          <li><a href="#user-flow">User flow</a></li>
           <li><a href="#hypotheses">Приоритизация гипотез</a></li>
           <li><a href="#solution">Решение</a></li>
           <li><a href="#usability-test-2">Модерируемый юзабилити тест обновленного интерфейса</a></li>
@@ -103,8 +103,14 @@
         </div>
       </section>
 
+      <section id="user-flow">
+        <h2 class="h-title">User flow существующего интерфейса</h2>
+        <p class="measure">Составление флоу помогло разобраться в механике покупки билета за баллы: где начинается путь, из скольких шагов состоит и в каких местах ломается. Приоритизированные ниже гипотезы закрывают большинство проблем этого пути — отдельную регистрацию, повторный ввод данных, ручной перенос номера счёта и тупик, когда баллов не хватает.</p>
+        <img class="media" src="../assets/case-user-flow.png" width="5000" height="1374" loading="lazy" decoding="async" alt="User flow существующего интерфейса">
+      </section>
+
       <section id="usability-test">
-        <div class="test-heading"><h2 class="h-title">Результаты UX-теста текущего интерфейса</h2><div class="test-respondents" aria-hidden="true"><img data-no-zoom src="../assets/test-respondent-1.png" width="40" height="40" alt=""><img data-no-zoom src="../assets/test-respondent-2.png" width="40" height="40" alt=""><img data-no-zoom src="../assets/test-respondent-3.png" width="40" height="40" alt=""></div></div>
+        <div class="test-heading"><h2 class="h-title">Результаты UX-теста текущего интерфейса</h2><div class="test-respondents" aria-hidden="true"><img data-no-zoom src="../assets/test-respondent-1.png?v=20261102-hd" width="40" height="40" alt=""><img data-no-zoom src="../assets/test-respondent-2.png?v=20261102-hd" width="40" height="40" alt=""><img data-no-zoom src="../assets/test-respondent-3.png?v=20261102-hd" width="40" height="40" alt=""></div></div>
         <div class="test-facts" aria-label="Параметры исследования"><span class="test-fact test-fact--people">14 респондентов</span><span class="test-fact test-fact--time">1 неделя тестирования</span></div>
         <div class="stack-32">
           <div class="block"><h3 class="h-sub">Гипотезы к тестам</h3><ul class="measure"><li>Пользователи ждут, что функции, относящиеся к программе лояльности, будут находиться в личном кабинете на сайте РЖД (не на отдельном сайте РЖД Бонус)</li><li>Пользователи не замечают дропдаун «РЖД БОНУС» при оформлении билета</li><li>Пользователи не понимают различие между премиальными и квалификационными баллами</li><li>Пользователю не понятно, как начисляются баллы, и он не предполагает, что для начисления нужны дополнительные действия</li><li>Пользователи не замечают раздел истории</li></ul></div>
@@ -197,12 +203,12 @@
 
       <section id="benchmarking" class="stack-32">
         <div class="benchmark-intro">
-          <div class="block"><h2 class="h-title">Бенчмаркинг</h2><p>Изучено 4 косвенных конкурента и 1 паттерн-референс</p></div>
+          <h2 class="h-title">Бенчмаркинг</h2><div class="block benchmark-summary"><p>Изучено 4 косвенных конкурента и 1 паттерн-референс</p><div class="benchmark-logos"><img data-no-zoom src="../assets/bench-tutu.png" alt="Туту"><img data-no-zoom src="../assets/bench-ozon-travel.png" alt="Ozon Travel"><img data-no-zoom src="../assets/bench-s7.png" alt="S7 Airlines"><img data-no-zoom src="../assets/bench-yandex-travel.png" alt="Яндекс Путешествия"><img data-no-zoom src="../assets/bench-ref.png" alt="Паттерн-референс"></div></div>
           <div class="benchmark-insights"><p>Единые термины и визуальные обозначения помогают разобраться в программе лояльности.</p><p>Возможности программы стоит показывать заранее, даже если они пока недоступны: так пользователю понятнее, как она работает.</p></div>
         </div>
         <div class="benchmark-board" data-benchmark-board>
-          <div class="benchmark-viewport" tabindex="0" role="region" aria-label="Холст бенчмаркинга с масштабированием" aria-describedby="benchmark-help">
-            <img class="benchmark-content" data-no-zoom src="../assets/benchmark-board.webp" width="6045" height="3485" alt="Бенчмаркинг: сравнение программ лояльности Туту, Ozon Travel, Яндекс Путешествий, S7 и паттерна-референса; экраны и заметки исследования" draggable="false" loading="lazy">
+          <div class="benchmark-viewport" tabindex="0" role="region" aria-label="Холст бенчмаркинга с масштабированием">
+            <img class="benchmark-content" data-no-zoom src="../assets/benchmark-board-hd.webp" width="6045" height="3485" alt="Бенчмаркинг: сравнение программ лояльности Туту, Ozon Travel, Яндекс Путешествий, S7 и паттерна-референса; экраны и заметки исследования" draggable="false" loading="lazy">
           </div>
           <div class="benchmark-toolbar" role="group" aria-label="Масштаб холста">
             <button type="button" data-board-out aria-label="Уменьшить"><svg class="board-icon" data-icon="sf:minus" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 640" fill="currentColor"><path fill-rule="evenodd" d="M116.50,357.96 C105.48,350.98 99.00,334.29 100.26,316.08 C101.25,301.80 105.95,291.28 114.34,284.57 L118.19,281.50 L315.34,281.20 C423.78,281.04 514.81,281.18 517.64,281.51 C534.95,283.55 545.17,313.96 536.97,339.00 C533.88,348.43 531.15,352.33 524.32,357.09 L520.14,360.00 L319.82,359.93 C124.85,359.86 119.42,359.80 116.50,357.96 Z"/></svg></button>
@@ -211,14 +217,8 @@
             <button type="button" data-board-fit aria-label="Показать весь холст"><svg class="board-icon" data-icon="sf:arrow.up.left.and.arrow.down.right" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 640" fill="currentColor"><path fill-rule="evenodd" d="M366.01,547.29 C358.49,543.47 354.77,538.03 354.19,529.97 C353.49,520.28 357.47,512.50 365.28,508.28 C370.19,505.63 390.65,505.52 433.16,507.93 C453.32,509.07 472.00,509.99 474.66,509.99 L479.50,509.98 L474.00,504.78 C470.98,501.93 465.12,496.42 461.00,492.54 C409.48,444.11 337.86,372.33 335.00,366.26 C328.05,351.52 339.19,335.00 356.07,335.00 C359.20,335.00 363.45,335.71 365.52,336.57 C368.14,337.67 381.81,350.83 410.44,379.82 C433.07,402.75 456.10,426.23 461.62,432.00 C467.13,437.77 479.89,451.17 489.97,461.76 C500.06,472.36 508.43,480.91 508.57,480.76 C508.72,480.62 507.76,462.05 506.44,439.50 C502.80,377.38 503.12,369.67 509.56,362.72 C517.74,353.89 533.18,353.71 542.15,362.34 C548.23,368.20 548.10,366.18 547.78,448.50 C547.44,534.45 548.07,528.56 538.16,538.82 C534.10,543.02 530.80,545.37 526.50,547.09 L520.50,549.50 L446.00,549.79 L371.50,550.07 L366.01,547.29 Z M277.04,306.31 C275.69,306.03 272.76,304.55 270.54,303.02 C266.87,300.49 197.70,230.68 169.94,201.50 C146.36,176.70 142.24,172.35 137.04,166.75 C134.11,163.59 131.32,161.00 130.84,161.00 C130.37,161.00 130.21,162.69 130.49,164.75 C131.70,173.61 135.15,248.51 134.83,259.00 C134.40,273.01 132.39,277.63 124.65,282.41 C120.51,284.97 118.81,285.41 113.00,285.41 C103.69,285.41 97.70,281.87 93.71,274.00 L90.93,268.50 L91.21,193.50 L91.50,118.50 L93.79,112.82 C95.47,108.68 97.80,105.55 102.43,101.22 C113.23,91.11 109.51,91.50 195.53,91.50 L268.55,91.50 L273.52,94.05 C280.97,97.89 284.50,104.12 284.50,113.42 C284.50,122.15 282.14,127.21 276.08,131.50 L271.84,134.50 L253.83,134.81 C243.68,134.99 219.42,134.21 198.28,133.03 C177.63,131.87 160.57,131.10 160.35,131.31 C160.14,131.53 172.01,143.11 186.73,157.06 C227.52,195.69 300.89,268.97 303.14,273.32 C305.67,278.23 306.51,285.42 305.13,290.50 C303.76,295.55 298.89,301.50 294.14,303.93 C290.29,305.89 281.21,307.16 277.04,306.31 Z"/></svg></button>
           </div>
         </div>
-        <p class="benchmark-help" id="benchmark-help">Перетаскивайте холст, чтобы перемещаться. Колесо мыши или жест двумя пальцами — масштаб. Кнопка со стрелками — показать всё.</p>
       </section>
 
-      <section id="user-flow">
-        <h2 class="h-title">User flow существующего интерфейса</h2>
-        <p class="measure">Составление флоу помогло разобраться в механике покупки билета за баллы: где начинается путь, из скольких шагов состоит и в каких местах ломается. Приоритизированные ниже гипотезы закрывают большинство проблем этого пути — отдельную регистрацию, повторный ввод данных, ручной перенос номера счёта и тупик, когда баллов не хватает.</p>
-        <img class="media" src="../assets/case-user-flow.png" width="5000" height="1374" loading="lazy" decoding="async" alt="User flow существующего интерфейса">
-      </section>
 
       <section id="hypotheses">
         <h2 class="h-title">Приоритизация гипотез</h2>
@@ -289,7 +289,7 @@
   <script src="../js/emoji.js"></script>
   <script src="../js/tg-button.js"></script>
   <script src="../js/lightbox.js?v=20261102-sf"></script>
-  <script src="../js/benchmark-board.js"></script>
+  <script src="../js/benchmark-board.js?v=20261102-hd-final"></script>
   <script src="../js/compare.js?v=20261102-annotations"></script>
   <script src="../js/solution.js"></script>
   <script src="../js/edge-title.js"></script>

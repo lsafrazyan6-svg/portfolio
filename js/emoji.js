@@ -155,7 +155,7 @@
   document.addEventListener("pointerup", releaseEmoji, true);
   document.addEventListener("pointercancel", releaseEmoji, true);
 
-  nameLink.addEventListener("click", () => {
+  nameLink?.addEventListener("click", () => {
     if (reducedMotion.matches) return;
     const origin = nameLink.getBoundingClientRect();
     if (emojiBodies.length >= 25) emojiBodies.shift();
