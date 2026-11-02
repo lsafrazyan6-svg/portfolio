@@ -366,3 +366,9 @@ html[data-theme=dark] .result-count{color:#d58b83}
 @media(max-width:820px){.rzd-centered .results-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px !important}}
 @media(max-width:480px){.rzd-centered .results-metrics{grid-template-columns:minmax(0,1fr)}.result-count{font-size:48px}.test-heading{align-items:flex-start}}
 .rzd-centered .toggle:not([open])>summary .disclosure-icon,.rzd-centered .toggle[open]>summary .disclosure-icon{transform:none;transition:none}
+
+/* Шеврон показывает закрытое и раскрытое состояние. */
+.rzd-centered .toggle>summary{font-style:italic}
+.rzd-centered .toggle>summary .disclosure-chevron{width:20px;height:20px;transform:rotate(-90deg);transition:transform .18s ease}
+.rzd-centered .toggle[open]>summary .disclosure-chevron{transform:rotate(0deg)}
+@media(prefers-reduced-motion:reduce){.rzd-centered .toggle>summary .disclosure-chevron{transition:none}}
