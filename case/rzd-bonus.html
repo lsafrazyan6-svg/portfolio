@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/case.css?v=20261102-status-pills">
+  <link rel="stylesheet" href="../css/case.css?v=20261102-benchmark-board">
   <link rel="stylesheet" href="../css/tg-button.css">
   <link rel="stylesheet" href="../css/solution.css">
 </head>
@@ -196,22 +196,22 @@
       </section>
 
       <section id="benchmarking" class="stack-32">
-        <div class="block">
-          <h2 class="h-title">Бенчмаркинг</h2>
-          <p>Изучено 4 косвенных конкурента и 1 паттерн-референс</p>
+        <div class="benchmark-intro">
+          <div class="block"><h2 class="h-title">Бенчмаркинг</h2><p>Изучено 4 косвенных конкурента и 1 паттерн-референс</p></div>
+          <div class="benchmark-insights"><p>Единые термины и визуальные обозначения помогают разобраться в программе лояльности.</p><p>Возможности программы стоит показывать заранее, даже если они пока недоступны: так пользователю понятнее, как она работает.</p></div>
         </div>
-        <div class="logos">
-          <img data-no-zoom src="../assets/bench-tutu.png" width="132" height="135" alt="Туту" loading="lazy">
-          <img data-no-zoom src="../assets/bench-ozon-travel.png" width="320" height="135" alt="Ozon Travel" loading="lazy">
-          <img data-no-zoom src="../assets/bench-s7.png" width="308" height="135" alt="S7 Airlines" loading="lazy">
-          <img data-no-zoom src="../assets/bench-yandex-travel.png" width="674" height="135" alt="Яндекс Путешествия" loading="lazy">
-          <img data-no-zoom src="../assets/bench-ref.png" width="132" height="135" alt="Паттерн-референс" loading="lazy">
+        <div class="benchmark-board" data-benchmark-board>
+          <div class="benchmark-viewport" tabindex="0" role="region" aria-label="Холст бенчмаркинга с масштабированием" aria-describedby="benchmark-help">
+            <img class="benchmark-content" data-no-zoom src="../assets/benchmark-board.webp" width="6045" height="3485" alt="Бенчмаркинг: сравнение программ лояльности Туту, Ozon Travel, Яндекс Путешествий, S7 и паттерна-референса; экраны и заметки исследования" draggable="false" loading="lazy">
+          </div>
+          <div class="benchmark-toolbar" role="group" aria-label="Масштаб холста">
+            <button type="button" data-board-out aria-label="Уменьшить"><svg class="board-icon" data-icon="sf:minus" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 640" fill="currentColor"><path fill-rule="evenodd" d="M116.50,357.96 C105.48,350.98 99.00,334.29 100.26,316.08 C101.25,301.80 105.95,291.28 114.34,284.57 L118.19,281.50 L315.34,281.20 C423.78,281.04 514.81,281.18 517.64,281.51 C534.95,283.55 545.17,313.96 536.97,339.00 C533.88,348.43 531.15,352.33 524.32,357.09 L520.14,360.00 L319.82,359.93 C124.85,359.86 119.42,359.80 116.50,357.96 Z"/></svg></button>
+            <output aria-label="Масштаб">100%</output>
+            <button type="button" data-board-in aria-label="Увеличить"><svg class="board-icon" data-icon="sf:plus" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 640" fill="currentColor"><path fill-rule="evenodd" d="M116.50,357.96 C105.48,350.98 99.00,334.29 100.26,316.08 C101.25,301.80 105.95,291.28 114.34,284.57 L118.19,281.50 L315.34,281.20 C423.78,281.04 514.81,281.18 517.64,281.51 C534.95,283.55 545.17,313.96 536.97,339.00 C533.88,348.43 531.15,352.33 524.32,357.09 L520.14,360.00 L319.82,359.93 C124.85,359.86 119.42,359.80 116.50,357.96 Z"/><g transform="rotate(90 320 320)"><path fill-rule="evenodd" d="M116.50,357.96 C105.48,350.98 99.00,334.29 100.26,316.08 C101.25,301.80 105.95,291.28 114.34,284.57 L118.19,281.50 L315.34,281.20 C423.78,281.04 514.81,281.18 517.64,281.51 C534.95,283.55 545.17,313.96 536.97,339.00 C533.88,348.43 531.15,352.33 524.32,357.09 L520.14,360.00 L319.82,359.93 C124.85,359.86 119.42,359.80 116.50,357.96 Z"/></g></svg></button>
+            <button type="button" data-board-fit aria-label="Показать весь холст"><svg class="board-icon" data-icon="sf:arrow.up.left.and.arrow.down.right" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 640" fill="currentColor"><path fill-rule="evenodd" d="M366.01,547.29 C358.49,543.47 354.77,538.03 354.19,529.97 C353.49,520.28 357.47,512.50 365.28,508.28 C370.19,505.63 390.65,505.52 433.16,507.93 C453.32,509.07 472.00,509.99 474.66,509.99 L479.50,509.98 L474.00,504.78 C470.98,501.93 465.12,496.42 461.00,492.54 C409.48,444.11 337.86,372.33 335.00,366.26 C328.05,351.52 339.19,335.00 356.07,335.00 C359.20,335.00 363.45,335.71 365.52,336.57 C368.14,337.67 381.81,350.83 410.44,379.82 C433.07,402.75 456.10,426.23 461.62,432.00 C467.13,437.77 479.89,451.17 489.97,461.76 C500.06,472.36 508.43,480.91 508.57,480.76 C508.72,480.62 507.76,462.05 506.44,439.50 C502.80,377.38 503.12,369.67 509.56,362.72 C517.74,353.89 533.18,353.71 542.15,362.34 C548.23,368.20 548.10,366.18 547.78,448.50 C547.44,534.45 548.07,528.56 538.16,538.82 C534.10,543.02 530.80,545.37 526.50,547.09 L520.50,549.50 L446.00,549.79 L371.50,550.07 L366.01,547.29 Z M277.04,306.31 C275.69,306.03 272.76,304.55 270.54,303.02 C266.87,300.49 197.70,230.68 169.94,201.50 C146.36,176.70 142.24,172.35 137.04,166.75 C134.11,163.59 131.32,161.00 130.84,161.00 C130.37,161.00 130.21,162.69 130.49,164.75 C131.70,173.61 135.15,248.51 134.83,259.00 C134.40,273.01 132.39,277.63 124.65,282.41 C120.51,284.97 118.81,285.41 113.00,285.41 C103.69,285.41 97.70,281.87 93.71,274.00 L90.93,268.50 L91.21,193.50 L91.50,118.50 L93.79,112.82 C95.47,108.68 97.80,105.55 102.43,101.22 C113.23,91.11 109.51,91.50 195.53,91.50 L268.55,91.50 L273.52,94.05 C280.97,97.89 284.50,104.12 284.50,113.42 C284.50,122.15 282.14,127.21 276.08,131.50 L271.84,134.50 L253.83,134.81 C243.68,134.99 219.42,134.21 198.28,133.03 C177.63,131.87 160.57,131.10 160.35,131.31 C160.14,131.53 172.01,143.11 186.73,157.06 C227.52,195.69 300.89,268.97 303.14,273.32 C305.67,278.23 306.51,285.42 305.13,290.50 C303.76,295.55 298.89,301.50 294.14,303.93 C290.29,305.89 281.21,307.16 277.04,306.31 Z"/></svg></button>
+          </div>
         </div>
-        <div class="insights">
-          <p>Несколько точек входа повышают вероятность знакомства пользователя с условиями программы лояльности</p>
-          <p>Чтобы выстроить четкое понимание программы лояльности, нужно соблюдать единообразие терминов и визуальных элементов</p>
-          <p>Стоит показывать функционал пользователю, даже если он не может на данный момент им воспользоваться, так он сможет сложить четкую картинку в голове, как работает программа лояльности</p>
-        </div>
+        <p class="benchmark-help" id="benchmark-help">Перетаскивайте холст, чтобы перемещаться. Колесо мыши или жест двумя пальцами — масштаб. Кнопка со стрелками — показать всё.</p>
       </section>
 
       <section id="user-flow">
@@ -289,6 +289,7 @@
   <script src="../js/emoji.js"></script>
   <script src="../js/tg-button.js"></script>
   <script src="../js/lightbox.js?v=20261102-sf"></script>
+  <script src="../js/benchmark-board.js"></script>
   <script src="../js/compare.js?v=20261102-annotations"></script>
   <script src="../js/solution.js"></script>
   <script src="../js/edge-title.js"></script>
