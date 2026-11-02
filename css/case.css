@@ -275,7 +275,6 @@ img.zoomable:focus-visible{outline:2px solid var(--link);outline-offset:3px}
 
 /* Единая типографика кейса РЖД */
 .rzd-centered{font-family:"Inter Tight",Arial,sans-serif}
-.rzd-centered .name{font-family:"Inter Tight",Arial,sans-serif;letter-spacing:0;-webkit-text-stroke:0}
 .rzd-centered .case-h1,.rzd-centered .article h2,.rzd-centered .article h3{font-size:24px;line-height:30px}
 .rzd-centered .article p,.rzd-centered .article li,.rzd-centered .article td,.rzd-centered .article th,.rzd-centered .article summary{font-size:16px;line-height:24px}
 
@@ -301,3 +300,13 @@ img.zoomable:focus-visible{outline:2px solid var(--link);outline-offset:3px}
 /* Regular и расстояние между заголовком и текстом */
 .rzd-centered .article h2,.rzd-centered .article h3,.rzd-centered .pill{font-weight:400}
 .rzd-centered .article .block{gap:12px}
+
+.rzd-centered .test-facts{display:flex;flex-wrap:wrap;gap:8px}
+.rzd-centered .test-fact{display:inline-flex;align-items:center;min-height:32px;padding:4px 12px;border-radius:16px;font-size:16px;line-height:24px;font-weight:400}
+.rzd-centered .test-fact--people{background:#d9fee0;color:#286f39}
+.rzd-centered .test-fact--time{background:#d9fbfe;color:#126c68}
+html[data-theme=dark] .rzd-centered .test-fact--people{background:rgba(95,207,125,.14);color:#7fdc97}
+html[data-theme=dark] .rzd-centered .test-fact--time{background:rgba(64,219,203,.14);color:#6fe3d6}
+
+/* Плашки по содержимому и в grid, и в flex. */
+.rzd-centered .pill{justify-self:start;width:fit-content;max-width:100%}

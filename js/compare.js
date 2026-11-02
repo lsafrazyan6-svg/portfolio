@@ -7,7 +7,7 @@
   const before = root.querySelector(".cmp-before");
   const after = root.querySelector(".cmp-after");
   const tabs = [...root.querySelectorAll(".cmp-tab")];
-  const names = { tickets: "Выбор билета", bonus: "РЖД Бонус", passengers: "Данные пассажира", success: "Успешная оплата" };
+  const names = { tickets: "Выбор билета", bonus: "Раздел РЖД Бонус в ЛК", passengers: "Оформление билета", success: "Успешная оплата" };
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
   const src = (slug, k) => "../assets/compare/" + slug + "-" + k + ".jpg";
   const apply = (slug) => { before.src = src(slug, "before"); after.src = src(slug, "after"); };
