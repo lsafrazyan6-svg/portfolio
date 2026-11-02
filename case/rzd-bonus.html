@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/case.css?v=20261102-audit-intro">
+  <link rel="stylesheet" href="../css/case.css?v=20261102-audit-all">
   <link rel="stylesheet" href="../css/tg-button.css">
   <link rel="stylesheet" href="../css/solution.css">
 </head>
@@ -76,15 +76,30 @@
               <p class="audit-evidence">В рамках открытого исследования изучено 100 отзывов пользователей и проведено UX-тестирование существующего интерфейса на 14 респондентах.</p>
             </div>
           </div>
-          <img class="media" src="../assets/rzd-ux-audit-main.jpg" width="981" height="557" loading="lazy" decoding="async" alt="Личный кабинет РЖД: блок «Мой счёт Клуб путешественников» с кнопкой «Перейти на сайт РЖД Бонус»">
-          <svg class="audit-arrow" aria-hidden="true" width="433" height="45" viewBox="0 0 433 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.91131 42.3213C0.361205 42.3703 -0.0450086 42.856 0.00400716 43.4061C0.0530229 43.9562 0.538706 44.3625 1.08881 44.3134L1.00006 43.3174L0.91131 42.3213ZM1.00006 43.3174L1.08881 44.3134L423.696 6.65814L423.607 5.66209L423.518 4.66604L0.91131 42.3213L1.00006 43.3174ZM432.571 4.86333L422.098 0.000120232L423.123 11.5016L432.571 4.86333Z" fill="#FF6159"/>
-</svg>
+          <figure class="audit-annotated">
+            <div class="audit-shot">
+              <img class="media" src="../assets/rzd-ux-audit-account.png" width="3834" height="1870" loading="lazy" decoding="async" alt="Раздел РЖД Бонус в личном кабинете. Выделена кнопка «Перейти на сайт РЖД Бонус»; стрелки связывают замечания с названиями, уровнем и информацией об участнике.">
+              <svg class="audit-connectors" viewBox="0 0 1000 488" fill="none" aria-hidden="true">
+                <defs><marker id="audit-tip" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="m2 1 5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><mask id="audit-spotlight"><rect width="1000" height="488" fill="white"/><rect x="686" y="225" width="126" height="27" rx="13" fill="black"/></mask></defs>
+                <rect width="1000" height="488" fill="#141414" fill-opacity=".28" mask="url(#audit-spotlight)"/>
+                <rect class="audit-highlight" x="684" y="223" width="130" height="31" rx="15"/>
+                <path class="audit-leader" d="M166 487V285Q166 272 180 272H315Q330 272 330 258V143Q330 130 343 130H355"/>
+                <path class="audit-leader" d="M500 487V295Q500 281 514 281H647Q660 281 660 267V194Q660 181 673 181H686"/>
+                <path class="audit-leader" d="M833 487V407Q833 394 819 394H650"/>
+                <g class="audit-pin"><circle cx="366" cy="130" r="11"/><circle cx="697" cy="181" r="11"/><circle cx="639" cy="394" r="11"/></g>
+                <g class="audit-pin-label" text-anchor="middle" dominant-baseline="central"><text x="366" y="130">1</text><text x="697" y="181">2</text><text x="639" y="394">3</text></g>
+              </svg>
+            </div>
+            <figcaption class="audit-notes">
+              <p><span class="audit-note-num">1</span>Термины отличаются от страницы к странице: «РЖД Бонус» и «Клуб путешественников».</p>
+              <p><span class="audit-note-num">2</span>Неясно, почему у пассажира такой уровень и от чего он зависит.</p>
+              <p><span class="audit-note-num">3</span>Нет возможности управлять информацией об участнике. Это вся информация о программе лояльности в отдельном месте.</p>
+            </figcaption>
+          </figure>
         </div>
         <div class="entries">
-          <p class="c1">Точки входа в РЖД Бонус малозаметны, а баннер не объясняет преимущества программы и обращается только к участникам.</p>
-          <img class="media i1" src="../assets/rzd-ux-entry-1.jpg" width="950" height="539" loading="lazy" decoding="async" alt="Поиск билетов РЖД с баннером «Билеты за баллы»">
-          <img class="media i2" src="../assets/rzd-ux-entry-2.jpg" width="950" height="539" loading="lazy" decoding="async" alt="Главная страница РЖД с малозаметными ссылками на РЖД Бонус">
+          <figure class="audit-annotated audit-entry i1"><div class="audit-shot"><img class="media" src="../assets/rzd-ux-entry-1.jpg" width="950" height="539" loading="lazy" decoding="async" alt="Поиск билетов РЖД с баннером «Билеты за баллы»"><svg class="audit-connectors" viewBox="0 0 950 539" fill="none" aria-hidden="true"><g class="audit-highlight"><rect x="74" y="266" width="197" height="113" rx="12"/></g><path class="audit-leader" d="M475 538V420Q475 400 455 400H300Q285 400 285 385V330H272"/></svg></div><figcaption class="audit-entry-note"><p>Баннер «Билеты за баллы» не объясняет преимущества программы и обращается только к её участникам.</p></figcaption></figure>
+          <figure class="audit-annotated audit-entry i2"><div class="audit-shot"><img class="media" src="../assets/rzd-ux-entry-2.jpg" width="950" height="539" loading="lazy" decoding="async" alt="Главная страница РЖД с малозаметными ссылками на РЖД Бонус"><svg class="audit-connectors" viewBox="0 0 950 539" fill="none" aria-hidden="true"><g class="audit-highlight"><rect x="558" y="36" width="89" height="31" rx="6"/><rect x="58" y="514" width="187" height="23" rx="4"/></g><path class="audit-leader" d="M475 538V365Q475 345 495 345H660Q680 345 680 325V85Q680 70 665 70H645 M380 538V505H245"/></svg></div><figcaption class="audit-entry-note"><p>Точки входа в РЖД Бонус на главной странице малозаметны среди остальных ссылок и блоков.</p></figcaption></figure>
         </div>
       </section>
 
