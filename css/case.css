@@ -377,3 +377,9 @@ html[data-theme=dark] .result-count{color:#d58b83}
 .rzd-centered .result-count{color:#ed2118;gap:0;letter-spacing:-.04em;font-variant-numeric:normal;font-kerning:normal}
 .rzd-centered .result-count small{letter-spacing:-.02em}
 html[data-theme=dark] .rzd-centered .result-count{color:#ff453a}
+
+/* Статус гипотезы отдельным буллетом под нейтральной цифрой. */
+.rzd-centered .result-count,html[data-theme=dark] .rzd-centered .result-count{color:var(--ink)}
+.rzd-centered .result-count small{color:var(--muted)}
+.rzd-centered .result-hypothesis{display:flex;align-items:baseline;gap:8px;color:var(--ink)}
+.result-hypothesis::before{content:"";display:block;flex:0 0 5px;width:5px;height:5px;border-radius:50%;background:currentColor;align-self:flex-start;margin-top:9px}
