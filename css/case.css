@@ -278,3 +278,15 @@ img.zoomable:focus-visible{outline:2px solid var(--link);outline-offset:3px}
 .rzd-centered .name{font-family:"Inter Tight",Arial,sans-serif;letter-spacing:0;-webkit-text-stroke:0}
 .rzd-centered .case-h1,.rzd-centered .article h2,.rzd-centered .article h3{font-size:24px;line-height:30px}
 .rzd-centered .article p,.rzd-centered .article li,.rzd-centered .article td,.rzd-centered .article th,.rzd-centered .article summary{font-size:16px;line-height:24px}
+
+/* Правки композиции кейса */
+.rzd-centered .case-h1{max-width:600px;text-wrap:balance}
+.rzd-centered .toc-details{max-width:600px}
+.rzd-centered .toc-details summary{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;cursor:pointer;list-style:none}
+.rzd-centered .toc-details summary::-webkit-details-marker{display:none}
+.rzd-centered .toc-details summary svg{transition:transform .2s}
+.rzd-centered .toc-details[open] summary svg{transform:rotate(180deg)}
+.rzd-centered .toc-details .toc{margin-top:12px}
+.rzd-centered .cmp-handle:focus-visible{outline:none}
+.rzd-centered .cmp-handle:focus-visible .cmp-knob{outline:2px solid var(--link);outline-offset:3px}
+@media(min-width:821px){.rzd-centered .sides{grid-template-rows:auto auto auto;row-gap:32px}.rzd-centered .side{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:start}}
