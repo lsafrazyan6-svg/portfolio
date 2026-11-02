@@ -372,3 +372,8 @@ html[data-theme=dark] .result-count{color:#d58b83}
 .rzd-centered .toggle>summary .disclosure-chevron{width:20px;height:20px;transform:rotate(-90deg);transition:transform .18s ease}
 .rzd-centered .toggle[open]>summary .disclosure-chevron{transform:rotate(0deg)}
 @media(prefers-reduced-motion:reduce){.rzd-centered .toggle>summary .disclosure-chevron{transition:none}}
+
+/* Акцентные компактные значения результатов. */
+.rzd-centered .result-count{color:#ed2118;gap:0;letter-spacing:-.04em;font-variant-numeric:normal;font-kerning:normal}
+.rzd-centered .result-count small{letter-spacing:-.02em}
+html[data-theme=dark] .rzd-centered .result-count{color:#ff453a}
