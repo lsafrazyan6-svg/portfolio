@@ -4,10 +4,11 @@
 .layout{display:flex;flex-direction:column;align-items:center;gap:88px}
 .intro{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
 .home-portrait{display:block;width:160px;height:160px;object-fit:cover;border-radius:20px;margin-bottom:12px}
-.home-name{font-size:32px;line-height:1.2;font-weight:500}
+.home-name{margin:0;font-size:32px;line-height:1.2;font-weight:500}
 .bio{font-size:18px;line-height:27px}
 .home-resume{margin-top:8px;text-decoration:underline;text-underline-offset:4px}
-.contacts{margin-top:16px}
+.home-write{margin-top:16px}
+.contacts{margin-top:20px}
 .contact-links{align-items:center}
 .cases{width:100%;display:flex;flex-direction:column;gap:64px}
 .case{display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px}
