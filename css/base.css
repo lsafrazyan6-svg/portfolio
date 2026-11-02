@@ -72,9 +72,9 @@ html[data-theme=dark] .theme-moon{opacity:1;transform:translate(0) scale(.9) rot
 html[data-theme=dark] .theme-icon{transform:rotate(-18deg) scale(1.04);filter:drop-shadow(0 0 3px #f2f2ee38)}
 
 /* Контакты */
-.contacts{display:flex;flex-direction:column;gap:8px}
+.contacts{display:flex;flex-direction:column;gap:16px}
 .contacts h2{font-size:20px;line-height:28px;font-weight:500}
-.contact-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;color:var(--link)}
+.contact-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;color:var(--link)}
 .contact-links a{display:inline-flex;align-items:center;gap:8px;transition:opacity .2s}
 .contact-links a:hover,.contact-links a:focus-visible{opacity:.6}
 .contact-links .tg{gap:6px}

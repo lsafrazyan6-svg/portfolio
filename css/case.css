@@ -433,3 +433,15 @@ html[data-theme=dark] .benchmark-viewport{background-image:radial-gradient(circl
 .test-respondents img{width:96px;height:96px;margin-left:-24px}.test-respondents{padding-left:24px}
 @media(max-width:820px){.benchmark-summary,.benchmark-insights{grid-column:1;grid-row:auto}}
 @media(max-width:600px){.test-respondents img{width:96px;height:96px;margin-left:-24px}.test-respondents{padding-left:24px}}
+
+/* Аннотации: перенос вкладок, правая ссылка, интервалы результатов. */
+.rzd-centered .cmp-tabs{flex-wrap:wrap;overflow:visible}
+.rzd-centered .cmp-tab{height:auto;min-height:44px;max-width:100%;padding:10px 16px;white-space:normal;text-align:left}
+.rzd-centered .results-head{justify-content:space-between;align-items:baseline;gap:12px 24px}
+.rzd-centered .results-head>a{margin-left:auto;text-align:right}
+.rzd-centered .result-count{gap:8px}
+.rzd-centered .result-count small{letter-spacing:0}
+.rzd-centered .article .contacts{gap:16px}
+.rzd-centered .article .contacts h2{font-size:20px;line-height:28px;font-weight:500}
+.rzd-centered .article .contacts .contact-links{gap:12px;margin:0;padding:0;list-style:none}
+.rzd-centered .audit-leader{stroke-width:1.8}

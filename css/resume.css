@@ -93,7 +93,7 @@ html[data-theme=dark] .rs-logo{border-radius:50%}
 .resume-page .case{gap:16px}
 .resume-page .cases{gap:32px}
 .resume .case-title{font-size:24px;line-height:30px}
-.contacts-bottom h2{font-size:18px;line-height:27px}
+.contacts-bottom h2{font-size:20px;line-height:28px;font-weight:500}
 
 /* ---- Лайтбокс: фото открываются ровно, без наклона ---- */
 img.zoomable{cursor:zoom-in}
