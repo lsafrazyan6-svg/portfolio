@@ -4,16 +4,14 @@
    Размеры, шрифт и отступы кнопки не трогаются — их задают base.css / style.css.
    Точки строит js/tg-button.js. Подключать последним стилем страницы. */
 .write.tg-fx{
-  /* ободок цвета страницы: в светлой теме это #fff, как на холсте; в тёмной — #141414 */
-  --tg-ring:var(--page,#fff);
   position:relative;background:#ee2f86;color:#fff;
-  box-shadow:0 0 0 3px var(--tg-ring),0 6px 20px rgba(238,47,134,.28);
+  box-shadow:0 6px 20px rgba(238,47,134,.28);
   transition:transform .35s cubic-bezier(.25,.1,.25,1),box-shadow .8s cubic-bezier(.25,.1,.25,1),background-color .8s cubic-bezier(.25,.1,.25,1);
   -webkit-tap-highlight-color:transparent
 }
 .write.tg-fx:hover,.write.tg-fx:focus-visible{background:#ee2f86}
 @media(hover:hover){
-  .write.tg-fx:hover{background:#f0388e;box-shadow:0 0 0 3px var(--tg-ring),0 8px 28px rgba(238,47,134,.44)}
+  .write.tg-fx:hover{background:#f0388e;box-shadow:0 8px 28px rgba(238,47,134,.44)}
   .write.tg-fx:hover .dots{opacity:1}
   .write.tg-fx:hover .dot.L.c0{transform:scale(1.1)}
   .write.tg-fx:hover .dot.L.c1{transform:translateX(3px) scale(1.2)}

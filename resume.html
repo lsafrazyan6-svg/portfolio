@@ -16,9 +16,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/base.css?v=20261102-eleven">
-  <link rel="stylesheet" href="css/home.css?cover=20261103-dark-corners&v=20261102-eleven">
-  <link rel="stylesheet" href="css/resume.css?v=20261103-resume-comments">
-  <link rel="stylesheet" href="css/tg-button.css?v=20261102-eleven">
+  <link rel="stylesheet" href="css/home.css?cover=20261103-native&v=20261102-eleven">
+  <link rel="stylesheet" href="css/resume.css?v=20261103-final-comments">
+  <link rel="stylesheet" href="css/rzd-cover.css?v=20261103-native">
+  <link rel="stylesheet" href="css/tg-button.css?v=20261103-no-ring">
 </head>
 <body class="page-resume">
   <header class="hdr">
@@ -35,7 +36,7 @@
     </div>
   </header>
   <main class="home resume-page" id="top">
-    <a class="back" href="index.html"><svg class="icon" data-icon="sf:arrow.left" data-source="SF-Pro-Regular" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path transform="translate(0.738693 28.326633) scale(0.022613 -0.022613)" d="M827 651H411L251 658Q224 659 205.0 677.0Q186 695 186 722Q186 749 205.0 767.0Q224 785 251 786L411 793H827Q855 793 875.5 772.0Q896 751 896 722Q896 693 875.5 672.0Q855 651 827 651ZM416 392Q390 392 369 414L124 670Q110 684 105.0 696.0Q100 708 100 722Q100 736 105.0 748.0Q110 760 124 774L369 1030Q390 1052 416 1052Q444 1052 461.5 1033.0Q479 1014 479 986Q479 956 458 938L338 828L225 722L338 616L458 506Q479 487 479 457Q479 429 461.5 410.5Q444 392 416 392Z"/></svg><span>На главную</span></a>
+    <a class="back" href="index.html"><svg class="icon" data-icon="sf:arrow.left" data-source="SF-Pro-Regular-U2190" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path transform="translate(0.5257731958762886 20.931958762886598) scale(0.012371134020618556 -0.012371134020618556)" d="M803 122Q770 122 744 147L228 662Q200 688 200 722Q200 756 228 782L744 1297Q770 1322 803 1322Q836 1322 858.5 1300.0Q881 1278 881 1244Q881 1228 875.5 1213.0Q870 1198 859 1188L721 1045L363 722L721 399L859 256Q870 246 875.5 231.0Q881 216 881 200Q881 166 858.5 144.0Q836 122 803 122ZM631 641 365 660Q338 660 320.5 677.5Q303 695 303 722Q303 749 320.0 766.5Q337 784 365 784L631 803H1575Q1611 803 1633.0 780.0Q1655 757 1655 722Q1655 687 1633.0 664.0Q1611 641 1575 641Z"/></svg><span>На главную</span></a>
     <div class="layout">
       <aside class="intro">
         <img class="home-portrait" src="assets/resume-photo.jpg" width="450" height="556" alt="Фото Лидии Сафразян">
@@ -63,10 +64,11 @@
         <section class="rs-row" aria-labelledby="skills-h">
           <h2 id="skills-h">Навыки</h2>
           <div class="rs-body rs-skills">
-            <p>UX-аудит, юзабилити-тесты, user flow, информационная архитектура, приоритизация гипотез по&nbsp;ICE</p>
+            <p>ИИ-агенты активно встроены в&nbsp;мой продуктовый процесс.</p>
+            <p>Исследования: UX-тесты, глубинные интервью, опросы.</p>
+            <p>UX-аудит, бенчмаркинг, user flow, информационная архитектура, приоритизация гипотез по&nbsp;ICE.</p>
             <p>Английский уровень B2</p>
-            <p>Claude Code и&nbsp;ИИ-агенты уже плотно включены в&nbsp;мой продуктовый процесс</p>
-            <p class="rs-tools-text">Figma, Adobe Creative Suite, Tilda, Framer, Claude Code</p>
+            <p class="rs-tools-text">Claude Code, Codex, Figma, Adobe Creative Suite, Tilda, Framer</p>
           </div>
         </section>
         <section class="rs-row" id="activities" aria-labelledby="act-h">
@@ -84,14 +86,17 @@
           <h2 id="cases-h">Кейсы:</h2>
           <div class="cases">
             <a class="case" href="case/rzd-bonus.html">
-              <picture class="case-media case-media--rzd">
-                <source media="(max-width: 820px)" srcset="assets/home-rzd-cover-m-20261103.jpg" width="663" height="1033">
-                <img data-no-zoom loading="lazy" src="assets/home-rzd-cover-d-v2-20261103.jpg" width="1200" height="640" alt="Как я увеличила вовлечение в пользование программой РЖД бонус. Редизайн, UX-тесты и обратная связь от команды РЖД" decoding="async">
-              </picture>
-              <div class="case-copy">
-                <h3 class="case-title">Как я увеличила вовлечение в&nbsp;пользование программой РЖД бонус</h3>
-                <span class="badge">В процессе</span>
+              <div class="case-media rzd-cover" data-no-typo>
+            <div class="rzd-cover-art">
+              <picture><source media="(max-width:820px)" srcset="assets/rzd-cover-native/background-mobile.png"><img class="rzd-cover-bg" data-no-zoom src="assets/rzd-cover-native/background-desktop.png" alt="" decoding="async"></picture>
+              <div class="rzd-cover-tint" aria-hidden="true"></div>
+              <div class="rzd-cover-phone" aria-hidden="true"><img data-no-zoom src="assets/rzd-cover-native/phone.png" alt="" decoding="async"></div>
+              <div class="rzd-cover-copy">
+                <h2 class="rzd-cover-title">Как я увеличила вовлечение <br class="rzd-cover-break">в пользование программой РЖД бонус</h2>
+                <div class="rzd-cover-tags"><div class="rzd-cover-tag-row"><span class="rzd-cover-tag">Редизайн</span><span class="rzd-cover-tag">Ux-тесты</span></div><span class="rzd-cover-tag rzd-cover-feedback">Обратная связь от команды РЖД</span></div>
               </div>
+            </div>
+          </div>
             </a>
             
           </div>

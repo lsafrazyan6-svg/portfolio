@@ -1,6 +1,6 @@
 /* Локальный шрифт для резюме: не зависит от загрузки Google Fonts. */
 @font-face{font-family:"Inter Tight";src:url("../assets/fonts/inter-tight-variable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
-.page-resume .name{letter-spacing:-1px}
+.page-resume .name{letter-spacing:0}
 /* Резюме. Перенесено из Figma: «Резюме — 1441» (1440) и «Резюме — 1442» (360).
    Подключается после base.css и home.css: шапка, кнопки, контакты и карточки кейсов общие с главной. */
 :root{--muted:#878787;--line:rgba(0,0,0,.16);--note:#bc678d;--x5:#1cbd2c;--content:965px}
@@ -8,7 +8,7 @@ html[data-theme=dark]{--muted:#a0a0a0;--line:rgba(255,255,255,.2);--note:#e08fb3
 
 /* ---- Каркас ---- */
 .resume-page{padding-top:116px}
-.back{display:flex;width:fit-content;align-items:center;gap:6px;min-height:44px;color:var(--muted);font-size:24px;line-height:32px;transition:opacity .2s}
+.back{display:flex;width:fit-content;align-items:center;gap:6px;min-height:44px;color:var(--muted);font-size:16px;line-height:24px;transition:opacity .2s}
 .back:hover,.back:focus-visible{opacity:.6}
 .back .icon,.back svg{display:block;width:24px;height:24px;flex-shrink:0}
 .resume-page .layout{margin-top:32px;grid-template-columns:192px minmax(0,725px);gap:48px}
@@ -119,7 +119,7 @@ img.zoomable:focus-visible{outline:2px solid var(--link);outline-offset:3px}
 /* ---- Телефон (макет 360) ---- */
 @media(max-width:820px){
   .resume-page{padding-top:84px}
-  .back{min-height:48px;margin-bottom:16px;font-size:14px;line-height:20px}
+  .back{min-height:48px;margin-bottom:16px;font-size:16px;line-height:24px}
   .back .icon,.back svg{width:16px;height:16px}
   .resume-page .layout{margin-top:0;gap:24px}
   .rs-row{grid-template-columns:minmax(0,1fr);row-gap:16px}
@@ -149,3 +149,5 @@ img.zoomable:focus-visible{outline:2px solid var(--link);outline-offset:3px}
 .resume .rs-cases .case-title{text-align:left}
 
 .resume .rs-tools-text{margin-top:8px}
+
+.resume .contacts-bottom,.resume .contacts-bottom .contact-links{align-items:flex-start;text-align:left}

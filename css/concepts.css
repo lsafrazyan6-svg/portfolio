@@ -1,21 +1,21 @@
-/* Телефоны без исходных прозрачных полей. Три работы на десктопе, одна с продолжением на мобильном. */
-.concepts{width:100%;display:flex;flex-direction:column;gap:24px;--concept-width:208px}
-.concepts-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.concepts-title{margin:0;font-size:24px;line-height:30px;font-weight:500}
-.concepts-toggle{flex-shrink:0;border:0;padding:8px 0 8px 8px;background:transparent;color:var(--link);font:inherit;font-size:14px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
-.concepts-viewport{width:100%;overflow-x:auto;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x pan-y}
-.concepts-viewport::-webkit-scrollbar{display:none}
-.concepts-track,.concepts-set{display:flex;gap:24px;align-items:flex-start;width:max-content}
-.concept-card{display:block;flex:0 0 var(--concept-width);width:var(--concept-width);padding:0;border:0;background:transparent;cursor:zoom-in;border-radius:32px}
-.concept-card img{display:block;width:100%;height:auto;aspect-ratio:1523/3100;object-fit:contain;background:transparent}
-.concept-card:focus-visible{outline:2px solid var(--link);outline-offset:-2px}
-.concepts-toggle:focus-visible,.concept-dialog button:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+/* Один телефон целиком. Исходное разрешение макетов, без уменьшения и потерь при сжатии. */
+.concepts{width:100%;display:flex;flex-direction:column;align-items:center;gap:24px}
+.concepts-title{align-self:flex-start;margin:0;font-size:24px;line-height:30px;font-weight:500}
+.concept-slide{width:100%;margin:0;display:flex;flex-direction:column;align-items:center;gap:16px;touch-action:pan-y pinch-zoom}
+.concept-open{display:block;width:min(400px,100%);padding:0;border:0;background:transparent;cursor:zoom-in}
+.concept-open img{display:block;width:100%;height:auto;aspect-ratio:1528/3104;object-fit:contain;background:transparent;transform:none}
+.concept-caption{font-size:20px;line-height:28px;font-weight:500;text-align:center}
+.concept-controls{width:min(400px,100%);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.concept-controls button,.concept-dialog button{min-width:44px;min-height:44px;padding:8px;border:0;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.concept-controls button{color:var(--link)}
+.concept-controls svg{display:block;width:24px;height:24px}
+.concept-counter{font-size:16px;line-height:24px;color:var(--ink);font-variant-numeric:tabular-nums}
+.concept-open:focus-visible,.concept-controls button:focus-visible,.concept-dialog button:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:8px}
 .concept-dialog{width:100vw;max-width:none;height:100dvh;max-height:none;margin:0;padding:24px;border:0;background:transparent;color:white;overflow:hidden}
 .concept-dialog::backdrop{background:rgba(0,0,0,.88)}
 .concept-dialog[open]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
 .concept-dialog-image{display:block;max-width:100%;width:auto;height:auto;max-height:calc(100dvh - 156px);object-fit:contain;background:transparent}
 .concept-dialog-toolbar{display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(560px,100%)}
-.concept-dialog button{min-height:44px;border:0;background:transparent;color:inherit;font:inherit;cursor:pointer;padding:8px}
 .concept-dialog-caption{font-size:16px;line-height:24px;text-align:center}
 .concept-dialog-close{position:absolute;right:16px;top:16px}
-@media(max-width:820px){.concepts{--concept-width:clamp(180px,calc(100vw - 112px),248px)}.concept-dialog{padding:16px}.concepts-head{align-items:flex-start}.concepts-title{max-width:240px}}
+@media(max-width:820px){.concept-dialog{padding:16px}}
