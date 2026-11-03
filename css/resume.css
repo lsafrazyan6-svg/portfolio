@@ -1,3 +1,6 @@
+/* Локальный шрифт для резюме: не зависит от загрузки Google Fonts. */
+@font-face{font-family:"Inter Tight";src:url("../assets/fonts/inter-tight-variable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+.page-resume .name{letter-spacing:-1px}
 /* Резюме. Перенесено из Figma: «Резюме — 1441» (1440) и «Резюме — 1442» (360).
    Подключается после base.css и home.css: шапка, кнопки, контакты и карточки кейсов общие с главной. */
 :root{--muted:#878787;--line:rgba(0,0,0,.16);--note:#bc678d;--x5:#1cbd2c;--content:965px}
@@ -33,8 +36,6 @@ html[data-theme=dark]{--muted:#a0a0a0;--line:rgba(255,255,255,.2);--note:#e08fb3
 .rs-logo{display:block;width:53px;height:56px;flex-shrink:0}
 html[data-theme=dark] .rs-logo{border-radius:50%}
 .rs-skills{gap:8px}
-.rs-tools{display:flex;flex-wrap:wrap;gap:0 8px;padding:0;list-style:none;line-height:27px}
-.rs-tools li+li::before{content:"/";margin-right:8px;font-size:18px}
 .resume .rs-note{max-width:417px;color:var(--note);font-style:italic}
 .rs-x5{color:var(--x5)}
 
@@ -143,13 +144,8 @@ img.zoomable:focus-visible{outline:2px solid var(--link);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.rs-pic,.lb,.lb-fig,.lb-btn{transition:none}}
 
 /* Приложения и левый край карточки кейса. */
-.resume .rs-tools{display:flex;flex-wrap:wrap;gap:16px 24px;padding:0;margin:12px 0 0;list-style:none}
-.rs-tools li{display:flex;align-items:center;gap:10px;font-size:14px;line-height:20px}
-.rs-tools li+li::before{content:none}
-.rs-app-icon{display:flex;align-items:center;justify-content:center;width:44px;height:44px;flex-shrink:0;border-radius:12px;background:var(--button);color:var(--ink)}
-.rs-app-icon svg{display:block;width:24px;height:24px;fill:currentColor}
-.rs-app-icon--adobe{background:#e51924;color:#fff}
-.rs-app-icon--claude{background:#f4e8dd;color:#a74426}
 .resume .rs-cases .case{align-items:flex-start;text-align:left}
 .resume .rs-cases .case-copy{align-items:flex-start;flex-direction:column;justify-content:flex-start;text-align:left;width:100%}
 .resume .rs-cases .case-title{text-align:left}
+
+.resume .rs-tools-text{margin-top:8px}
