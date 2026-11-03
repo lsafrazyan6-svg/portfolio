@@ -2,7 +2,7 @@
 
 Статический сайт: `index.html`, `resume.html`, `case/rzd-bonus.html`, `case/hire.html`, стили в `css/`, картинки в `assets/`.
 
-Публичный сайт: https://lsafrazyan6-svg.github.io/safrazyan-lidia/ (GitHub Pages из ветки `main`).
+Публичный сайт: https://lsafrazyan6-svg.github.io/portfolio/ (GitHub Pages из ветки `main`).
 
 Стили нового вида: `css/base.css` (общее: цвета, шапка, кнопки, контакты) + свой файл страницы: `css/home.css` (главная), `css/case.css` (кейс РЖД), `css/resume.css` (резюме). Кейс Hire пока на старом `css/style.css`.
 - Шкала текста в кейсе: заголовок 32/39, подзаголовок 24/30, наборный 20/30 (мобила: 24/30, 20/26, 18/27). Расстояния — через gap контейнеров.
