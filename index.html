@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/base.css?v=20261102-eleven">
   <link rel="stylesheet" href="css/home.css?cover=20261103-dark-corners&v=20261103-rzd-cover">
+  <link rel="stylesheet" href="css/concepts.css?v=20261103">
   <link rel="stylesheet" href="css/tg-button.css?v=20261102-eleven">
 </head>
 <body>
@@ -44,9 +45,25 @@
         </a>
         
       </section>
-      <h2 class="visuals">Визуалы и концептики</h2>
+      <section class="concepts" aria-labelledby="concepts-title">
+        <div class="concepts-head"><h2 class="concepts-title" id="concepts-title">Визуальные концепты</h2><button class="concepts-toggle" type="button" hidden>Пауза</button></div>
+        <div class="concepts-viewport" role="region" aria-label="Лента визуальных концептов" tabindex="0">
+          <div class="concepts-track"><div class="concepts-set">
+              <button class="concept-card" type="button" data-concept="0" aria-label="Открыть крупно: Книжный дневник · Чтение"><img src="assets/concepts/reading.webp" width="720" height="1466" loading="lazy" decoding="async" alt="Книжный дневник · Чтение"></button>
+              <button class="concept-card" type="button" data-concept="1" aria-label="Открыть крупно: Книжный дневник · Вход"><img src="assets/concepts/login.webp" width="720" height="1466" loading="lazy" decoding="async" alt="Книжный дневник · Вход"></button>
+              <button class="concept-card" type="button" data-concept="2" aria-label="Открыть крупно: Формула-1 · Поиск попутчика"><img src="assets/concepts/formula.webp" width="720" height="1466" loading="lazy" decoding="async" alt="Формула-1 · Поиск попутчика"></button>
+              <button class="concept-card" type="button" data-concept="3" aria-label="Открыть крупно: Дневник путешествий"><img src="assets/concepts/travel.webp" width="720" height="1466" loading="lazy" decoding="async" alt="Дневник путешествий"></button>
+          </div></div>
+        </div>
+      </section>
     </div>
   </main>
+  <dialog class="concept-dialog" aria-label="Просмотр визуального концепта">
+    <button class="concept-dialog-close" type="button">Закрыть</button>
+    <img class="concept-dialog-image" alt="">
+    <div class="concept-dialog-toolbar"><button type="button" data-step="-1" aria-label="Предыдущая работа">Назад</button><p class="concept-dialog-caption"></p><button type="button" data-step="1" aria-label="Следующая работа">Далее</button></div>
+  </dialog>
+  <script src="js/concepts.js?v=20261103"></script>
   <script src="js/typo-nbsp.js?v=20261102-eleven"></script>
   <script src="js/theme.js?v=20261102-eleven"></script>
   <script src="js/emoji.js?v=20261102-eleven"></script>
