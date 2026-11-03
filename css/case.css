@@ -445,3 +445,20 @@ html[data-theme=dark] .benchmark-viewport{background-image:radial-gradient(circl
 .rzd-centered .article .contacts h2{font-size:20px;line-height:28px;font-weight:500}
 .rzd-centered .article .contacts .contact-links{gap:12px;margin:0;padding:0;list-style:none}
 .rzd-centered .audit-leader{stroke-width:1.8}
+
+/* Правки кейса 03.11: общая маска для фото и стрелок, согласованные строки результатов. */
+.rzd-centered .article img:not([data-no-zoom]){border-radius:12px}
+.audit-shot{border-radius:12px;overflow:hidden;box-shadow:var(--cover-shadow)}
+.audit-shot .media{border-radius:inherit;box-shadow:none}
+.audit-connectors{border-radius:inherit;overflow:hidden}
+.test-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:center}
+.test-heading .h-title{grid-column:1;grid-row:1}
+.test-heading .test-facts{grid-column:1;grid-row:2}
+.test-heading .test-respondents{grid-column:2;grid-row:1 / span 2}
+.rzd-centered .results-metrics{row-gap:12px !important;align-items:stretch}
+.result-metric{display:grid;grid-template-rows:subgrid;grid-row:span 3;padding-bottom:28px;align-items:start}
+@media(max-width:600px){.test-heading{grid-template-columns:1fr}.test-heading .test-respondents{grid-column:1;grid-row:3}.rzd-centered .results-metrics{row-gap:12px !important}}
+
+.test-title-copy{display:flex;flex-direction:column;gap:12px;min-width:0;grid-column:1;grid-row:1}
+.test-heading .test-respondents{grid-row:1;align-self:start}
+@media(max-width:600px){.test-heading .test-respondents{grid-row:2}}
