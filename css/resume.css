@@ -151,3 +151,10 @@ img.zoomable:focus-visible{outline:2px solid var(--link);outline-offset:3px}
 .resume .rs-tools-text{margin-top:8px}
 
 .resume .contacts-bottom,.resume .contacts-bottom .contact-links{align-items:flex-start;text-align:left}
+
+.resume-strengths{display:flex;flex-direction:column;gap:24px;width:min(596px,100%);align-self:center}
+.resume-strength{display:flex;flex-direction:column;gap:8px}
+.resume-strength-heading{display:flex;align-items:center;gap:4px}
+.resume-strength-heading img{display:block;flex:none}
+.resume-strength-heading h2{font-size:24px;line-height:28px;font-weight:500;margin:0}
+.resume .resume-strength p{padding-left:44px;font-size:20px;line-height:28px;color:#918d8d;margin:0}
