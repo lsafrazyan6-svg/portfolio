@@ -1,0 +1,95 @@
+/* One type scale for the home page and the shared resume: 24 / 20 / 16. */
+.home-index{width:min(960px,100% - 32px)}
+.home-index>.layout{gap:32px}
+.home-index>.layout>.intro{max-width:672px}
+.home-index .concepts{
+  --page:#fff;--ink:#1f1f1f;--link:#1f2836;
+  padding:32px;background:#fff;color:var(--ink);border-radius:24px;box-shadow:var(--cover-shadow);
+}
+.resume-section{width:100%;padding:32px 32px 0;scroll-margin-top:24px}
+.resume-title{margin:0 auto 24px;max-width:800px;font-size:24px;line-height:30px;font-weight:500}
+.resume-content{--muted:#666;--line:rgba(0,0,0,.16);width:min(800px,100%);margin:0 auto;gap:32px;min-width:0}
+html[data-theme=dark] .resume-content{--muted:#b3b3b3;--line:rgba(255,255,255,.2)}
+.resume-content .resume-summary{font-size:16px;line-height:24px;max-width:72ch}
+.resume-content .resume-strengths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;width:100%}
+.resume-content .resume-strength{gap:8px}
+.resume-content .resume-strength-heading{gap:12px}
+.resume-content .resume-strength-heading img{width:32px;height:32px}
+.resume-content .resume-strength-heading h2{font-size:20px;line-height:28px;font-weight:500}
+.resume-content .resume-strength p{padding-left:44px;font-size:16px;line-height:24px;color:var(--muted)}
+.resume-content .rs-row{display:block;min-height:0}
+.resume-content .rs-row>h2{display:flex;align-items:center;gap:12px;padding:0;margin-bottom:24px;font-size:16px;line-height:24px;font-weight:400}
+.resume-content .rs-row>h2>span{flex:none;display:block;width:fit-content;padding:2px 10px;border-radius:16px;background:var(--ink);color:var(--page)}
+.resume-content .rs-row>h2::after{content:"";height:1px;background:var(--line);flex:1}
+.resume-content .rs-body{gap:24px}
+.resume-content h3{margin:0;font-size:20px;line-height:28px;font-weight:500}
+.resume-content p{font-size:16px;line-height:24px}
+.resume-content .rs-date{color:var(--muted);font-variant-numeric:tabular-nums;line-height:24px}
+.resume-content .rs-school p{line-height:24px}
+.resume-content .rs-logo{width:48px;height:auto}
+.resume-content .rs-skills{gap:8px}
+.resume-content .rs-edu .rs-text{max-width:none;padding-right:180px}
+.resume-content .rs-edu .rs-entry--media{min-height:136px}
+.resume-content .rs-pic--grad{left:auto;right:12px;top:-12px;width:132px;aspect-ratio:164/158}
+.resume-content .rs-pro{min-height:200px}
+.resume-content .rs-pro .rs-text{max-width:320px}
+.resume-content .rs-pic--diploma{left:352px;top:0;width:120px}
+.resume-content .rs-pic--award{left:488px;top:12px;width:136px}
+.resume-content .rs-note{max-width:100%;font-size:16px;line-height:24px;color:var(--note)}
+.resume-content .rs-spectr{min-height:224px}
+.resume-content .rs-spectr .rs-text{max-width:320px}
+.resume-content .rs-pic--cert{left:344px;top:0;width:160px}
+.resume-content .rs-pic--stage{left:464px;top:56px;width:184px}
+/* Keep the original photo tilt/hover; its timing and focus behavior live in resume.css. */
+@media(min-width:821px){
+  .resume-content .rs-pro .rs-pics,.resume-content .rs-spectr .rs-pics{position:absolute;inset:0;width:100%;max-width:none;margin:0;aspect-ratio:auto}
+}
+@media(max-width:820px){
+  .home-index .concepts{padding:24px 16px}
+  .resume-section{padding:16px 0 0}
+  .resume-content{gap:32px}
+  .resume-content .resume-strengths{grid-template-columns:minmax(0,1fr)}
+  .resume-content .rs-pro,.resume-content .rs-spectr{min-height:0}
+  .resume-content .rs-pro .rs-text,.resume-content .rs-spectr .rs-text{max-width:none}
+  .resume-content .rs-pro .rs-pics,.resume-content .rs-spectr .rs-pics{position:relative;inset:auto;width:min(360px,100%);max-width:100%;margin-top:16px;align-self:center}
+  .resume-content .rs-pro .rs-pics{aspect-ratio:333/218}
+  .resume-content .rs-spectr .rs-pics{aspect-ratio:333/220}
+  .resume-content .rs-pic--diploma{left:4%;top:0;width:40%}
+  .resume-content .rs-pic--award{left:48%;top:4%;width:40%}
+  .resume-content .rs-pic--cert{left:0;top:3%;width:47%}
+  .resume-content .rs-pic--stage{left:36%;top:26%;width:56%}
+  .resume-content .rs-edu .rs-text{padding-right:140px}
+  .resume-content .rs-pic--grad{right:4px;width:108px;top:0}
+  .resume-content .rs-note{display:block}
+}
+@media(max-width:380px){
+  .resume-content .rs-edu .rs-text{padding-right:124px}
+  .resume-content .rs-pic--grad{right:0;width:100px}
+}
+
+.resume-life{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:16px;text-align:center}
+.resume-life h2{margin:0;font-size:24px;line-height:30px;font-weight:500}
+.resume-life>p{max-width:72ch}
+
+/* The six supplied photos follow the Figma collage; each remains independently zoomable. */
+.resume-life{--line:rgba(0,0,0,.16);--link:#1f2836;padding:24px;background:#fff;color:#1f1f1f;border-radius:24px}
+.life-collage{position:relative;width:100%;aspect-ratio:1.68;margin-top:16px}
+.resume-life .life-photo{position:absolute;margin:0}
+.resume-life .life-photo img{width:100%;height:100%;object-fit:cover;border-radius:24px}
+.resume-life .life-photo--race{left:0;top:13.5%;width:26.7%;aspect-ratio:4/3}
+.resume-life .life-photo--museum{left:34.8%;top:0;width:15.8%;aspect-ratio:3/4}
+.resume-life .life-photo--formula{left:75.6%;top:4.6%;width:22%;aspect-ratio:1}
+.resume-life .life-photo--book{left:17.3%;top:57.9%;width:18.8%;aspect-ratio:3/4}
+.resume-life .life-photo--shirt{left:50.6%;top:41.5%;width:19.7%;aspect-ratio:1}
+.resume-life .life-photo--skating{left:75.6%;top:55.1%;width:24.4%;aspect-ratio:1}
+.resume-life .life-photo--skating img{object-position:center 65%}
+@media(max-width:820px){
+  .resume-life{padding:24px 16px}
+  .life-collage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;aspect-ratio:auto}
+  .resume-life .life-photo{position:relative;inset:auto;width:100%;align-self:start}
+  .resume-life .life-photo:nth-child(2n+1){margin-top:24px}
+  .resume-life .life-photo img{border-radius:16px}
+}
+@media(prefers-reduced-motion:reduce){
+  .resume-life .life-photo{transform:none!important;transition:none!important}
+}
