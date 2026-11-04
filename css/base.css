@@ -97,38 +97,34 @@ html[data-theme=dark] .theme-icon{transform:rotate(-18deg) scale(1.04);filter:dr
   body,.hdr,.write,.theme-toggle,.theme-icon,.theme-glyph{transition:none}
 }
 
-/* Resume download: transitions.dev Learn more hover (24), personal/commercial use. */
-:root{
-  --learn-shift:2px;
-  --learn-spread:8deg;
-  --learn-in:350ms;
-  --learn-out:350ms;
-  --learn-ease:cubic-bezier(0.22,1,0.36,1);
+/* Resume download: one arrow-to-tray cycle; only the SVG's inner parts move. */
+.resume-link--download{
+  --resume-download-duration:600ms;
+  --resume-download-ease:cubic-bezier(0.77,0,0.175,1);
+  display:inline-flex;align-items:center;gap:4px;white-space:nowrap;
 }
-.resume-link--download{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
 .resume-link--download:hover,.resume-link--download:focus-visible{opacity:1}
 .resume-link--download:focus-visible{outline:2px solid var(--link);outline-offset:4px;border-radius:4px}
-.resume-download-icon{display:inline-flex;width:16px;height:16px;flex-shrink:0;transform:rotate(90deg)}
-.t-learn-chevron {
-  display: inline-flex;
-  transform: translateX(0);
-  transition: transform var(--learn-out) var(--learn-ease);
+.resume-download-icon{display:block;width:20px;height:20px;flex-shrink:0;overflow:hidden}
+.resume-download-arrow{transform:translateY(0);opacity:1}
+.resume-download-tray{transform-box:view-box;transform-origin:12px 21px;transform:translateY(0) scaleX(1)}
+@keyframes resume-download-arrow-cycle{
+  0%{transform:translateY(0);opacity:1}
+  38%{transform:translateY(7px);opacity:0}
+  39%{transform:translateY(-6px);opacity:0}
+  100%{transform:translateY(0);opacity:1}
 }
-.t-learn-arm {
-  transform-box: view-box;
-  transform-origin: 10px 8px;
-  vector-effect: non-scaling-stroke;
-  transition: transform var(--learn-out) var(--learn-ease);
+@keyframes resume-download-tray-cycle{
+  0%,20%,100%{transform:translateY(0) scaleX(1)}
+  38%{transform:translateY(1px) scaleX(.9)}
+  72%{transform:translateY(0) scaleX(1)}
 }
-@media (hover:hover) and (pointer:fine){
-  .t-learn:hover .t-learn-chevron { transform: translateX(var(--learn-shift)); transition-duration: var(--learn-in); }
-  .t-learn:hover .t-learn-arm { transition-duration: var(--learn-in); }
-  .t-learn:hover .t-learn-arm-top { transform: rotate(var(--learn-spread)); }
-  .t-learn:hover .t-learn-arm-bot { transform: rotate(calc(var(--learn-spread) * -1)); }
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .resume-link--download:hover .resume-download-arrow{animation:resume-download-arrow-cycle var(--resume-download-duration) var(--resume-download-ease) 1 both}
+  .resume-link--download:hover .resume-download-tray{animation:resume-download-tray-cycle var(--resume-download-duration) var(--resume-download-ease) 1 both}
 }
-@media (prefers-reduced-motion: reduce) {
-  .t-learn-chevron, .t-learn-arm { transition: none !important; }
-  .resume-link--download .t-learn-chevron,.resume-link--download .t-learn-arm{transform:none!important}
+@media (prefers-reduced-motion:reduce){
+  .resume-download-arrow,.resume-download-tray{animation:none!important;transform:none!important;opacity:1!important}
 }
 
 @media (max-width:380px){
