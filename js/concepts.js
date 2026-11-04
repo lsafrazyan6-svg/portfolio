@@ -26,14 +26,28 @@
   section.querySelectorAll('[data-step]').forEach(b => b.addEventListener('click', () => show(index + Number(b.dataset.step))));
   section.addEventListener('keydown', e => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); show(index + (e.key === 'ArrowRight' ? 1 : -1)); } });
   const slide = section.querySelector('.concept-slide');
-  slide.addEventListener('pointerdown', e => { start = { x: e.clientX, y: e.clientY }; swiped = false; });
-  slide.addEventListener('pointerup', e => {
+  const finishSwipe = (x, y) => {
     if (!start) return;
-    const dx = e.clientX - start.x, dy = e.clientY - start.y;
+    const dx = x - start.x, dy = y - start.y;
     if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5) { swiped = true; show(index + (dx < 0 ? 1 : -1)); }
     start = null;
+  };
+  slide.addEventListener('touchstart', e => {
+    if (e.touches.length !== 1) { start = null; return; }
+    start = { x: e.touches[0].clientX, y: e.touches[0].clientY }; swiped = false;
+  }, { passive: true });
+  slide.addEventListener('touchend', e => { if (e.changedTouches.length) finishSwipe(e.changedTouches[0].clientX, e.changedTouches[0].clientY); }, { passive: true });
+  slide.addEventListener('touchcancel', () => { start = null; });
+  slide.addEventListener('pointerdown', e => {
+    if (e.pointerType !== 'mouse') return;
+    start = { x: e.clientX, y: e.clientY }; swiped = false;
+    (e.target.closest('button') || slide).setPointerCapture(e.pointerId);
   });
-  slide.addEventListener('pointercancel', () => { start = null; });
+  slide.addEventListener('pointerup', e => { if (e.pointerType === 'mouse') finishSwipe(e.clientX, e.clientY); });
+  slide.addEventListener('pointercancel', e => { if (e.pointerType === 'mouse') start = null; });
+  const preload = () => works.slice(1).forEach(([src]) => { const next = new Image(); next.src = src; });
+  if (picture.complete && picture.naturalWidth) preload();
+  else picture.addEventListener('load', preload, { once: true });
   open.addEventListener('click', e => {
     if (swiped) { e.preventDefault(); swiped = false; return; }
     big.src = works[index][0]; big.alt = works[index][1]; dialog.querySelector('.concept-dialog-caption').textContent = works[index][1];
