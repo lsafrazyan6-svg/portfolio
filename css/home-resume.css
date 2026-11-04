@@ -10,12 +10,13 @@
 .resume-title{margin:0 auto 24px;max-width:800px;font-size:24px;line-height:30px;font-weight:500;text-align:center}
 .resume-content{--muted:#666;--line:rgba(0,0,0,.16);width:min(800px,100%);margin:0 auto;gap:32px;min-width:0}
 html[data-theme=dark] .resume-content{--muted:#b3b3b3;--line:rgba(255,255,255,.2)}
-.resume-content .resume-summary{font-size:16px;line-height:24px;max-width:72ch}
+.resume-content .resume-summary{font-size:16px;line-height:24px;max-width:72ch;margin-left:44px}
 .resume-content .resume-strengths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;width:100%;margin:16px 0}
 .resume-content .rs-skill-tools{margin-top:16px}
 .resume-content .resume-results{padding-left:24px;margin:8px 0;display:grid;gap:8px}
 .resume-content .resume-results li{font-size:16px;line-height:24px}
-.resume-content .resume-quote{margin:0;padding:16px 20px;border-left:3px solid currentColor;background:var(--line)}
+.resume-content .resume-quote{display:flex;align-items:flex-start;gap:12px;margin:0;padding:24px;border:0;border-radius:24px;background:rgba(247,79,160,.08)}
+.resume-content .resume-quote-icon{display:block;flex:none;width:32px;height:32px}
 .resume-content .resume-quote p{font-weight:500}
 .resume-content .resume-quote cite{display:block;margin-top:8px;color:var(--muted);font-size:16px;font-style:normal}
 .resume-content .resume-strength{gap:8px}
@@ -76,6 +77,9 @@ html[data-theme=dark] .resume-content{--muted:#b3b3b3;--line:rgba(255,255,255,.2
 .resume-life{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:16px;text-align:center}
 .resume-life h2{margin:0;font-size:24px;line-height:30px;font-weight:500}
 .resume-life>p{max-width:72ch}
+.life-title-wrap{position:relative;isolation:isolate;display:grid;place-items:center;width:min(100%,560px);min-height:64px;overflow:hidden}
+.life-title-wrap::before{content:"";position:absolute;z-index:-1;left:50%;top:50%;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:radial-gradient(ellipse 48% 17% at 50% 50%,rgba(247,79,160,.17),rgba(247,79,160,.06) 48%,transparent 75%);animation:life-glow-rotate 24s linear infinite;pointer-events:none}
+@keyframes life-glow-rotate{to{transform:rotate(360deg)}}
 
 /* The six supplied photos follow the Figma collage; each remains independently zoomable. */
 .resume-life{--line:rgba(0,0,0,.16);--link:#1f2836;padding:24px;background:#fff;color:#1f1f1f;border-radius:24px}
@@ -98,4 +102,5 @@ html[data-theme=dark] .resume-content{--muted:#b3b3b3;--line:rgba(255,255,255,.2
 }
 @media(prefers-reduced-motion:reduce){
   .resume-life .life-photo{transform:none!important;transition:none!important}
+  .life-title-wrap::before{animation:none}
 }
