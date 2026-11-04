@@ -54,10 +54,19 @@
     const src = imgs[index];
     const big = root.querySelector(".lb-img");
     setZoom(false); big.style.width = ""; big.src = src.dataset.full || src.currentSrc || src.src; big.alt = src.alt;
-    root.querySelector(".lb-cap").textContent = src.alt;
-    root.querySelector(".lb-prev").hidden = root.querySelector(".lb-next").hidden = imgs.length < 2;
+    const lifePhoto = !!src.closest(".resume-life");
+    const caption = root.querySelector(".lb-cap");
+    caption.textContent = lifePhoto ? "" : src.alt;
+    caption.hidden = lifePhoto;
+    root.querySelector(".lb-prev").hidden = root.querySelector(".lb-next").hidden = (lifePhoto ? imgs.filter(img => img.closest(".resume-life")).length : imgs.length) < 2;
   };
-  const step = (d) => { index = (index + d + imgs.length) % imgs.length; show(); };
+  const step = (d) => {
+    if (imgs[index].closest(".resume-life")) {
+      const group = imgs.map((img, i) => img.closest(".resume-life") ? i : -1).filter(i => i >= 0);
+      index = group[(group.indexOf(index) + d + group.length) % group.length];
+    } else index = (index + d + imgs.length) % imgs.length;
+    show();
+  };
   function open(i) {
     if (!root) build();
     lastFocus = document.activeElement; index = i; show();

@@ -7,11 +7,17 @@
   padding:32px;background:#fff;color:var(--ink);border-radius:24px;box-shadow:var(--cover-shadow);
 }
 .resume-section{width:100%;padding:32px 32px 0;scroll-margin-top:24px}
-.resume-title{margin:0 auto 24px;max-width:800px;font-size:24px;line-height:30px;font-weight:500}
+.resume-title{margin:0 auto 24px;max-width:800px;font-size:24px;line-height:30px;font-weight:500;text-align:center}
 .resume-content{--muted:#666;--line:rgba(0,0,0,.16);width:min(800px,100%);margin:0 auto;gap:32px;min-width:0}
 html[data-theme=dark] .resume-content{--muted:#b3b3b3;--line:rgba(255,255,255,.2)}
 .resume-content .resume-summary{font-size:16px;line-height:24px;max-width:72ch}
-.resume-content .resume-strengths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;width:100%}
+.resume-content .resume-strengths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;width:100%;margin:16px 0}
+.resume-content .rs-skill-tools{margin-top:16px}
+.resume-content .resume-results{padding-left:24px;margin:8px 0;display:grid;gap:8px}
+.resume-content .resume-results li{font-size:16px;line-height:24px}
+.resume-content .resume-quote{margin:0;padding:16px 20px;border-left:3px solid currentColor;background:var(--line)}
+.resume-content .resume-quote p{font-weight:500}
+.resume-content .resume-quote cite{display:block;margin-top:8px;color:var(--muted);font-size:16px;font-style:normal}
 .resume-content .resume-strength{gap:8px}
 .resume-content .resume-strength-heading{gap:12px}
 .resume-content .resume-strength-heading img{width:32px;height:32px}
