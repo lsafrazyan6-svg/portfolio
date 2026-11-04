@@ -1,61 +1,51 @@
-/* Ручной слайдер: кнопки, стрелки клавиатуры и свайп; без автопрокрутки и увеличения при наведении. */
+/* Ручная лента: перетаскивание мышкой, нативный свайп, стрелки; оригиналы без потерь качества. */
 (() => {
   const section = document.querySelector('.concepts');
   if (!section) return;
-  const works = [
-    ['assets/concepts/reading-full.webp', 'Читалка'],
-    ['assets/concepts/login-full.webp', 'Книжный дневник · Вход'],
-    ['assets/concepts/formula-full.webp', 'Формула-1 · Поиск попутчика'],
-    ['assets/concepts/travel-full.webp', 'Дневник путешествий']
-  ];
-  const picture = section.querySelector('.concept-image');
-  const caption = section.querySelector('.concept-caption');
-  const counter = section.querySelector('.concept-counter');
-  const open = section.querySelector('.concept-open');
+  const viewport = section.querySelector('.concepts-viewport');
+  const frame = section.querySelector('.concepts-window');
+  const cards = [...section.querySelectorAll('.concept-card')];
   const dialog = document.querySelector('.concept-dialog');
   const big = dialog.querySelector('.concept-dialog-image');
-  let index = 0, start = null, swiped = false;
-  const show = n => {
-    index = (n + works.length) % works.length;
-    const [src, title] = works[index];
-    picture.src = src; picture.alt = title;
-    caption.textContent = title; counter.textContent = `${index + 1} / ${works.length}`;
-    open.setAttribute('aria-label', `Открыть крупно: ${title}`);
-    if (dialog.open) { big.src = src; big.alt = title; dialog.querySelector('.concept-dialog-caption').textContent = title; }
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  let index = 0, lastFocus = null, drag = null, dragged = false;
+  const update = () => {
+    const max = viewport.scrollWidth - viewport.clientWidth;
+    frame.classList.toggle('has-before', viewport.scrollLeft > 2);
+    frame.classList.toggle('has-after', viewport.scrollLeft < max - 2);
+    section.querySelector('[data-step="-1"]').disabled = viewport.scrollLeft < 2;
+    section.querySelector('[data-step="1"]').disabled = viewport.scrollLeft >= max - 2;
   };
-  section.querySelectorAll('[data-step]').forEach(b => b.addEventListener('click', () => show(index + Number(b.dataset.step))));
-  section.addEventListener('keydown', e => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); show(index + (e.key === 'ArrowRight' ? 1 : -1)); } });
-  const slide = section.querySelector('.concept-slide');
-  const finishSwipe = (x, y) => {
-    if (!start) return;
-    const dx = x - start.x, dy = y - start.y;
-    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5) { swiped = true; show(index + (dx < 0 ? 1 : -1)); }
-    start = null;
+  const step = direction => viewport.scrollBy({left:direction * (cards[0].offsetWidth + 24),behavior:reduce.matches?'instant':'smooth'});
+  section.querySelectorAll('[data-step]').forEach(b => b.addEventListener('click', () => step(Number(b.dataset.step))));
+  viewport.addEventListener('scroll', update, {passive:true});
+  new ResizeObserver(update).observe(viewport);
+  viewport.addEventListener('keydown', e => { if (e.key==='ArrowLeft'||e.key==='ArrowRight') {e.preventDefault();step(e.key==='ArrowRight'?1:-1);} });
+  viewport.addEventListener('pointerdown', e => {
+    if (e.pointerType!=='mouse'||e.button!==0) return;
+    drag={x:e.clientX,left:viewport.scrollLeft};dragged=false;
+  });
+  viewport.addEventListener('pointermove', e => {
+    if (!drag) return;
+    const dx=e.clientX-drag.x;
+    if (Math.abs(dx)>4&&!dragged) {dragged=true;viewport.setPointerCapture(e.pointerId);viewport.classList.add('is-dragging');}
+    if (dragged) {e.preventDefault();viewport.scrollLeft=drag.left-dx;}
+  });
+  const endDrag=()=>{drag=null;viewport.classList.remove('is-dragging');update();};
+  viewport.addEventListener('pointerup',endDrag);
+  viewport.addEventListener('pointercancel',endDrag);
+  viewport.addEventListener('click',e=>{if(dragged){e.preventDefault();e.stopImmediatePropagation();dragged=false;}},true);
+  const show=n=>{
+    index=(n+cards.length)%cards.length;
+    const img=cards[index].querySelector('img');
+    big.src=img.src;big.alt=img.alt;dialog.querySelector('.concept-dialog-caption').textContent=img.alt;
   };
-  slide.addEventListener('touchstart', e => {
-    if (e.touches.length !== 1) { start = null; return; }
-    start = { x: e.touches[0].clientX, y: e.touches[0].clientY }; swiped = false;
-  }, { passive: true });
-  slide.addEventListener('touchend', e => { if (e.changedTouches.length) finishSwipe(e.changedTouches[0].clientX, e.changedTouches[0].clientY); }, { passive: true });
-  slide.addEventListener('touchcancel', () => { start = null; });
-  slide.addEventListener('pointerdown', e => {
-    if (e.pointerType !== 'mouse') return;
-    start = { x: e.clientX, y: e.clientY }; swiped = false;
-    (e.target.closest('button') || slide).setPointerCapture(e.pointerId);
-  });
-  slide.addEventListener('pointerup', e => { if (e.pointerType === 'mouse') finishSwipe(e.clientX, e.clientY); });
-  slide.addEventListener('pointercancel', e => { if (e.pointerType === 'mouse') start = null; });
-  const preload = () => works.slice(1).forEach(([src]) => { const next = new Image(); next.src = src; });
-  if (picture.complete && picture.naturalWidth) preload();
-  else picture.addEventListener('load', preload, { once: true });
-  open.addEventListener('click', e => {
-    if (swiped) { e.preventDefault(); swiped = false; return; }
-    big.src = works[index][0]; big.alt = works[index][1]; dialog.querySelector('.concept-dialog-caption').textContent = works[index][1];
-    dialog.showModal(); document.body.style.overflow = 'hidden';
-  });
-  dialog.querySelector('.concept-dialog-close').addEventListener('click', () => dialog.close());
-  dialog.querySelectorAll('[data-step]').forEach(b => b.addEventListener('click', () => show(index + Number(b.dataset.step))));
-  dialog.addEventListener('keydown', e => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); show(index + (e.key === 'ArrowRight' ? 1 : -1)); } });
-  dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
-  dialog.addEventListener('close', () => { document.body.style.overflow = ''; open.focus({ preventScroll: true }); });
+  cards.forEach((card,i)=>card.querySelector('button').addEventListener('click',e=>{lastFocus=e.currentTarget;show(i);dialog.showModal();document.body.style.overflow='hidden';}));
+  dialog.querySelector('.concept-dialog-close').addEventListener('click',()=>dialog.close());
+  dialog.querySelectorAll('[data-step]').forEach(b=>b.addEventListener('click',()=>show(index+Number(b.dataset.step))));
+  dialog.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();show(index+(e.key==='ArrowRight'?1:-1));}});
+  dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
+  dialog.addEventListener('close',()=>{document.body.style.overflow='';lastFocus?.focus({preventScroll:true});});
+  new IntersectionObserver(([entry],observer)=>{if(entry.isIntersecting){cards.forEach(card=>{card.querySelector('img').loading='eager';});observer.disconnect();}}).observe(section);
+  update();
 })();
