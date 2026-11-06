@@ -34,3 +34,6 @@
 @media(max-width:820px){.concept-card{width:min(220px,calc((100svh - 220px) * .492268))}.concept-controls{width:min(260px,100%)}}
 
 .concepts{scroll-margin-top:16px}
+
+/* Recorded album concept: keep the existing gallery sizing and controls. */
+.concept-card--album .concept-image{border-radius:12px;background:#e8e9ed}
