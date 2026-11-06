@@ -100,7 +100,13 @@
   root.querySelector('[data-board-in]').addEventListener('click', () => zoom(scale * 1.4, center()));
   root.querySelector('[data-board-out]').addEventListener('click', () => zoom(scale / 1.4, center()));
   root.querySelector('[data-board-fit]').addEventListener('click', fit);
-  img.addEventListener('load', fit);
-  if (img.complete) fit();
-  new ResizeObserver(fit).observe(viewport);
+  const initial = () => {
+    if (!img.naturalWidth) return;
+    fitScale = Math.min((viewport.clientWidth - 64) / contentWidth, (viewport.clientHeight - 64) / contentHeight);
+    scale = Math.max(fitScale, Math.min(1, (viewport.clientWidth - 40) / 900));
+    x = 20 - 70 * scale; y = 20 - 60 * scale; paint();
+  };
+  img.addEventListener('load', initial);
+  if (img.complete) initial();
+  new ResizeObserver(initial).observe(viewport);
 })();
