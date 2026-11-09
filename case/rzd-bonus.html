@@ -77,10 +77,10 @@
     <article class="article">
       <div class="rzd-showcase" aria-label="Прототип на телефоне и ноутбуке">
         <div class="rzd-showcase__card"><div class="rzd-showcase__phone"><div class="rzd-showcase__phone-inner">
-          <img src="../assets/rzd-phone-poster.jpg" alt="Покупка билета в мобильном прототипе" width="1024" height="1536" decoding="async">
+          <img data-no-zoom src="../assets/rzd-phone-poster.jpg" alt="Покупка билета в мобильном прототипе" width="1024" height="1536" decoding="async">
           <video muted loop playsinline preload="none" aria-label="Запись покупки билета в мобильном прототипе" data-video-src="../assets/rzd-phone-journey.mp4"></video>
         </div></div></div>
-        <div class="rzd-showcase__card rzd-showcase__desktop"><img src="../assets/rzd-laptop-hero.png" width="2240" height="1508" alt="Поиск билетов РЖД на экране ноутбука" decoding="async"></div>
+        <div class="rzd-showcase__card rzd-showcase__desktop"><img data-no-zoom src="../assets/rzd-laptop-hero.png" width="2240" height="1508" alt="Поиск билетов РЖД на экране ноутбука" decoding="async"></div>
       </div>
       <script>
         (()=>{const video=document.querySelector('[data-video-src]');if(!video||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const start=()=>{if(!video.src){video.src=video.dataset.videoSrc;video.addEventListener('playing',()=>video.parentElement.classList.add('is-playing'),{once:true})}video.play().catch(()=>{})};if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)start();else video.pause()})},{rootMargin:'200px'});observer.observe(video.parentElement)}else start()})();
