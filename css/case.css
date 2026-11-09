@@ -466,3 +466,28 @@ html[data-theme=dark] .benchmark-viewport{background-image:radial-gradient(circl
 /* Итоговая оценка ICE */
 .ice th:last-child,.ice td:last-child{background:var(--button);font-weight:500}
 @media(max-width:820px){.ice td.num:last-child{padding:4px 8px;border-radius:6px;color:var(--ink)}}
+
+/* Правки кейса */
+.rzd-centered .aside-head .back{align-self:flex-start;text-align:left}
+.rzd-centered .status{background:#d9fee0;color:#286f39}
+html[data-theme=dark] .rzd-centered .status{background:rgba(95,207,125,.14);color:#7fdc97}
+.rzd-centered .cmp-before-wrap{background:#fff}
+.rzd-centered .test-facts{flex-wrap:nowrap}
+.rzd-centered .test-fact{white-space:nowrap}
+.rzd-centered .test-hypotheses li + li{margin-top:8px}
+.rzd-centered .test-materials:not([open])>summary .chev{transform:none}
+.rzd-centered .test-materials[open]>summary .chev{transform:rotate(180deg)}
+@media(max-width:400px){.rzd-centered .test-facts{flex-wrap:wrap}}
+
+.rzd-centered .validation-findings{padding-left:1.5em}
+.rzd-centered .validation-findings li + li{margin-top:8px}
+.rzd-centered #compare .h-title{margin-bottom:24px}
+
+.validation-table{width:100%}.validation-table summary{display:flex;align-items:center;gap:8px;cursor:pointer}.validation-table summary .chev{flex:none;transition:transform .2s}.validation-table:not([open]) summary .chev{transform:none}.validation-table[open] summary .chev{transform:rotate(180deg)}.validation-table .table-wrap{overflow-x:auto;margin-top:16px}.validation-table table{border-collapse:collapse;width:100%;min-width:680px}.validation-table th,.validation-table td{border:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}.validation-table th{font-weight:500}.validation-table td a{color:var(--link);text-decoration:underline}
+
+.rzd-centered .validation-table > summary,.rzd-centered .test-materials > summary,.rzd-centered .test-materials .toggle > summary{padding-left:0;padding-right:0}
+.rzd-centered .test-materials > .toggle-body,.rzd-centered .test-materials .toggle > .toggle-body{padding-left:0;padding-right:0}
+
+.benchmark-logos img{height:36px}
+
+.rzd-centered .results-metrics .result-metric:last-child{display:flex;grid-row:span 2;padding-bottom:0;align-self:start}

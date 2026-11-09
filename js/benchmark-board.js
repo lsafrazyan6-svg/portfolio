@@ -103,8 +103,8 @@
   const initial = () => {
     if (!img.naturalWidth) return;
     fitScale = Math.min((viewport.clientWidth - 64) / contentWidth, (viewport.clientHeight - 64) / contentHeight);
-    scale = Math.max(fitScale, Math.min(1, (viewport.clientWidth - 40) / 900));
-    x = 20 - 70 * scale; y = 20 - 60 * scale; paint();
+    scale = Math.max(fitScale, Math.min((viewport.clientWidth - 32) / 2000, (viewport.clientHeight - 32) / 960));
+    x = (viewport.clientWidth - 2000 * scale) / 2; y = 16; paint();
   };
   img.addEventListener('load', initial);
   if (img.complete) initial();
