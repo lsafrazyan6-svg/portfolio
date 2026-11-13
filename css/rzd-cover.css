@@ -4,7 +4,7 @@
 .rzd-cover-title{margin:0;width:100%;font-family:"Inter Tight",sans-serif;font-weight:500;font-size:4cqw;line-height:4.833333cqw;letter-spacing:0;text-align:left}
 .rzd-cover-tags{display:flex;flex-direction:column;gap:1.25cqw;align-items:flex-start}
 .rzd-cover-tag-row{display:flex;gap:1.25cqw}
-.rzd-cover-tag{display:block;padding:.666667cqw 1cqw;border:0;border-radius:6.277167cqw;background:#F0F1F3;color:#1f1f1f;font-size:2.666667cqw;line-height:3.25cqw;font-weight:400;white-space:nowrap}
+.rzd-cover-tag{display:block;padding:.666667cqw 1cqw;border:0;border-radius:6.277167cqw;background:#F2F4F5;color:#1f1f1f;font-size:2.666667cqw;line-height:3.25cqw;font-weight:400;white-space:nowrap}
 .rzd-cover-feedback{padding:.666667cqw 1.333333cqw;border-radius:2cqw 6.277167cqw 6.277167cqw 0;background:#1f1f1f;color:#fff}
 .rzd-cover-phone{position:absolute;z-index:1;left:56.615cqw;top:1.906667cqw;width:37.261333cqw;height:70.169083cqw;overflow:hidden;transform:none}
 .rzd-cover .rzd-cover-phone img{position:absolute;width:285.22338%;height:113.59442%;left:-93.28203%;top:-6.33072%;max-width:none;object-fit:fill;pointer-events:none;transition:none;transform:none}

@@ -5,16 +5,16 @@
 @font-face{font-family:"Felidae";src:url("../assets/fonts/felidae.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 
 :root{
-  --page:#E3E5E6;
-  --header:#E3E5E6;
+  --page:#F2F4F5;
+  --header:#F2F4F5;
   --ink:#1f1f1f;          /* основной текст: мягкий чёрный вместо #020202 */
   --link:#1f2836;         /* ссылки и кнопки: мягкий тёмно-синий вместо #04142c */
   --badge-ink:#3b3b3b;
-  --button:#F0F1F3;
-  --surface:#F0F1F3;
+  --button:#FFFFFF;
+  --surface:#FFFFFF;
   --accent:#F439AA;
   --button-hover:#e2e2e3;
-  --key:#F0F1F3;
+  --key:#FFFFFF;
   --ring:rgba(0,0,0,.08);
   --cover-shadow:none;
   --dock-shadow:none;

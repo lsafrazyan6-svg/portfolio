@@ -7,10 +7,10 @@
   --muted:#878787;
   --line:#e2e2e3;
   --toc-line:#e2d6d6;   /* тёплая линия слева у «Содержания», как в Figma */
-  --surface:#F0F1F3;
-  --ok:#2f9e4f;   --ok-bg:#F0F1F3;
-  --mid:#c98a00;  --mid-bg:#F0F1F3;
-  --bad:#d93d3d;  --bad-bg:#F0F1F3;
+  --surface:#FFFFFF;
+  --ok:#2f9e4f;   --ok-bg:#FFFFFF;
+  --mid:#c98a00;  --mid-bg:#FFFFFF;
+  --bad:#d93d3d;  --bad-bg:#FFFFFF;
 }
 html[data-theme=dark]{
   --muted:#a0a0a0;
