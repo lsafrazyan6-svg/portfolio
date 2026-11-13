@@ -44,7 +44,7 @@ html[data-theme=dark] .resume-content{--muted:#b3b3b3;--line:rgba(255,255,255,.2
 .resume-content .rs-pro .rs-text{max-width:320px}
 .resume-content .rs-pic--diploma{left:352px;top:0;width:120px}
 .resume-content .rs-pic--award{left:488px;top:12px;width:136px}
-.resume-content .rs-note{max-width:100%;font-size:16px;line-height:24px;color:var(--note)}
+.resume-content .rs-note{max-width:100%;font-size:16px;line-height:24px;color:#F439AA}
 .resume-content .rs-spectr{min-height:224px}
 .resume-content .rs-spectr .rs-text{max-width:320px}
 .resume-content .rs-pic--cert{left:344px;top:0;width:160px}
