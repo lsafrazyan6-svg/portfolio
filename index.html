@@ -17,12 +17,13 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/base.css?v=20261113-no-shadows">
+  <link rel="stylesheet" href="css/base.css?v=20261113-borderless">
   <link rel="stylesheet" href="css/home.css?v=20261113-no-shadows">
+  <link rel="stylesheet" href="css/rzd-cover.css?v=20261113-straight">
   <link rel="stylesheet" href="css/resume.css?v=20261113-no-shadows">
   <link rel="stylesheet" href="css/home-resume.css?v=20261113-no-shadows">
   <link rel="stylesheet" href="css/concepts.css?v=20261106-album-gif">
-  <link rel="stylesheet" href="css/tg-button.css?v=20261113-no-shadows">
+  <link rel="stylesheet" href="css/tg-button.css?v=20261113-pink-restored">
 
 </head>
 <body>
@@ -41,10 +42,16 @@
       </aside>
       <section class="cases" id="cases" aria-label="Кейсы">
         <a class="case" id="case-1" href="case/rzd-bonus.html">
-          <picture class="case-media case-media--rzd">
-            <source media="(max-width:820px)" srcset="assets/rzd-cover-mobile-3x.webp" width="1989" height="3099">
-            <img data-no-zoom src="assets/rzd-cover-desktop-3x.webp" width="3600" height="1920" alt="Как я увеличила вовлечение в пользование программой РЖД бонус. Редизайн, UX-тесты и обратная связь от команды РЖД" decoding="async">
-          </picture>
+          <div class="case-media case-media--rzd rzd-cover">
+            <div class="rzd-cover-phone" aria-hidden="true"><img data-no-zoom src="assets/rzd-cover/phone-straight-source.png" width="4096" height="3072" alt="" decoding="async"></div>
+            <div class="rzd-cover-copy">
+              <h2 class="rzd-cover-title">Как я увеличила вовлечение в программу лояльности РЖД бонус</h2>
+              <div class="rzd-cover-tags">
+                <div class="rzd-cover-tag-row"><span class="rzd-cover-tag">Редизайн</span><span class="rzd-cover-tag">UX-тесты</span></div>
+                <span class="rzd-cover-tag rzd-cover-feedback">Обратная связь от команды РЖД</span>
+              </div>
+            </div>
+          </div>
         </a>
         
       </section>

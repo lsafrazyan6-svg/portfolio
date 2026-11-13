@@ -135,3 +135,6 @@ html[data-theme=dark] .theme-icon{transform:rotate(-18deg) scale(1.04);filter:no
 
 /* Shared accent for interface icons. Brand marks keep their own colors. */
 .icon,.theme-icon,.resume-download-icon,.board-icon,svg[data-icon],svg.chev{color:var(--accent)}
+
+/* Panels use fill alone, without decorative outlines. */
+.badge,.status,.toc-box,.toc-details,.toggle,.table-wrap,.benchmark-board,.benchmark-toolbar,.pill{border:0!important}
