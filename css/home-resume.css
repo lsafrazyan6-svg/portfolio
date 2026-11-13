@@ -3,8 +3,8 @@
 .home-index>.layout{gap:32px}
 .home-index>.layout>.intro{max-width:672px}
 .home-index .concepts{
-  --page:#fff;--ink:#1f1f1f;--link:#1f2836;
-  padding:32px;background:#fff;color:var(--ink);border-radius:24px;box-shadow:var(--cover-shadow);
+  --page:var(--surface);--ink:#1f1f1f;--link:#1f2836;
+  padding:32px;background:var(--surface);color:var(--ink);border-radius:24px;box-shadow:var(--cover-shadow);
 }
 .resume-section{width:100%;padding:32px 32px 0;scroll-margin-top:24px;overflow-x:clip;overflow-y:visible}
 .resume-title{margin:0 auto 24px;max-width:800px;font-size:24px;line-height:30px;font-weight:500;text-align:center}
@@ -15,7 +15,7 @@ html[data-theme=dark] .resume-content{--muted:#b3b3b3;--line:rgba(255,255,255,.2
 .resume-content .rs-skill-tools{margin-top:16px}
 .resume-content .resume-results{padding-left:24px;margin:8px 0;display:grid;gap:8px}
 .resume-content .resume-results li{font-size:16px;line-height:24px}
-.resume-content .resume-quote{display:flex;align-items:flex-start;gap:12px;margin:0;padding:24px;border:0;border-radius:24px;background:rgba(247,79,160,.08)}
+.resume-content .resume-quote{display:flex;align-items:flex-start;gap:12px;margin:0;padding:24px;border:0;border-radius:24px;background:var(--surface)}
 .resume-content .resume-quote-icon{display:block;flex:none;width:32px;height:32px}
 .resume-content .resume-quote p{font-weight:500}
 .resume-content .resume-quote cite{display:block;margin-top:8px;color:var(--muted);font-size:16px;font-style:normal}
@@ -26,7 +26,7 @@ html[data-theme=dark] .resume-content{--muted:#b3b3b3;--line:rgba(255,255,255,.2
 .resume-content .resume-strength p{padding-left:44px;font-size:16px;line-height:24px;color:var(--muted)}
 .resume-content .rs-row{display:block;min-height:0}
 .resume-content .rs-row>h2{display:flex;align-items:center;gap:12px;padding:0;margin-bottom:24px;font-size:16px;line-height:24px;font-weight:400}
-.resume-content .rs-row>h2>span{flex:none;display:block;width:fit-content;padding:2px 10px;border-radius:16px;background:var(--ink);color:var(--page)}
+.resume-content .rs-row>h2>span{flex:none;display:block;width:fit-content;padding:2px 10px;border-radius:16px;background:var(--surface);color:var(--ink)}
 .resume-content .rs-row>h2::after{content:"";height:1px;background:var(--line);flex:1}
 .resume-content .resume-project-heading{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
 .resume-content .resume-project-heading img{display:block;flex:none;width:55px;height:24px}
@@ -44,7 +44,7 @@ html[data-theme=dark] .resume-content{--muted:#b3b3b3;--line:rgba(255,255,255,.2
 .resume-content .rs-pro .rs-text{max-width:320px}
 .resume-content .rs-pic--diploma{left:352px;top:0;width:120px}
 .resume-content .rs-pic--award{left:488px;top:12px;width:136px}
-.resume-content .rs-note{max-width:100%;font-size:16px;line-height:24px;color:#F439AA}
+.resume-content .rs-note{max-width:100%;font-size:16px;line-height:24px;color:var(--accent)}
 .resume-content .rs-spectr{min-height:224px}
 .resume-content .rs-spectr .rs-text{max-width:320px}
 .resume-content .rs-pic--cert{left:344px;top:0;width:160px}
@@ -81,7 +81,7 @@ html[data-theme=dark] .resume-content{--muted:#b3b3b3;--line:rgba(255,255,255,.2
 .life-intro{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;gap:12px;width:100%}
 .life-intro>p{max-width:72ch}
 .life-title-wrap{display:grid;place-items:center;width:min(100%,560px);min-height:64px}
-.life-intro::before{content:"";position:absolute;z-index:-1;left:0;top:50%;width:100%;aspect-ratio:1;translate:0 -50%;border-radius:50%;background:radial-gradient(ellipse 42% 30% at 44% 52%,rgba(247,79,160,.14),rgba(247,79,160,.045) 50%,transparent 78%),radial-gradient(ellipse 34% 25% at 61% 47%,rgba(255,167,208,.13),transparent 76%);animation:life-glow-rotate 60s linear infinite;pointer-events:none}
+.life-intro::before{content:"";position:absolute;z-index:-1;left:0;top:50%;width:100%;aspect-ratio:1;translate:0 -50%;border-radius:50%;background:none;animation:life-glow-rotate 60s linear infinite;pointer-events:none}
 @keyframes life-glow-rotate{to{transform:rotate(360deg)}}
 
 /* The six supplied photos follow the Figma collage; each remains independently zoomable. */

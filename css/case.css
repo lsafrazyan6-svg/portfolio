@@ -7,10 +7,10 @@
   --muted:#878787;
   --line:#e2e2e3;
   --toc-line:#e2d6d6;   /* тёплая линия слева у «Содержания», как в Figma */
-  --surface:#f6f6f7;
-  --ok:#2f9e4f;   --ok-bg:#eaf7ee;
-  --mid:#c98a00;  --mid-bg:#fdf5dc;
-  --bad:#d93d3d;  --bad-bg:#fdecec;
+  --surface:#F0F1F3;
+  --ok:#2f9e4f;   --ok-bg:#F0F1F3;
+  --mid:#c98a00;  --mid-bg:#F0F1F3;
+  --bad:#d93d3d;  --bad-bg:#F0F1F3;
 }
 html[data-theme=dark]{
   --muted:#a0a0a0;
@@ -491,3 +491,7 @@ html[data-theme=dark] .rzd-centered .status{background:rgba(95,207,125,.14);colo
 .benchmark-logos img{height:36px}
 
 .rzd-centered .results-metrics .result-metric:last-child{display:flex;grid-row:span 2;padding-bottom:0;align-self:start}
+
+/* Neutral surfaces repeat the same palette across case panels. */
+html:not([data-theme=dark]) :is(.toc-box,.media,.cmp-frame,.cmp-knob,.pill--users,.pill--biz,.res-tag,.audit-note-num,.test-fact--people,.test-fact--time,.result-hypothesis--yes,.result-hypothesis--partial,.result-hypothesis--no,.status,.benchmark-board,.benchmark-toolbar){background:var(--surface)}
+html:not([data-theme=dark]) .benchmark-viewport{background-color:var(--surface)}

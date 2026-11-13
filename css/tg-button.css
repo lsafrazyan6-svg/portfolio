@@ -62,3 +62,7 @@
 @keyframes tgRingA{0%{opacity:0;box-shadow:0 0 0 0 rgba(238,47,134,.4)}15%{opacity:1}100%{opacity:0;box-shadow:0 0 0 14px rgba(238,47,134,0)}}
 @keyframes tgRingB{0%{opacity:0;box-shadow:0 0 0 0 rgba(238,47,134,.4)}15%{opacity:1}100%{opacity:0;box-shadow:0 0 0 14px rgba(238,47,134,0)}}
 @media(prefers-reduced-motion:reduce){.write.tg-fx,.write.tg-fx *,.write.tg-fx::after{animation:none!important;transition:none!important}}
+
+/* Same neutral backing as the other interface panels. */
+.write.tg-fx,.write.tg-fx:hover,.write.tg-fx:focus-visible{background:var(--button);color:var(--ink)}
+.write.tg-fx .keys{background:var(--key);color:var(--accent)}

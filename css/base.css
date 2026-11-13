@@ -5,14 +5,16 @@
 @font-face{font-family:"Felidae";src:url("../assets/fonts/felidae.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 
 :root{
-  --page:#fff;
-  --header:#fff;
+  --page:#E3E5E6;
+  --header:#E3E5E6;
   --ink:#1f1f1f;          /* основной текст: мягкий чёрный вместо #020202 */
   --link:#1f2836;         /* ссылки и кнопки: мягкий тёмно-синий вместо #04142c */
   --badge-ink:#3b3b3b;
-  --button:#f1f1f2;
+  --button:#F0F1F3;
+  --surface:#F0F1F3;
+  --accent:#F439AA;
   --button-hover:#e2e2e3;
-  --key:#e2e2e3;
+  --key:#F0F1F3;
   --ring:rgba(0,0,0,.08);
   --cover-shadow:0 8px 24px rgba(0,0,0,.08),0 0 0 1px var(--ring);
   --dock-shadow:0 4px 16px rgba(0,0,0,.12);
@@ -130,3 +132,6 @@ html[data-theme=dark] .theme-icon{transform:rotate(-18deg) scale(1.04);filter:dr
 @media (max-width:380px){
   .home-index .home-actions{flex-direction:column;gap:12px}
 }
+
+/* Shared accent for interface icons. Brand marks keep their own colors. */
+.icon,.theme-icon,.resume-download-icon,.board-icon,svg[data-icon],svg.chev{color:var(--accent)}

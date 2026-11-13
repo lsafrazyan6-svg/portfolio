@@ -15,7 +15,7 @@
 .contact-links{align-items:center}
 .cases{width:100%;display:flex;flex-direction:column;gap:64px}
 .case{display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px}
-.case-media{display:block;overflow:hidden;background:#fff;box-shadow:var(--cover-shadow)}
+.case-media{display:block;overflow:hidden;background:var(--surface);box-shadow:var(--cover-shadow)}
 .case-media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .case:hover .case-media img{transform:none}
 /* Обложки Figma: десктоп 109:112, мобилка 109:92 (03.11.2026). */
