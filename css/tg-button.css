@@ -5,13 +5,13 @@
    Точки строит js/tg-button.js. Подключать последним стилем страницы. */
 .write.tg-fx{
   position:relative;background:#ee2f86;color:#fff;
-  box-shadow:0 6px 20px rgba(238,47,134,.28);
+  box-shadow:none;
   transition:transform .35s cubic-bezier(.25,.1,.25,1),box-shadow .8s cubic-bezier(.25,.1,.25,1),background-color .8s cubic-bezier(.25,.1,.25,1);
   -webkit-tap-highlight-color:transparent
 }
 .write.tg-fx:hover,.write.tg-fx:focus-visible{background:#ee2f86}
 @media(hover:hover){
-  .write.tg-fx:hover{background:#f0388e;box-shadow:0 8px 28px rgba(238,47,134,.44)}
+  .write.tg-fx:hover{background:#f0388e;box-shadow:none}
   .write.tg-fx:hover .dots{opacity:1}
   .write.tg-fx:hover .dot.L.c0{transform:scale(1.1)}
   .write.tg-fx:hover .dot.L.c1{transform:translateX(3px) scale(1.2)}
@@ -28,9 +28,9 @@
 }
 .write.tg-fx:active{transform:scale(.985)}
 .write.tg-fx:focus-visible{outline:2px solid #ee2f86;outline-offset:5px}
-.write.tg-fx::after{content:"";position:absolute;inset:-3px;border-radius:15px;pointer-events:none;box-shadow:0 0 0 0 rgba(238,47,134,.4);opacity:0}
+.write.tg-fx::after{content:"";position:absolute;inset:-3px;border-radius:15px;pointer-events:none;box-shadow:none;opacity:0}
 .write.tg-fx .lbl,.write.tg-fx .keys{position:relative;z-index:2}
-.write.tg-fx .lbl{display:inline-block;text-shadow:0 0 8px rgba(255,255,255,.5)}
+.write.tg-fx .lbl{display:inline-block;text-shadow:none}
 .write.tg-fx .keys{background:rgba(255,255,255,.22);color:#fff}
 .write.tg-fx .dots{position:absolute;inset:0;z-index:0;overflow:hidden;border-radius:inherit;pointer-events:none;filter:blur(.45px);opacity:1;transition:opacity 1s cubic-bezier(.25,.1,.25,1)}
 .write.tg-fx .dot{position:absolute;display:block;transition:transform .6s cubic-bezier(.25,.1,.25,1)}
@@ -59,8 +59,8 @@
 @keyframes tgFlashB{0%,100%{opacity:0}45%{opacity:1}}
 @keyframes tgPopA{0%,100%{transform:scale(1)}45%{transform:scale(1.035)}}
 @keyframes tgPopB{0%,100%{transform:scale(1)}45%{transform:scale(1.035)}}
-@keyframes tgRingA{0%{opacity:0;box-shadow:0 0 0 0 rgba(238,47,134,.4)}15%{opacity:1}100%{opacity:0;box-shadow:0 0 0 14px rgba(238,47,134,0)}}
-@keyframes tgRingB{0%{opacity:0;box-shadow:0 0 0 0 rgba(238,47,134,.4)}15%{opacity:1}100%{opacity:0;box-shadow:0 0 0 14px rgba(238,47,134,0)}}
+@keyframes tgRingA{0%{opacity:0;box-shadow:none}15%{opacity:1}100%{opacity:0;box-shadow:none}}
+@keyframes tgRingB{0%{opacity:0;box-shadow:none}15%{opacity:1}100%{opacity:0;box-shadow:none}}
 @media(prefers-reduced-motion:reduce){.write.tg-fx,.write.tg-fx *,.write.tg-fx::after{animation:none!important;transition:none!important}}
 
 /* Same neutral backing as the other interface panels. */

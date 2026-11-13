@@ -16,8 +16,8 @@
   --button-hover:#e2e2e3;
   --key:#F0F1F3;
   --ring:rgba(0,0,0,.08);
-  --cover-shadow:0 8px 24px rgba(0,0,0,.08),0 0 0 1px var(--ring);
-  --dock-shadow:0 4px 16px rgba(0,0,0,.12);
+  --cover-shadow:none;
+  --dock-shadow:none;
   --content:904px;
 }
 html[data-theme=dark]{
@@ -30,8 +30,8 @@ html[data-theme=dark]{
   --button-hover:#353535;
   --key:#3a3a3a;
   --ring:rgba(255,255,255,.1);
-  --cover-shadow:0 8px 24px rgba(0,0,0,.45),0 0 0 1px var(--ring);
-  --dock-shadow:0 4px 16px rgba(0,0,0,.5);
+  --cover-shadow:none;
+  --dock-shadow:none;
 }
 
 *{box-sizing:border-box}
@@ -71,7 +71,7 @@ h2,h3,p,ul{margin:0}
 .theme-moon{opacity:0;transform:translate(-1px,1px) scale(.62) rotate(52deg)}
 html[data-theme=dark] .theme-sun{opacity:0;transform:rotate(90deg) scale(.55)}
 html[data-theme=dark] .theme-moon{opacity:1;transform:translate(0) scale(.9) rotate(19deg)}
-html[data-theme=dark] .theme-icon{transform:rotate(-18deg) scale(1.04);filter:drop-shadow(0 0 3px #f2f2ee38)}
+html[data-theme=dark] .theme-icon{transform:rotate(-18deg) scale(1.04);filter:none}
 
 /* Контакты */
 .contacts{display:flex;flex-direction:column;gap:16px}
@@ -91,7 +91,7 @@ html[data-theme=dark] .theme-icon{transform:rotate(-18deg) scale(1.04);filter:dr
   /* Кнопки «Написать в тг» и смена темы закреплены внизу экрана */
   .dock{position:fixed;z-index:30;right:16px;bottom:16px;gap:8px}
   .dock .keys,.dock .slash{display:none}
-  .write,.theme-toggle{box-shadow:var(--dock-shadow)}
+  .write,.theme-toggle{box-shadow:none}
 }
 
 @media(prefers-reduced-motion:reduce){

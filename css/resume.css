@@ -16,7 +16,7 @@ html[data-theme=dark]{--muted:#a0a0a0;--line:rgba(255,255,255,.2);--note:#e08fb3
 
 /* ---- Левая колонка ---- */
 .about{display:flex;flex-direction:column;gap:16px}
-.resume-photo{display:block;width:160px;height:160px;object-fit:cover;border-radius:20px;box-shadow:0 0 0 1px var(--line)}
+.resume-photo{display:block;width:160px;height:160px;object-fit:cover;border-radius:20px;box-shadow:none}
 .about-name{margin:0 0 8px;font-size:24px;line-height:32px;font-weight:500}
 .about .bio{font-size:16px;line-height:24px}
 
@@ -43,7 +43,7 @@ html[data-theme=dark] .rs-logo{border-radius:50%}
 .rs-entry--media{position:relative}
 .rs-pics{position:absolute;inset:0;pointer-events:none}
 .rs-pic{position:absolute;margin:0;pointer-events:auto;transform:rotate(var(--tilt,0deg));transition:transform .35s cubic-bezier(.22,1,.36,1)}
-.rs-pic img{display:block;width:100%;height:100%;object-fit:cover;border-radius:12px;background:#f2f2f2;box-shadow:0 0 0 1px var(--line),0 6px 16px rgba(0,0,0,.08);cursor:zoom-in}
+.rs-pic img{display:block;width:100%;height:100%;object-fit:cover;border-radius:12px;background:#f2f2f2;box-shadow:none;cursor:zoom-in}
 .rs-pic img:focus-visible{outline:2px solid var(--link);outline-offset:3px}
 .rs-pic--grad{aspect-ratio:164/158}.rs-pic--grad img{border-radius:17px}
 .rs-pic--diploma{aspect-ratio:107/151}.rs-pic--diploma img{border-radius:7px}

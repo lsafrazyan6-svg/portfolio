@@ -8,7 +8,7 @@
 .rzd-cover-title{margin:0;width:100%;font-family:"Inter Tight",sans-serif;font-weight:500;font-size:4cqw;line-height:4.833333cqw;letter-spacing:0;text-align:left}
 .rzd-cover-tags{display:flex;flex-direction:column;gap:1.25cqw;align-items:flex-start}
 .rzd-cover-tag-row{display:flex;gap:1.25cqw}
-.rzd-cover-tag{display:block;position:relative;padding:.666667cqw 1cqw;border-radius:6.277167cqw;background:rgba(255,255,255,.32);font-family:"Inter Tight",sans-serif;font-size:2.666667cqw;font-weight:400;line-height:3.25cqw;letter-spacing:0;white-space:nowrap;backdrop-filter:blur(.502172cqw);-webkit-backdrop-filter:blur(.502172cqw);box-shadow:inset 0 0 0 .125543cqw rgba(255,255,255,.5),inset 0 .125543cqw .3cqw rgba(255,255,255,.13)}
+.rzd-cover-tag{display:block;position:relative;padding:.666667cqw 1cqw;border-radius:6.277167cqw;background:rgba(255,255,255,.32);font-family:"Inter Tight",sans-serif;font-size:2.666667cqw;font-weight:400;line-height:3.25cqw;letter-spacing:0;white-space:nowrap;backdrop-filter:blur(.502172cqw);-webkit-backdrop-filter:blur(.502172cqw);box-shadow:none}
 .rzd-cover-feedback{padding:.666667cqw 1.333333cqw;border-radius:2cqw 6.277167cqw 6.277167cqw 0;background:rgba(237,20,20,.32);backdrop-filter:blur(8.083333cqw);-webkit-backdrop-filter:blur(8.083333cqw)}
 .rzd-cover-phone{position:absolute;z-index:2;left:59.927775cqw;top:1.906494cqw;width:37.261335cqw;height:70.169118cqw;overflow:hidden;transform:rotate(2.705682deg);transform-origin:0 0}
 .rzd-cover .rzd-cover-phone img{position:absolute;width:285.22338%;height:113.59442%;left:-93.28203%;top:-6.33072%;max-width:none;object-fit:fill;pointer-events:none;transition:none}
@@ -21,7 +21,7 @@
  .rzd-cover-title{font-size:7.239819cqw;line-height:8.748115cqw}
  .rzd-cover-break{display:none}
  .rzd-cover-tags,.rzd-cover-tag-row{gap:2.262443cqw}
- .rzd-cover-tag{padding:1.206637cqw 1.809955cqw;border-radius:11.361388cqw;background:rgba(73,73,73,.32);font-size:4.826546cqw;line-height:5.882353cqw;backdrop-filter:blur(14.630468cqw);-webkit-backdrop-filter:blur(14.630468cqw);box-shadow:inset 0 0 0 .227227cqw rgba(255,255,255,.5)}
+ .rzd-cover-tag{padding:1.206637cqw 1.809955cqw;border-radius:11.361388cqw;background:rgba(73,73,73,.32);font-size:4.826546cqw;line-height:5.882353cqw;backdrop-filter:blur(14.630468cqw);-webkit-backdrop-filter:blur(14.630468cqw);box-shadow:none}
  .rzd-cover-feedback{padding:1.206637cqw 2.413273cqw;border-radius:3.61991cqw 11.361388cqw 11.361388cqw 0;background:rgba(179,0,0,.46)}
  .rzd-cover-phone{z-index:1;left:3.288718cqw;top:37.738175cqw;width:85.75722cqw;height:161.494715cqw;transform:rotate(-4.700049deg)}
 }

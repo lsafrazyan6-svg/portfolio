@@ -41,7 +41,7 @@ html[data-theme=dark] .sol{
      стопки и счётчика, её меряет solution.js */
   position:relative;width:min(100%,700px,max(320px,(100svh - var(--sol-reserve,390px)) * 1.6));margin:0;
   aspect-ratio:8/5;border-radius:20px;overflow:hidden;isolation:isolate;
-  background:#fff;box-shadow:var(--cover-shadow);touch-action:pan-y;user-select:none;-webkit-user-select:none;
+  background:#fff;box-shadow:none;touch-action:pan-y;user-select:none;-webkit-user-select:none;
   transition:--s var(--sol-dur) var(--sol-ease),--tx var(--sol-dur) var(--sol-ease),--ty var(--sol-dur) var(--sol-ease);
 }
 .sol-frame.is-drag,.sol-frame.is-instant{transition:none}
@@ -76,8 +76,7 @@ html[data-theme=dark] .sol{
 }
 .sol-mark::after{
   content:"";position:absolute;inset:calc(-2px / var(--s));border-radius:inherit;opacity:0;
-  box-shadow:0 0 calc(18px / var(--s)) calc(3px / var(--s)) color-mix(in srgb,var(--acc) 55%,transparent),
-    inset 0 0 calc(12px / var(--s)) color-mix(in srgb,var(--acc) 35%,transparent);
+  box-shadow:none;
 }
 .sol-mark.is-ghost{border-style:dashed}
 .sol-mark.is-ghost::after{display:none}
@@ -113,7 +112,7 @@ html[data-theme=dark] .sol{
   text-align:left;cursor:pointer;-webkit-tap-highlight-color:transparent;
   transform-origin:bottom center;
   transform:translate(calc(var(--x,0px) + var(--drag-x,0px)),calc(var(--y,0px) + var(--drag-y,0px))) scale(var(--sc,1));
-  opacity:var(--o,1);z-index:var(--z,1);box-shadow:var(--sh,none);
+  opacity:var(--o,1);z-index:var(--z,1);box-shadow:none;
   transition:transform var(--sol-card-dur) var(--sol-ease),opacity var(--sol-card-dur) var(--sol-ease),
     box-shadow var(--sol-card-dur) var(--sol-ease),background-color var(--sol-card-dur) var(--sol-ease),border-color var(--sol-card-dur) var(--sol-ease),
     height var(--sol-card-dur) var(--sol-ease);
@@ -167,7 +166,7 @@ html[data-theme=dark] .sol-card{background:color-mix(in srgb,var(--acc) 12%,var(
 .sol-frame.is-zoomed .sol-full-in{opacity:0;transform:translateY(-4px)}
 .sol-full:hover .sol-full-pill{background:rgba(0,0,0,.86)}
 .sol-full:focus-visible{outline:none}
-.sol-full:focus-visible .sol-full-pill{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px rgba(0,0,0,.72)}
+.sol-full:focus-visible .sol-full-pill{outline:2px solid #fff;outline-offset:2px;box-shadow:none}
 
 /* ---- Широкая колонка: экран слева, стопка справа (колонка 340 px, зазор 28 px).
    Если экрану остаётся меньше 480 px — стопка уходит под экран (раскладка выше). ---- */
