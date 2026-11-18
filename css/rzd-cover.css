@@ -24,3 +24,13 @@ html[data-theme=dark] .rzd-cover-title{color:#fff}
 .rzd-cover-feedback{border-radius:11.361388cqw}
 
 @media(min-width:821px){.rzd-cover-phone{top:8cqw;left:61cqw}}
+
+/* Larger cover artwork and roomier badges. */
+.rzd-cover-tag,.rzd-cover-feedback{padding:8px 16px}
+.rzd-cover-tags,.rzd-cover-tag-row{gap:12px}
+@media(min-width:821px){.rzd-cover-phone{left:59cqw;top:8cqw;width:43cqw;height:80.977cqw}}
+@media(max-width:820px){
+ .rzd-cover-phone{left:3cqw;top:38cqw;width:94cqw;height:177.018cqw}
+ .rzd-cover-tag,.rzd-cover-feedback{padding:6px 12px;font-size:16px;line-height:22px}
+ .rzd-cover-tags,.rzd-cover-tag-row{gap:10px}
+}

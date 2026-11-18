@@ -65,3 +65,9 @@
 @media(max-width:820px){.alfa-case .alfa-media{max-height:240px}.alfa-case .alfa-note-grid{grid-template-columns:1fr;gap:16px}}
 
 .alfa-case .alfa-media{width:auto;max-width:100%;background:transparent!important}
+
+/* Increase the actual phone box, not only its source image crop. */
+.alfa-cover-tags{gap:12px}
+.alfa-cover-tags span{padding:8px 16px}
+@media(min-width:821px){.alfa-cover-screen{top:48px;right:0;width:44%}}
+@media(max-width:820px){.alfa-cover-screen{top:27%;right:5%;width:90%}.alfa-cover-tags{gap:10px}.alfa-cover-tags span{padding:6px 12px}}
