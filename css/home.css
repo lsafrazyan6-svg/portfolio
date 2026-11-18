@@ -49,3 +49,11 @@
  .home-index>.layout{gap:24px}
  .case-media--rzd{width:min(100%, calc((100svh - 355px) * 1.875))}
 }
+
+/* Mobile: align copy and its supporting links to the left edge. */
+@media(max-width:820px){
+ .home .intro{width:100%;align-items:flex-start;text-align:left}
+ .home .home-actions{justify-content:flex-start}
+ .home .case,.home .case-copy,.home .contact-links{align-items:flex-start;text-align:left}
+ .home .case-copy{width:100%}
+}

@@ -112,3 +112,19 @@ html[data-theme=dark] .resume-content{--muted:#b3b3b3;--line:rgba(255,255,255,.2
   .resume-content .rs-edu .rs-text{width:min(250px, calc(100% - 120px));padding-right:0}
   .resume-content .rs-pic--grad{left:min(262px, calc(100% - 112px));right:auto}
 }
+
+/* Even photo tiles and a compact heading without an inset. */
+.resume-life{padding:0}
+.life-intro{gap:16px}
+.life-title-wrap{display:block;width:100%;min-height:0;padding:0}
+.life-collage{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;aspect-ratio:auto}
+.resume-life .life-photo{position:relative;inset:auto;width:100%;aspect-ratio:1;margin:0;transform:none}
+.resume-life .life-photo:nth-child(2n+1){margin-top:0}
+@media(max-width:820px){
+ .resume-life,.life-intro{align-items:flex-start;text-align:left}
+ .life-collage{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:820px){.resume-title,.resume-content .resume-summary{text-align:left;margin-left:0;margin-right:0}}
+
+@media(max-width:820px){.resume-life .life-title-wrap,.resume-life h2{text-align:left}.resume-life .life-title-wrap{padding:0}}

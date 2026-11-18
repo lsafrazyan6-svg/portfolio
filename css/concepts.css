@@ -37,3 +37,11 @@
 
 /* Recorded album concept: keep the existing gallery sizing and controls. */
 .concept-card--album .concept-image{border-radius:12px;background:#e8e9ed}
+
+/* Open gallery: no edge fades or added frames around the mockups. */
+.home-index .concepts{padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+.concepts-window::before,.concepts-window::after{display:none}
+.concepts-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;width:100%}
+.concepts-heading .concepts-title{align-self:center}
+.concepts-heading .concept-controls{width:auto;gap:8px;margin-left:auto}
+.concept-open,.concept-open img,.concept-card--album .concept-image{border:0;border-radius:0;background:transparent;box-shadow:none}

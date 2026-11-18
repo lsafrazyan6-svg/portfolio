@@ -495,3 +495,30 @@ html[data-theme=dark] .rzd-centered .status{background:rgba(95,207,125,.14);colo
 /* Neutral surfaces repeat the same palette across case panels. */
 html:not([data-theme=dark]) :is(.toc-box,.media,.cmp-frame,.cmp-knob,.pill--users,.pill--biz,.res-tag,.audit-note-num,.test-fact--people,.test-fact--time,.result-hypothesis--yes,.result-hypothesis--partial,.result-hypothesis--no,.status,.benchmark-board,.benchmark-toolbar){background:var(--surface)}
 html:not([data-theme=dark]) .benchmark-viewport{background-color:var(--surface)}
+
+/* Mobile: keep the case introduction and navigation left aligned. */
+@media(max-width:820px){
+ .rzd-centered .aside{align-items:flex-start}
+ .rzd-centered .aside-head,.rzd-centered .toc-nav{width:100%;align-items:flex-start;text-align:left}
+ .rzd-centered .case-h1{text-align:left}
+ .rzd-centered .cmp-head{align-items:flex-start;justify-content:flex-start}
+ .rzd-centered .results-head>a{margin-left:0;text-align:left}
+}
+
+/* Shared page and panel palette, including the case showcase. */
+.rzd-centered{--surface:var(--button)}
+.rzd-centered .rzd-showcase__card,.rzd-centered .retest-box{background:var(--surface)}
+html[data-theme=dark] .rzd-centered .retest-box{background:var(--surface)}
+
+/* Matched name weight and numbered audit annotations. */
+.rzd-centered .name{font-weight:500;-webkit-text-stroke:0}
+.rzd-centered .audit-note-num{display:inline;width:auto;height:auto;border-radius:0;background:transparent!important;font:inherit;margin-right:8px}
+.rzd-centered .audit-pin circle{fill:var(--surface);stroke:var(--accent);stroke-width:2}
+.rzd-centered .audit-pin-label{fill:#1f1f1f;font-family:"Inter Tight",Arial,sans-serif;font-size:20px;font-weight:500;text-anchor:middle;dominant-baseline:central}
+.rzd-centered .audit-connectors .audit-leader{display:none}
+.validation-link{width:fit-content}
+@media(max-width:820px){.rzd-centered .results-head{flex-direction:column;align-items:flex-start;gap:16px}.rzd-centered .results-head>a{margin:0;text-align:left}}
+
+.rzd-centered .retest-box{border:0;box-shadow:none;background:var(--surface)}
+.rzd-centered .retest-icon,.rzd-centered .retest-icon img{border-radius:0;box-shadow:none;background:transparent}
+@media(max-width:820px){.rzd-centered .ice tr{background:var(--surface);border:0;box-shadow:none}.rzd-centered .ice td.num:last-child{background:var(--page)}}
