@@ -6,7 +6,7 @@
 .alfa-cover-tags{display:flex;flex-wrap:wrap;gap:8px}
 .alfa-cover-tags span{padding:4px 8px;border-radius:24px;background:var(--page);font-size:16px;line-height:24px}
 .alfa-cover-screen{position:absolute;top:32px;right:40px;width:30%;height:auto;border-radius:28px}
-.alfa-case .aside-head>p{max-width:620px}.alfa-case .status{background:var(--surface);color:var(--ink);border:0}
+.alfa-case .aside-head>p{max-width:620px}
 .alfa-section{display:flex;flex-direction:column;gap:24px;min-width:0;scroll-margin-top:100px}
 .alfa-muted{color:var(--muted,#666)}
 .alfa-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
@@ -35,7 +35,7 @@
  .alfa-image-scroll{padding:12px}.alfa-image-scroll--wide img{min-width:1600px}
 }
 
-.alfa-case{--muted:#666}html[data-theme=dark] .alfa-case{--muted:#b3b3b3}
+
 
 @media(min-width:821px){.alfa-cover-screen{top:116px;right:16px}}
 
@@ -51,3 +51,17 @@
 .alfa-device>img{width:132.506%;left:-16.377%;top:-12.239%}
 @media(min-width:821px){.alfa-cover-screen{top:64px;right:8px;width:38%}}
 @media(max-width:820px){.alfa-cover-screen{top:29%;right:11%;width:78%}}
+
+/* Case content inherits base.css and case.css, exactly like the RZD case. */
+.alfa-case .alfa-note{padding:16px;border-radius:16px;gap:16px}
+.alfa-case .alfa-note-grid{gap:24px}
+.alfa-case .alfa-note h3{font:inherit;font-weight:500}
+.alfa-case .alfa-media{display:block;width:100%;height:auto;max-height:320px;object-fit:contain;object-position:left center;background:transparent;border-radius:0}
+.alfa-case .alfa-figure--flow{max-width:640px}
+.alfa-case .alfa-figure--flow .alfa-media{max-height:260px}
+.alfa-case .alfa-figure--findings .alfa-media{max-height:220px}
+.alfa-case .lnk{display:inline-flex;align-items:center;gap:8px;width:fit-content}
+.alfa-case .lnk>svg{width:24px;height:24px;flex:none;color:var(--accent)}
+@media(max-width:820px){.alfa-case .alfa-media{max-height:240px}.alfa-case .alfa-note-grid{grid-template-columns:1fr;gap:16px}}
+
+.alfa-case .alfa-media{width:auto;max-width:100%;background:transparent!important}

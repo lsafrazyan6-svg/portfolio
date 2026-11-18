@@ -1,6 +1,8 @@
 /* Общие стили сайта: шрифты, цвета, шапка, кнопки, контакты.
    Подключается на всех страницах нового вида (главная, кейсы). */
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;1,400&display=swap');
+@font-face{font-family:"Inter Tight";src:url("../assets/fonts/inter-tight-variable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+
 /* Felidae — антиква для имени, файл шрифта прислала Лидия */
 @font-face{font-family:"Felidae";src:url("../assets/fonts/felidae.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 
