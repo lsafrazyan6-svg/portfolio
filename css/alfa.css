@@ -38,3 +38,10 @@
 .alfa-case{--muted:#666}html[data-theme=dark] .alfa-case{--muted:#b3b3b3}
 
 @media(min-width:821px){.alfa-cover-screen{top:116px;right:16px}}
+
+/* Crop only the simulator chrome in layout; keep the screenshot intact. */
+.alfa-device{position:relative;aspect-ratio:820/1680;overflow:hidden;border-radius:0;background:transparent}
+.alfa-cover-screen.alfa-device{position:absolute}
+.alfa-device>img{position:absolute;display:block;top:-12.084%;left:-15.244%;width:130.244%;height:auto;max-width:none;border-radius:0}
+.alfa-prototype .alfa-device--case{padding:0;width:min(320px,100%);margin:0 auto}
+.alfa-prototype .alfa-device--case>img{max-width:none;margin:0}
