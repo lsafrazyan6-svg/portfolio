@@ -22,3 +22,5 @@ html[data-theme=dark] .rzd-cover{background:var(--button)}
 html[data-theme=dark] .rzd-cover-title{color:#fff}
 .rzd-cover-tag,.rzd-cover-feedback{padding-left:8px;padding-right:8px}
 .rzd-cover-feedback{border-radius:11.361388cqw}
+
+@media(min-width:821px){.rzd-cover-phone{top:8cqw;left:61cqw}}

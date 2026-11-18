@@ -45,3 +45,9 @@
 .alfa-device>img{position:absolute;display:block;top:-12.084%;left:-15.244%;width:130.244%;height:auto;max-width:none;border-radius:0}
 .alfa-prototype .alfa-device--case{padding:0;width:min(320px,100%);margin:0 auto}
 .alfa-prototype .alfa-device--case>img{max-width:none;margin:0}
+
+/* Match the crop to the physical body, excluding the window shadow. */
+.alfa-device{aspect-ratio:806/1675;clip-path:inset(0 round 18% / 8.7%)}
+.alfa-device>img{width:132.506%;left:-16.377%;top:-12.239%}
+@media(min-width:821px){.alfa-cover-screen{top:64px;right:8px;width:38%}}
+@media(max-width:820px){.alfa-cover-screen{top:29%;right:11%;width:78%}}
