@@ -36,3 +36,5 @@
 }
 
 .alfa-case{--muted:#666}html[data-theme=dark] .alfa-case{--muted:#b3b3b3}
+
+@media(min-width:821px){.alfa-cover-screen{top:116px;right:16px}}
