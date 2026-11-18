@@ -57,3 +57,5 @@
  .home .case,.home .case-copy,.home .contact-links{align-items:flex-start;text-align:left}
  .home .case-copy{width:100%}
 }
+
+.home-actions{flex-wrap:wrap}

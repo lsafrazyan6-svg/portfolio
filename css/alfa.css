@@ -1,0 +1,38 @@
+/* Alfa case uses the same page, type and panel system as RZD. */
+.alfa-cover{position:relative;display:block;width:100%;aspect-ratio:1200/640;overflow:hidden;border-radius:32px;background:var(--button);color:var(--ink);text-align:left}
+.alfa-cover-copy{position:absolute;inset:40px auto 40px 40px;width:53%;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:24px;z-index:1}
+.alfa-cover-title{font-size:36px;line-height:42px;font-weight:500;margin:0}
+.alfa-cover-brand{color:#e32e25;font-size:20px;line-height:26px;margin-bottom:16px}
+.alfa-cover-tags{display:flex;flex-wrap:wrap;gap:8px}
+.alfa-cover-tags span{padding:4px 8px;border-radius:24px;background:var(--page);font-size:16px;line-height:24px}
+.alfa-cover-screen{position:absolute;top:32px;right:40px;width:30%;height:auto;border-radius:28px}
+.alfa-case .aside-head>p{max-width:620px}.alfa-case .status{background:var(--surface);color:var(--ink);border:0}
+.alfa-section{display:flex;flex-direction:column;gap:24px;min-width:0;scroll-margin-top:100px}
+.alfa-muted{color:var(--muted,#666)}
+.alfa-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.alfa-facts>div,.alfa-note{display:flex;flex-direction:column;gap:12px;padding:24px;border-radius:20px;background:var(--surface);border:0;box-shadow:none;min-width:0}
+.alfa-facts strong{font-size:24px;line-height:30px;font-weight:500}.alfa-facts span{font-size:16px;line-height:24px}
+.alfa-note-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.alfa-kicker{font-size:15px;line-height:22px;color:var(--muted)}
+.alfa-links{display:flex;flex-wrap:wrap;align-items:flex-start;gap:16px 24px}
+.alfa-figure{margin:0;min-width:0}.alfa-figure figcaption{font-size:15px;line-height:22px;color:var(--muted);margin-top:12px}
+.alfa-image-scroll{overflow:auto;max-width:100%;border-radius:16px;background:var(--surface);padding:16px}
+.alfa-image-scroll img{display:block;width:100%;height:auto;max-width:none}
+.alfa-image-scroll--wide img{min-width:1120px}
+.alfa-document{display:block;width:100%;min-width:0}.alfa-document>summary{padding:12px 0;color:var(--link);font-size:20px;line-height:28px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.alfa-document-body{display:flex;flex-direction:column;gap:20px;padding-top:20px;overflow-wrap:anywhere}.alfa-document-body a{color:var(--link);text-decoration:underline}.alfa-document-body ul{padding-left:24px}.alfa-document-body li+li{margin-top:12px}
+.alfa-prototype{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}.alfa-prototype>div{display:flex;flex-direction:column;gap:24px}.alfa-prototype img{max-width:320px;margin:0 auto}.alfa-prototype .alfa-image-scroll{padding:0;background:transparent}
+@media(max-width:820px){
+ .alfa-cover{aspect-ratio:663/1033;border-radius:24px}
+ .alfa-cover-copy{inset:32px 24px 28px;width:auto}
+ .alfa-cover-title{font-size:28px;line-height:34px}
+ .alfa-cover-brand{font-size:18px;line-height:24px;margin-bottom:12px}
+ .alfa-cover-screen{top:36%;right:16%;width:68%;border-radius:24px}
+ .alfa-cover-tags{max-width:100%}.alfa-cover-tags span{font-size:15px;line-height:22px}
+ .alfa-case .aside-head,.alfa-case .toc-nav{text-align:left;align-items:flex-start}
+ .alfa-facts{grid-template-columns:1fr;gap:12px}.alfa-facts>div{padding:20px}
+ .alfa-note-grid,.alfa-prototype{grid-template-columns:1fr;gap:16px}
+ .alfa-note{padding:20px}.alfa-section{gap:20px}
+ .alfa-image-scroll{padding:12px}.alfa-image-scroll--wide img{min-width:1600px}
+}
+
+.alfa-case{--muted:#666}html[data-theme=dark] .alfa-case{--muted:#b3b3b3}

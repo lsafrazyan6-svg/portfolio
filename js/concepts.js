@@ -59,3 +59,23 @@
   dialog.addEventListener('close',()=>{document.body.style.overflow='';lastFocus?.focus({preventScroll:true});});
   update();
 })();
+
+/* Advance through the gallery; pause while the visitor interacts. */
+(() => {
+ const section=document.querySelector('.concepts'), viewport=section?.querySelector('.concepts-viewport');
+ if(!viewport)return;
+ const reduce=matchMedia('(prefers-reduced-motion: reduce)');
+ let pausedUntil=0,hover=false,visible=false;
+ const pause=()=>{pausedUntil=Date.now()+7000};
+ ['pointerdown','touchstart','wheel','keydown','click'].forEach(event=>section.addEventListener(event,pause,{passive:true}));
+ section.addEventListener('mouseenter',()=>{hover=true});
+ section.addEventListener('mouseleave',()=>{hover=false;pause()});
+ new IntersectionObserver(([entry])=>{visible=entry.isIntersecting},{threshold:.25}).observe(section);
+ setInterval(()=>{
+  if(reduce.matches||!visible||hover||Date.now()<pausedUntil||document.hidden||document.querySelector('.concept-dialog')?.open)return;
+  const max=viewport.scrollWidth-viewport.clientWidth;
+  if(max<=0)return;
+  const next=viewport.scrollLeft>=max-2?0:Math.min(max,viewport.scrollLeft+section.querySelector('.concept-card').offsetWidth+24);
+  viewport.scrollTo({left:next,behavior:'smooth'});
+ },4000);
+})();

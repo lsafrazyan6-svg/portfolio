@@ -17,3 +17,8 @@
  .rzd-cover-feedback{padding:1.206637cqw 2.413273cqw;border-radius:3.61991cqw 11.361388cqw 11.361388cqw 0}
  .rzd-cover-phone{left:9.760935cqw;top:40cqw;width:85.757164cqw;height:161.494721cqw;transform:none}
 }
+
+html[data-theme=dark] .rzd-cover{background:var(--button)}
+html[data-theme=dark] .rzd-cover-title{color:#fff}
+.rzd-cover-tag,.rzd-cover-feedback{padding-left:8px;padding-right:8px}
+.rzd-cover-feedback{border-radius:11.361388cqw}
