@@ -59,3 +59,6 @@
 }
 
 .home-actions{flex-wrap:wrap}
+
+.home-theme{display:flex;align-items:center;gap:16px}
+.home-resume-page-link{display:inline-flex;align-items:center;min-height:44px;font-size:18px;line-height:24px;text-decoration:underline;text-underline-offset:4px;color:var(--link)}
