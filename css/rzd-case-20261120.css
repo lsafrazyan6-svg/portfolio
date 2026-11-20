@@ -1,0 +1,134 @@
+/* RZD case, Figma 194:762. Gray panels intentionally reserve future mockups. */
+:root{--home-ink:#292929;--home-muted:#535353;--home-accent:#ff0087;--home-surface:#efefed;--home-tag:#ededed;--case-green:#08c918;--case-confirmed:#006307;--case-partial:#9c8a00}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--home-ink);font:400 16px/24px "Inter Tight",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure{margin:0;font-weight:400}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;border:0;cursor:pointer}img{display:block}a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var(--home-accent);outline-offset:5px}section,details{scroll-margin-top:24px}
+.case-copy{width:min(740px,calc(100% - 40px));margin-inline:auto}
+.case-header{height:103px;padding-top:56px}
+.case-header nav{display:flex;align-items:center;gap:18px;width:min(790px,calc(100% - 40px));margin-inline:auto;justify-content:flex-end;font:400 16px/21px "Geist Mono",monospace;letter-spacing:-.48px;transform:translateX(25px)}
+.case-header .case-email{text-decoration:underline;text-underline-offset:2px;margin-left:12px;margin-right:12px}
+.case-cv{display:flex;align-items:center;gap:8px;min-height:41px}
+.home-download{color:var(--home-accent)}
+.case-intro{margin-top:49px}
+.case-brand{width:48px;height:48px;border-radius:8px;background:var(--home-tag);display:grid;place-items:center}
+.case-brand img{object-fit:contain}
+.case-intro h1{font:400 32px/39px "Inter Tight",sans-serif;max-width:633px;margin-top:24px}
+.prototype-link{display:inline-block;margin-top:16px;font:400 16px/21px "Geist Mono",monospace;letter-spacing:-.48px;text-decoration:underline}
+.case-media,.solution{width:min(833px,calc(100% - 40px));margin-inline:auto}
+.case-hero{margin-top:16px}
+.case-placeholder{height:522px;width:100%;background:var(--home-surface);border-radius:31px}
+.problem-layout{position:relative;margin-top:64px}
+.problem-copy{width:564px;max-width:100%}
+.case-labels{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.case-pill{display:inline-flex;align-items:center;gap:8px;width:fit-content;padding:8px;border-radius:32px;background:var(--home-tag);color:var(--home-muted);font:400 16px/21px "Geist Mono",monospace;letter-spacing:-.48px}
+.case-pill--problem{color:#e30000}.case-pill--task{color:var(--case-confirmed)}.case-pill--research{text-decoration:underline;text-underline-offset:2px;color:var(--home-ink)}
+.problem-statement{margin-top:24px;font-size:24px;line-height:29px}
+.task-block{margin-top:40px;width:399px;max-width:100%}
+.task-list{margin:24px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:16px;color:var(--home-muted)}
+.task-list li{position:relative;padding-left:20px;line-height:24px}
+.task-list li:first-child{line-height:19px}
+.task-list li::before{content:"–";position:absolute;left:0}
+.problem-phone{position:absolute;left:580px;top:76px;width:329px;height:525px;display:flex;align-items:center;justify-content:center}
+.problem-phone img{width:281px;height:499px;object-fit:contain;transform:rotate(5.71deg)}
+.problem-decoration{position:absolute;left:-232px;top:99px;width:155px;height:108px;pointer-events:none}
+.problem-decoration i{position:absolute;display:block;background:#d9d9d9;height:8px;width:52px;left:0;top:34px}
+.problem-decoration i:first-child{left:49px;top:0;width:92px;height:24px}.problem-decoration i:last-child{left:63px;top:92px;width:92px;height:16px}
+.process-block{margin-top:48px}
+.process-title{margin-top:24px;font:400 24px/31px "Inter Tight",sans-serif;max-width:586px}
+.process-title span{font-family:"Geist Mono",monospace}
+.process-description{max-width:586px;margin-top:16px;line-height:24px;color:var(--home-muted)}
+.process-description a{color:var(--home-ink);text-decoration:underline;text-underline-offset:2px}
+.research-block{margin-top:48px}
+.research-avatars{position:relative;width:267px;height:111px}
+.research-avatars img{position:absolute;top:1px;width:110px;height:110px;object-fit:cover}.research-avatars img:nth-child(2){left:76px;top:0;width:111px;height:111px}.research-avatars img:nth-child(3){left:157px}
+.research-row{display:grid;grid-template-columns:400px 300px;gap:42px;margin-top:24px;align-items:start}
+.research-body{min-width:0}
+.research-body h3,.ice-block h3{font:400 24px/31px "Geist Mono",monospace}
+.research-description{color:var(--home-muted);margin-top:9px;line-height:24px}
+.research-links{display:flex;gap:8px;align-items:center}.research-links .case-pill{padding:8px 12px;min-height:40px;white-space:nowrap}
+.underlined{text-decoration:underline;text-underline-offset:2px}
+.case-icon{width:24px;height:24px;object-fit:contain;flex:none}
+.research-disclosures{display:flex;flex-direction:column;gap:16px;margin-top:16px}
+.case-disclosure>summary{display:flex;gap:8px;align-items:center;width:fit-content;cursor:pointer;list-style:none;color:#6a6a6a;line-height:24px}
+.case-disclosure>summary::-webkit-details-marker{display:none}
+.case-chevron{width:5.138px;height:9.228px;transform:rotate(90deg);margin-left:4px;transition:transform .2s}
+.case-disclosure[open]>summary .case-chevron{transform:rotate(-90deg)}
+.disclosure-content{margin-top:20px}
+.hypothesis-content{width:min(740px,calc(100vw - 40px));padding:20px 24px;border-radius:16px;background:var(--home-tag);color:var(--home-muted)}
+.test-hypotheses{margin:0;padding-left:24px}.test-hypotheses li{padding-left:4px;line-height:28px}.test-hypotheses li+li{margin-top:12px}
+.result-content{width:min(745px,calc(100vw - 40px))}
+.results-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;align-items:start}
+.results-column{display:flex;flex-direction:column;gap:16px}
+.result-card{padding:16px;border-radius:16px;background:var(--home-tag);color:var(--home-muted)}
+.result-count{font:400 32px/42px "Geist Mono",monospace;letter-spacing:-.96px}
+.result-status{margin-top:4px;line-height:24px;color:var(--case-confirmed)}
+.result-card--partial .result-status{color:var(--case-partial)}
+.result-description{margin-top:12px;line-height:24px}
+.ice-block{margin-top:48px}.ice-block h3{line-height:32px}.ice-block>.case-disclosure{margin-top:14px}
+.ice-content{width:min(833px,calc(100vw - 40px));position:relative;left:-46px}
+.table-wrap{overflow:auto;border-radius:16px;border:1px solid var(--home-tag)}
+.ice table{border-collapse:collapse;width:100%;min-width:680px;font-size:15px;line-height:22px}
+.ice th,.ice td{padding:14px 12px;border-bottom:1px solid var(--home-tag);text-align:left;vertical-align:top}
+.ice th{background:var(--home-tag);font-weight:500}.ice td:first-child{width:60%}.ice .num{text-align:center}.ice tr:last-child td{border-bottom:0}
+.solution--points{margin-top:91px}
+.solution-copy{padding-inline:47px}
+.solution-copy h2{font:400 32px/42px "Geist Mono",monospace;letter-spacing:-.96px;color:var(--case-green)}
+.solution-copy p{max-width:586px;line-height:24px;margin-top:16px}
+.solution--points .solution-copy p{max-width:452px}
+.solution>.case-placeholder,.solution>.case-media-pair{margin-top:16px}
+.solution>.solution-copy+.case-placeholder{margin-top:24px}
+.solution+.solution{margin-top:48px}
+.solution--account>.solution-copy+.case-placeholder{margin-top:32px}
+.case-media-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.solution.solution--entries,.solution.solution--comparison{margin-top:64px}
+.case-placeholder--comparison{height:439px}
+.case-footer{display:flex;justify-content:space-between;align-items:center;margin-top:74px;padding-bottom:119px;letter-spacing:-.48px;line-height:24px}
+.case-footer>a:last-child{display:flex;align-items:center;gap:8px}
+.next-arrow{transform:rotate(90deg)}
+html[data-theme=dark]{color-scheme:dark;--home-ink:#eee;--home-muted:#bbb;--home-surface:#252525;--home-tag:#303030;--case-confirmed:#82d88a;--case-partial:#e2cd53}
+html[data-theme=dark] body{background:#161616}
+html[data-theme=dark] .case-disclosure>summary{color:#bbb}
+@media(max-width:1250px) and (min-width:1001px){.problem-phone{left:auto;right:-100px;width:240px}.problem-phone img{width:220px;height:auto}.problem-copy{width:520px}.problem-decoration{display:none}}
+@media(max-width:1000px){
+ .case-header{height:auto;padding-top:24px}.case-header nav{transform:none;width:calc(100% - 40px);flex-wrap:wrap;gap:16px;font-size:14px;letter-spacing:-.4px}.case-header .case-email{margin:0}.case-header .theme-toggle{width:44px;height:44px}
+ .case-intro{margin-top:48px}.case-intro h1{max-width:633px}
+ .problem-decoration{display:none}.problem-phone{position:static;max-width:100%;width:240px;height:auto;margin:40px 0 0}.problem-phone img{width:220px;height:auto}
+ .problem-copy{width:564px;max-width:100%}
+ .research-row{display:flex;flex-direction:column;gap:24px}.research-links{order:-1;flex-wrap:wrap}.research-body{width:100%}.research-body h3{max-width:400px}
+ .hypothesis-content,.result-content,.ice-content{width:100%;max-width:100%;left:0}
+ .solution-copy{padding-inline:0}.case-placeholder{height:auto;aspect-ratio:833/522;border-radius:24px}.case-media-pair>.case-placeholder{aspect-ratio:409/522}
+ .case-placeholder--comparison{aspect-ratio:833/439}
+}
+@media(max-width:600px){
+ .case-header nav{justify-content:space-between;gap:12px}.case-header .case-email{font-size:12px}.case-header .case-cv{gap:4px}
+ .case-intro h1{font-size:28px;line-height:34px}.case-brand{width:48px;height:48px}
+ .case-pill{font-size:14px;line-height:21px;letter-spacing:-.42px}.case-pill--research{white-space:normal}
+ .problem-statement{font-size:22px;line-height:28px}.task-list br{display:none}
+ .process-title,.research-body h3,.ice-block h3{font-size:22px;line-height:29px}
+ .process-description{font-size:16px;line-height:24px}.research-description br{display:none}
+ .results-grid{display:flex;flex-direction:column;gap:12px}.results-column{display:contents}.result-card{width:100%}.result-card--yes{order:1}.result-card--partial{order:2}.result-card--none{order:3}
+ .research-links .case-pill{font-size:14px}
+ .solution--points{margin-top:64px}.solution-copy h2{font-size:25px;line-height:33px;letter-spacing:-.75px}
+ .case-media-pair{grid-template-columns:1fr}.case-media-pair>.case-placeholder{aspect-ratio:409/522}
+ .case-footer{gap:20px;font-size:14px;margin-top:48px;padding-bottom:72px}.case-footer>a:last-child{gap:4px}
+ .case-placeholder{border-radius:20px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.case-chevron{transition:none}}
+.prototype-link{display:block;width:fit-content}
+@media(max-width:800px){
+ .results-grid{display:flex;flex-direction:column;gap:12px}
+ .results-column{display:contents}
+ .result-card{width:100%}
+ .result-card--yes{order:1}.result-card--partial{order:2}.result-card--none{order:3}
+}
+/* Preserve the image-fill geometry used by the Figma phone layer. */
+.problem-phone img,.case-brand img{object-fit:fill}
+@media(max-width:1250px){.problem-phone img{height:391px}}
+@media(min-width:1001px){
+ .case-header nav{display:flex;width:421px;margin-left:calc(50% - 1px);margin-right:0;justify-content:flex-start;gap:0;transform:none}
+ .case-header .case-cv{width:47px;flex:none}
+ .case-header nav>a:nth-child(2){margin-left:18px;width:65px;flex:none}
+ .case-header .case-email{width:203px;margin-left:20px;margin-right:0;padding:10px;letter-spacing:0;flex:none}
+ .case-header .theme-toggle{width:56px;height:47px;margin-left:12px;flex:none}
+}
