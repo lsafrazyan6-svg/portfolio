@@ -1,0 +1,141 @@
+/* Controls and photo viewer restored from the published portfolio. */
+:root{--page:#fff;--button:#fff;--button-hover:#ededed;--ink:var(--home-ink);--link:var(--home-ink);--key:#fff;--badge-ink:#535353;--accent:#f439aa}
+.write{display:inline-flex;align-items:center;gap:4px;height:44px;padding:0 14px;border-radius:12px;background:var(--button);color:var(--link);font-size:18px;line-height:24px;white-space:nowrap;transition:background-color .2s}
+.write:hover,.write:focus-visible{background:var(--button-hover)}
+.keys{display:inline-flex;align-items:center;height:25px;padding:0 6px;border-radius:7px;background:var(--key);color:var(--badge-ink)}
+.key{font-style:normal;font-weight:500;font-size:15px;line-height:17px}
+.slash{color:var(--link);font-size:18px;line-height:24px}
+
+/* Переключатель темы */
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:52px;height:44px;padding:0;border:0;border-radius:12px;background:var(--button);color:var(--ink);cursor:pointer;transition:transform .32s cubic-bezier(.22,1,.36,1),background-color .2s}
+.theme-toggle:hover{background:var(--button-hover)}
+.theme-toggle:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+.theme-toggle:active{transform:scale(.92)}
+.theme-icon{position:relative;display:block;width:20px;height:20px;transition:transform .52s cubic-bezier(.22,1,.36,1),filter .32s}
+.theme-glyph{position:absolute;inset:0;width:20px;height:20px;transform-origin:center;transition:transform .42s cubic-bezier(.22,1,.36,1),opacity .22s}
+.theme-sun{opacity:1;transform:rotate(0) scale(1)}
+.theme-moon{opacity:0;transform:translate(-1px,1px) scale(.62) rotate(52deg)}
+html[data-theme=dark] .theme-sun{opacity:0;transform:rotate(90deg) scale(.55)}
+html[data-theme=dark] .theme-moon{opacity:1;transform:translate(0) scale(.9) rotate(19deg)}
+html[data-theme=dark] .theme-icon{transform:rotate(-18deg) scale(1.04);filter:none}
+
+/* Resume download: one arrow-to-tray cycle; only the SVG's inner parts move. */
+.resume-link--download{
+  --resume-download-duration:600ms;
+  --resume-download-ease:cubic-bezier(0.77,0,0.175,1);
+  display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+}
+.resume-link--download:hover,.resume-link--download:focus-visible{opacity:1}
+.resume-link--download:focus-visible{outline:2px solid var(--link);outline-offset:4px;border-radius:4px}
+.resume-download-icon{display:block;width:20px;height:20px;flex-shrink:0;overflow:hidden}
+.resume-download-arrow{transform:translateY(0);opacity:1}
+.resume-download-tray{transform-box:view-box;transform-origin:12px 21px;transform:translateY(0) scaleX(1)}
+@keyframes resume-download-arrow-cycle{
+  0%{transform:translateY(0);opacity:1}
+  38%{transform:translateY(7px);opacity:0}
+  39%{transform:translateY(-6px);opacity:0}
+  100%{transform:translateY(0);opacity:1}
+}
+@keyframes resume-download-tray-cycle{
+  0%,20%,100%{transform:translateY(0) scaleX(1)}
+  38%{transform:translateY(1px) scaleX(.9)}
+  72%{transform:translateY(0) scaleX(1)}
+}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .resume-link--download:hover .resume-download-arrow{animation:resume-download-arrow-cycle var(--resume-download-duration) var(--resume-download-ease) 1 both}
+  .resume-link--download:hover .resume-download-tray{animation:resume-download-tray-cycle var(--resume-download-duration) var(--resume-download-ease) 1 both}
+}
+@media (prefers-reduced-motion:reduce){
+  .resume-download-arrow,.resume-download-tray{animation:none!important;transform:none!important;opacity:1!important}
+}
+
+/* Кнопка «Написать в тг»: полутоновые точки, наведение, клик.
+   Перенесено с холста Design (Tg-button-halftone.dc.html), одобрено 25.10.2026.
+   25.10.2026 по её слову ускорено (~1,8×) и размах шире: значения ниже уже новые.
+   Размеры, шрифт и отступы кнопки не трогаются — их задают base.css / style.css.
+   Точки строит js/tg-button.js. Подключать последним стилем страницы. */
+.write.tg-fx{
+  position:relative;background:#ee2f86;color:#fff;
+  box-shadow:none;
+  transition:transform .35s cubic-bezier(.25,.1,.25,1),box-shadow .8s cubic-bezier(.25,.1,.25,1),background-color .8s cubic-bezier(.25,.1,.25,1);
+  -webkit-tap-highlight-color:transparent
+}
+.write.tg-fx:hover,.write.tg-fx:focus-visible{background:#ee2f86}
+@media(hover:hover){
+  .write.tg-fx:hover{background:#f0388e;box-shadow:none}
+  .write.tg-fx:hover .dots{opacity:1}
+  .write.tg-fx:hover .dot.L.c0{transform:scale(1.1)}
+  .write.tg-fx:hover .dot.L.c1{transform:translateX(3px) scale(1.2)}
+  .write.tg-fx:hover .dot.L.c2{transform:translateX(6px) scale(1.3)}
+  .write.tg-fx:hover .dot.L.c3{transform:translateX(9px) scale(1.4)}
+  .write.tg-fx:hover .dot.L.c4{transform:translateX(12px) scale(1.5)}
+  .write.tg-fx:hover .dot.L.c5{transform:translateX(15px) scale(1.6)}
+  .write.tg-fx:hover .dot.R.c0{transform:scale(1.1)}
+  .write.tg-fx:hover .dot.R.c1{transform:translateX(-3px) scale(1.2)}
+  .write.tg-fx:hover .dot.R.c2{transform:translateX(-6px) scale(1.3)}
+  .write.tg-fx:hover .dot.R.c3{transform:translateX(-9px) scale(1.4)}
+  .write.tg-fx:hover .dot.R.c4{transform:translateX(-12px) scale(1.5)}
+  .write.tg-fx:hover .dot.R.c5{transform:translateX(-15px) scale(1.6)}
+}
+.write.tg-fx:active{transform:scale(.985)}
+.write.tg-fx:focus-visible{outline:2px solid #ee2f86;outline-offset:5px}
+.write.tg-fx::after{content:"";position:absolute;inset:-3px;border-radius:15px;pointer-events:none;box-shadow:none;opacity:0}
+.write.tg-fx .lbl,.write.tg-fx .keys{position:relative;z-index:2}
+.write.tg-fx .lbl{display:inline-block;text-shadow:none}
+.write.tg-fx .keys{background:rgba(255,255,255,.22);color:#fff}
+.write.tg-fx .dots{position:absolute;inset:0;z-index:0;overflow:hidden;border-radius:inherit;pointer-events:none;filter:blur(.45px);opacity:1;transition:opacity 1s cubic-bezier(.25,.1,.25,1)}
+.write.tg-fx .dot{position:absolute;display:block;transition:transform .6s cubic-bezier(.25,.1,.25,1)}
+.write.tg-fx .fl{display:block;width:100%;height:100%;text-decoration:none;animation:tgFloat 2.6s ease-in-out infinite}
+.write.tg-fx .tw{display:block;width:100%;height:100%;border-radius:50%;background:rgba(255,255,255,.85);animation:tgBreathe 2s ease-in-out infinite,tgTwinkle 1.7s ease-in-out infinite}
+.write.tg-fx .flash{position:absolute;inset:0;z-index:1;border-radius:inherit;pointer-events:none;opacity:0;background:radial-gradient(ellipse at center,rgba(255,255,255,.55),rgba(255,255,255,0) 70%)}
+@keyframes tgTwinkle{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes tgBreathe{0%,100%{transform:scale(.4)}50%{transform:scale(1.5)}}
+@keyframes tgFloat{0%,100%{transform:translate(0,0)}25%{transform:translate(1.6px,-1.8px)}50%{transform:translate(0,-3px)}75%{transform:translate(-1.6px,-1.8px)}}
+/* Клик: два одинаковых набора (a/b), чтобы анимация перезапускалась на каждом нажатии */
+.write.tg-fx.fx-a .dot.L{animation:tgBurstLa .9s cubic-bezier(.45,0,.25,1) both}
+.write.tg-fx.fx-b .dot.L{animation:tgBurstLb .9s cubic-bezier(.45,0,.25,1) both}
+.write.tg-fx.fx-a .dot.R{animation:tgBurstRa .9s cubic-bezier(.45,0,.25,1) both}
+.write.tg-fx.fx-b .dot.R{animation:tgBurstRb .9s cubic-bezier(.45,0,.25,1) both}
+.write.tg-fx.fx-a .flash{animation:tgFlashA .7s ease-in-out}
+.write.tg-fx.fx-b .flash{animation:tgFlashB .7s ease-in-out}
+.write.tg-fx.fx-a .lbl{animation:tgPopA .5s cubic-bezier(.25,.1,.25,1)}
+.write.tg-fx.fx-b .lbl{animation:tgPopB .5s cubic-bezier(.25,.1,.25,1)}
+.write.tg-fx.fx-a::after{animation:tgRingA .7s cubic-bezier(.25,.1,.25,1)}
+.write.tg-fx.fx-b::after{animation:tgRingB .7s cubic-bezier(.25,.1,.25,1)}
+@keyframes tgBurstLa{35%{opacity:1;transform:translateX(15px) scale(2)}60%{opacity:0;transform:translateX(40px) scale(.4)}72%{opacity:0;transform:none}}
+@keyframes tgBurstLb{35%{opacity:1;transform:translateX(15px) scale(2)}60%{opacity:0;transform:translateX(40px) scale(.4)}72%{opacity:0;transform:none}}
+@keyframes tgBurstRa{35%{opacity:1;transform:translateX(-15px) scale(2)}60%{opacity:0;transform:translateX(-40px) scale(.4)}72%{opacity:0;transform:none}}
+@keyframes tgBurstRb{35%{opacity:1;transform:translateX(-15px) scale(2)}60%{opacity:0;transform:translateX(-40px) scale(.4)}72%{opacity:0;transform:none}}
+@keyframes tgFlashA{0%,100%{opacity:0}45%{opacity:1}}
+@keyframes tgFlashB{0%,100%{opacity:0}45%{opacity:1}}
+@keyframes tgPopA{0%,100%{transform:scale(1)}45%{transform:scale(1.035)}}
+@keyframes tgPopB{0%,100%{transform:scale(1)}45%{transform:scale(1.035)}}
+@keyframes tgRingA{0%{opacity:0;box-shadow:none}15%{opacity:1}100%{opacity:0;box-shadow:none}}
+@keyframes tgRingB{0%{opacity:0;box-shadow:none}15%{opacity:1}100%{opacity:0;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){.write.tg-fx,.write.tg-fx *,.write.tg-fx::after{animation:none!important;transition:none!important}}
+img.zoomable{cursor:zoom-in}
+img.zoomable:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+.lb{display:none;position:fixed;inset:0;z-index:100;align-items:center;justify-content:center;background:rgba(0,0,0,.88);opacity:0;transition:opacity .2s ease;touch-action:manipulation;overscroll-behavior:contain}
+.lb.is-open{opacity:1}
+.lb-fig{margin:0;max-width:min(96vw,1600px);max-height:96vh;display:flex;flex-direction:column;align-items:center;gap:12px;transform:scale(.97);transition:transform .2s ease}
+.lb.is-open .lb-fig{transform:none}
+.lb-img{max-width:100%;max-height:calc(96vh - 64px);width:auto;height:auto;object-fit:contain;background:#fff;border-radius:8px;touch-action:manipulation}
+.lb-cap{max-width:720px;padding:0 16px;color:#e8e8ee;font-size:14px;line-height:20px;text-align:center}
+.lb-btn{position:absolute;display:grid;place-items:center;width:48px;height:48px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;cursor:pointer;transition:background-color .2s}
+.lb-btn svg{display:block}
+.lb-btn:hover,.lb-btn:focus-visible{background:rgba(255,255,255,.28)}
+.lb-btn:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.lb-close{top:max(16px,env(safe-area-inset-top));right:max(16px,env(safe-area-inset-right))}
+.lb-prev{left:max(16px,env(safe-area-inset-left));top:50%;margin-top:-24px}
+.lb-next{right:max(16px,env(safe-area-inset-right));top:50%;margin-top:-24px}
+.lb.is-zoomed .lb-fig{width:100vw;height:100vh;max-width:100vw;max-height:100vh;overflow:auto;-webkit-overflow-scrolling:touch;align-items:flex-start;justify-content:flex-start;transform:none;gap:0;touch-action:pan-x pan-y pinch-zoom}
+.lb.is-zoomed .lb-img{max-width:none;max-height:none;border-radius:0}
+.lb.is-zoomed .lb-cap{display:none}
+
+/* ---- Телефон (макет 360) ---- */
+
+.icon,.theme-icon,.resume-download-icon,svg[data-icon]{color:var(--accent)}
+.home-telegram.write{width:132px;height:41px;padding:0;justify-content:center;font-size:16px;line-height:24px}
+.home-download{display:flex;width:20px;height:41px;align-items:center}
+.home-download svg{color:var(--accent)}
+html[data-theme=dark]{--page:#161616;--button:#282828;--button-hover:#353535}
