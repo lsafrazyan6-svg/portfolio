@@ -31,9 +31,9 @@ h1,h2,h3,p,figure{margin:0;font-weight:400}a{color:inherit;text-decoration:none}
 .task-list li::before{content:"–";position:absolute;left:0}
 .problem-phone{position:absolute;left:580px;top:76px;width:329px;height:525px;display:flex;align-items:center;justify-content:center}
 .problem-phone img{width:281px;height:499px;object-fit:contain;transform:rotate(5.71deg)}
-.problem-decoration{position:absolute;left:-232px;top:99px;width:155px;height:108px;pointer-events:none}
-.problem-decoration i{position:absolute;display:block;background:#d9d9d9;height:8px;width:52px;left:0;top:34px}
-.problem-decoration i:first-child{left:49px;top:0;width:92px;height:24px}.problem-decoration i:last-child{left:63px;top:92px;width:92px;height:16px}
+
+
+
 .process-block{margin-top:48px}
 .process-title{margin-top:24px;font:400 24px/31px "Inter Tight",sans-serif;max-width:586px}
 .process-title span{font-family:"Geist Mono",monospace}
@@ -89,11 +89,11 @@ h1,h2,h3,p,figure{margin:0;font-weight:400}a{color:inherit;text-decoration:none}
 html[data-theme=dark]{color-scheme:dark;--home-ink:#eee;--home-muted:#bbb;--home-surface:#252525;--home-tag:#303030;--case-confirmed:#82d88a;--case-partial:#e2cd53}
 html[data-theme=dark] body{background:#161616}
 html[data-theme=dark] .case-disclosure>summary{color:#bbb}
-@media(max-width:1250px) and (min-width:1001px){.problem-phone{left:auto;right:-100px;width:240px}.problem-phone img{width:220px;height:auto}.problem-copy{width:520px}.problem-decoration{display:none}}
+@media(max-width:1250px) and (min-width:1001px){.problem-phone{left:auto;right:-100px;width:240px}.problem-phone img{width:220px;height:auto}.problem-copy{width:520px}}
 @media(max-width:1000px){
  .case-header{height:auto;padding-top:24px}.case-header nav{transform:none;width:calc(100% - 40px);flex-wrap:wrap;gap:16px;font-size:14px;letter-spacing:-.4px}.case-header .case-email{margin:0}.case-header .theme-toggle{width:44px;height:44px}
  .case-intro{margin-top:48px}.case-intro h1{max-width:633px}
- .problem-decoration{display:none}.problem-phone{position:static;max-width:100%;width:240px;height:auto;margin:40px 0 0}.problem-phone img{width:220px;height:auto}
+ .problem-phone{position:static;max-width:100%;width:240px;height:auto;margin:40px 0 0}.problem-phone img{width:220px;height:auto}
  .problem-copy{width:564px;max-width:100%}
  .research-row{display:flex;flex-direction:column;gap:24px}.research-links{order:-1;flex-wrap:wrap}.research-body{width:100%}.research-body h3{max-width:400px}
  .hypothesis-content,.result-content,.ice-content{width:100%;max-width:100%;left:0}
@@ -125,10 +125,17 @@ html[data-theme=dark] .case-disclosure>summary{color:#bbb}
 /* Preserve the image-fill geometry used by the Figma phone layer. */
 .problem-phone img,.case-brand img{object-fit:fill}
 @media(max-width:1250px){.problem-phone img{height:391px}}
-@media(min-width:1001px){
- .case-header nav{display:flex;width:421px;margin-left:calc(50% - 1px);margin-right:0;justify-content:flex-start;gap:0;transform:none}
- .case-header .case-cv{width:47px;flex:none}
- .case-header nav>a:nth-child(2){margin-left:18px;width:65px;flex:none}
- .case-header .case-email{width:203px;margin-left:20px;margin-right:0;padding:10px;letter-spacing:0;flex:none}
- .case-header .theme-toggle{width:56px;height:47px;margin-left:12px;flex:none}
+/* Identity link replaces About; header stays independent of case content. */
+.case-header nav{width:min(790px,calc(100% - 40px));margin-inline:auto;transform:translateX(25px);gap:18px;justify-content:flex-end}
+.case-home-link{display:flex;align-items:center;gap:10px;margin-right:auto;white-space:nowrap;min-height:44px}
+.case-home-link img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none}
+.case-header .case-cv{flex:none;width:auto}
+.case-header .case-email{flex:none;width:auto;padding:10px 0;margin:0;letter-spacing:0}
+.case-header .theme-toggle{width:56px;height:47px;flex:none;margin:0}
+@media(max-width:1000px){.case-header nav{width:calc(100% - 40px);transform:none;gap:12px}.case-header .theme-toggle{width:44px;height:44px}}
+@media(max-width:600px){
+ .case-home-link{order:1;flex:1 0 calc(100% - 56px);min-width:0}
+ .case-header .theme-toggle{order:2}
+ .case-header .case-cv{order:3;margin-right:auto}
+ .case-header .case-email{order:4}
 }
